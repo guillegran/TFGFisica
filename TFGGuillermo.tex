@@ -1,0 +1,181 @@
+%        File: TFGGuillermo.tex
+%     Created: sáb mar 03 09:00  2018 C
+% Last Change: sáb mar 03 09:00  2018 C
+%
+\documentclass[12pt,a4paper,twocolumn,reqno]{amsart}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-noquoting]{babel}
+\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm, mathtools}
+\usepackage{tikz,tikz-cd}
+\usetikzlibrary{arrows, babel}
+\usepackage{url}
+\usepackage[colorlinks=true,linktocpage=true,pagebackref=true,linkcolor=blue]{hyperref}
+\usepackage{remreset}
+\usepackage{enumitem}
+\usepackage{titlepic}
+\usepackage{graphicx}
+
+%Fuente Palatino:
+%\usepackage[sc]{mathpazo}
+%Fuente Times:
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+%Fuente Libertine:
+%\usepackage{libertine}
+%\usepackage[libertine]{newtxmath}
+
+%Para probar texto ciego:
+%\usepackage{blindtext}
+
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{prop}[thm]{Proposición}
+\newtheorem{lema}{Lema}
+\newtheorem{corol}[thm]{Corolario}
+\theoremstyle{definition} \newtheorem{defn}[thm]{Definición}
+\theoremstyle{definition} \newtheorem{ejemplo}[thm]{Ejemplo}
+\theoremstyle{definition} \newtheorem{ejercicio}[thm]{Ejercicio}
+\theoremstyle{remark} \newtheorem*{obs}{Observación}
+
+
+\def\CC{\mathbb{C}}
+\def\ZZ{\mathbb{Z}}
+\def\RR{\mathbb{R}}
+\def\TT{\mathbb{T}}
+\def\SF{\mathbb{S}}
+\def\NN{\mathbb{N}}
+\def\dd{\mathrm{d}}
+\def\lie{\mathcal{L}}
+\def\gg{\mathfrak{g}}
+
+\newcommand{\vect}[1]{\mathbf{#1}}
+%\newcommand{\vect}[1]{\vec{#1}}
+
+\newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pois}[2]{\left\lbrace#1,#2\right\rbrace}
+
+\author{Guillermo Gallego Sánchez}
+\date{\bf \today}
+
+\begin{document}
+\onecolumn
+
+\title[SIMETRÍAS EN MODELOS INTEGRABLES Y SUPERINTEGRABLES]{
+{\rm\tiny Trabajo  \hspace{-1mm}de  \hspace{-1mm}Fin  \hspace{-1mm}de  \hspace{-1mm}Grado,  
+\hspace{-1mm}Junio  \hspace{-1mm}2018}\\[8pt] 
+SIMETRÍAS EN MODELOS INTEGRABLES Y SUPERINTEGRABLES\\[8pt]
+{\rm\tiny Departamento \hspace{-1mm}de  \hspace{-1mm}Física  \hspace{-1mm}Teórica\\
+Facultad  \hspace{-1mm}de  \hspace{-1mm}Ciencias \hspace{-1mm}Físicas,  \hspace{-1mm}UCM\\
+{\rm\tiny Dirigido por Miguel A. Rodríguez}
+}}
+\maketitle
+\begin{abstract}
+  El abstract
+\end{abstract}
+\newpage
+\tableofcontents
+\twocolumn
+\section*{Introducción}
+Aquí la introducción.
+\section{Conceptos básicos: geometría simpléctica, simetrías e integrabilidad}
+La estructura matemática característica de los espacios de fases en Mecánica Clásica es la de \emph{variedad simpléctica}. Una variedad simpléctica es un par $(M,\omega)$, donde $M$ es una variedad diferenciable y $\omega$ es una $2$-forma diferencial (un tensor covariante antisimétrico de grado $2$), no degenerada y cerrada, es decir, tal que $\dd \omega=0$. En el caso en que la forma $\omega$ sea exacta, es decir, que exista una $1$-forma $\theta$ tal que $\omega=\dd \theta$, se dice que la variedad $(M,\omega)$ es exacta. 
+
+El ejemplo más básico de variedad simpléctica es el espacio $\RR^{2n}=\left\{ (\vect{q},\vect{p}) \right\}$, con $\vect{q}=(q^1,\dots,q^n)$ y $\vect{p}=(p_1,\dots,p_n)$, equipado con la forma $\omega=\dd p_i \wedge \dd q^i$. Claramente esta variedad es exacta pues $\omega=\dd \theta$, con $\theta=p_i \dd q^i$. El \emph{teorema de Darboux}, garantiza que para toda variedad simpléctica $(M,\omega)$ localmente es posible encontrar unas coordenadas $(\vect{q},\vect{p})$ en las que la forma toma el aspecto $\omega=\dd p_i \wedge \dd q^i$. Este tipo de coordenadas se llaman \emph{coordenadas de Darboux}.
+
+La forma $\omega$ induce una dualidad entre campos y $1$-formas. Resulta que a cada campo vectorial $\xi$ en la variedad le podemos asignar la forma $i_{\xi}\omega$, donde $i$ denota la \emph{contracción}, es decir $i_{\xi}\omega=\omega(\xi,\bullet)$. Un campo $\xi$ se dice \emph{simpléctico} si $\lie_{\xi}\omega=0$, donde $\lie$ denota la \emph{derivada de Lie}. Ahora, por la fórmula de Cartan, $\lie_{\xi}\omega=i_{\xi}(\dd \omega)+\dd(i_{\xi}\omega)=\dd(i_{\xi}\omega)$, de modo que un campo $\xi$ es simpléctico si y sólo si la forma $i_{\xi}\omega$ es cerrada. En el caso particular en que esta forma $i_{\xi}\omega$ sea exacta, existirá una función $H:M\rightarrow \RR$ tal que $i_{\xi}\omega=\dd H$ y decimos que $\xi$ es un \emph{campo hamiltoniano} de \emph{hamiltoniano} $H$ y se denota $\xi_H$. Un cálculo sencillo muestra que, localmente, en coordenadas de Darboux, las curvas integrales del campo $\xi_H$ seguirán las \emph{ecuaciones de Hamilton}
+\begin{equation}
+  \begin{cases}
+   \dot{\vect{q}}=\parcial{H}{p}\\ 
+    \dot{\vect{p}}=-\parcial{H}{q} .
+  \end{cases}
+  \label{eq:hamilton}
+\end{equation}
+
+El \emph{corchete de Poisson} también puede recuperarse ahora en el contexto simpléctico definiendo simplemente $\left\{ F,G \right\}=\xi^F G$, que localmente, en coordenadas de Darboux, se expresará en la forma clásica
+\begin{equation}
+  \left\{ F,G \right\}=\parcial{F}{p_i}\parcial{G}{q^i}-\parcial{F}{q^i}\parcial{G}{p_i}.
+  \label{eq:poisson}
+\end{equation}
+En este contexto las transformaciones canónicas serán simplemente aplicaciones $\varphi:M\rightarrow M$ que preserven la forma $\omega$, es decir, tales que $\varphi^*\omega=\omega$ o, equivalentemente que preserven el corchete de Poisson, $\left\{ F,G \right\}\circ \varphi^{-1}=\left\{ F\circ \varphi^{-1},G\circ \varphi^{-1} \right\}$.
+
+En el formalismo simpléctico el teorema de Noether adquiere también un nuevo cariz. Para ver esto supongamos que la variedad $M$ es conexa y consideremos un grupo de Lie $G$ que actúa sobre $M$ de tal forma que para cada $g\in G$, la aplicación $\Phi_g:M\rightarrow M$ inducida por la acción es una transformación canónica. En tal caso decimos que la acción $\Phi:G\times M\rightarrow M$ es una \emph{acción simpléctica}. Consideramos ahora una función $J:M\rightarrow \gg^*$, donde $\gg^*$ denota el dual del álgebra de Lie $\gg$ de $G$ y, para cada $\xi\in \gg$, llamamos $\hat{J}$ a la función
+\begin{align*}
+  \hat{J}(\xi) :M&\longrightarrow \RR\\ 
+     x &\longmapsto J(x)\cdot \xi.
+  \end{align*}
+  Decimos entonces que $J$ es una \emph{aplicación momento} para la acción si $\dd \hat{J}(\xi)=i_{\xi_M}\omega$, donde $\xi_M$ denota el generador infinitesimal de la acción correspondiente a $\xi$ (es decir, de la inducida por el subgrupo uniparamétrico $\exp(\xi t)$). Nótese también que el campo de hamiltoniano $\hat{J}(\xi)$ es precisamente $\xi_M$. Formulamos entonces la «versión simpléctica» del teorema de Noether 
+  \begin{thm}[Noether]
+    Sea $\Phi:G\times M \rightarrow M$ una acción simpléctica de un grupo de Lie $G$ en una variedad simpléctica $(M,\omega)$ con una aplicación momento $J$. Supongamos que $H:M\rightarrow \RR$ es invariante bajo la acción, esto es, $H(x)=H(\varphi_g(x))$ para cualesquiera $x\in M$ y $g\in G$. Entonces $J$ es una cantidad conservada del campo hamiltoniano $\xi_H$, esto es, si $\varphi_t$ es el flujo de $\xi_H$, $J(\varphi_t(x))=J(x)$ para todo $t$.
+  \end{thm}
+
+  La mejor forma de entender esto es ilustrarlo con un ejemplo:
+  \begin{ejemplo}[Conservación del momento angular]
+    Consideremos el grupo de rotaciones $\mathrm{SO}(3)$ actuando de forma simpléctica sobre el espacio de fases $\RR^6=\RR^3\times \RR^3$ en la forma
+    \begin{align*}
+      \mathrm{SO}(3)\times \RR^6&\longrightarrow \RR^6\\ 
+      (R,(\vect{q},\vect{p})) &\longmapsto (R\vect{q},R\vect{p}) .
+      \end{align*} 
+      Los elementos de su álgebra de Lie $\mathfrak{so}(3)$ son los generadores infinitesimales de las rotaciones que, como es bien sabido, pueden asociarse con operadores de la forma $J_{\vect{u}}=\vect{u}\times \bullet$, con $u\in \RR^3$ un vector cuya dirección es la del eje de la rotación y su norma la velocidad angular del giro. Así, a cada $\vect{u}\in \mathfrak{so}(3)$ podemos asociarle el campo en $M$ de la forma $\vect{u}_M=(\vect{u}\times \vect{q}, \vect{u}\times \vect{p})$, que en coordenadas se escribe
+      \begin{equation*}
+	\vect{u}_M=\epsilon_{ijk}u_k(q^i \partial_{q^j}+p_i \partial_{p_j}).
+      \end{equation*}
+      Ahora, si consideramos el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$, que en coordenadas se expresa $L_k(q^i,p_j)=\epsilon_{ijk}q^ip_j$, de modo que $(\vect{L}\times\vect{u})_{k}=\epsilon_{ijk}u_kq^ip_j$ y 
+      \begin{align*}
+	\dd(\vect{L}\times \vect{u})&=\epsilon_{ijk}u_k(q^i\dd p_j + p_j\dd q^i)\\ &=\epsilon_{ijk}u_k(q^i\dd p_j - p_i\dd q^j)=-i_{\vect{u}_M}\omega.
+      \end{align*}
+      Por tanto, si consideramos la aplicación $L:\RR^6\rightarrow\mathfrak{so}(3)^*$ que a cada $(\vect{q},\vect{p})$ le asigna  
+      \begin{align*}
+	L(\vect{q},\vect{p}) :\mathfrak{so}(3)&\longrightarrow \RR\\ 
+	\vect{u} &\longmapsto \vect{L}(\vect{q},\vect{p})\times \vect{u},
+	\end{align*}
+	tenemos que $L$ es una aplicación momento de la acción de $\mathrm{SO}(3)$. Por el teorema de Noether, si consideramos un hamiltoniano $H$ en $\RR^6$ que sea invariante bajo rotaciones, tenemos que la aplicación momento $L$ es una integral primera del sistema hamiltoniano dado por $H$. Como consecuencia, el momento angular $\vect{L}$ es una cantidad conservada del sistema.
+  \end{ejemplo}
+
+  Finalmente, uno de los aspectos de la Mecánica Clásica donde el formalismo simpléctico muestra todo su potencial es la teoría de sistemas integrables. 
+  \begin{defn}
+    Un sistema con hamiltoniano $H$ sobre una variedad simpléctica $(M,\omega)$ de dimensión $2n$ se dice \emph{completamente integrable} si admite $n$ integrales primeras $F_1=H,\dots,F_n$ en involución, es decir, tales que
+    \begin{equation}
+      \left\{ F_i,F_j \right\}=0,  
+    \end{equation}
+    para cualesquiera $i,j=1,\dots,n$ y funcionalmente independientes, es decir,
+    \begin{equation}
+      \dd F_{1,x} \wedge \cdots \wedge \dd F_{n,x}\neq 0
+    \end{equation}
+    para casi todo punto $x\in M$.
+  \end{defn}
+
+  El teorema central de toda la teoría de sistemas integrables es el siguiente:
+  \begin{thm}[Arnold-Liouville]
+   Sea un sistema con hamiltoniano $H$ sobre una variedad simpléctica $(M,\omega)$ de dimensión $2n$ que es completamente integrable y sea $F=(F_1,\dots,F_n):M\rightarrow \RR^n$ con $F_1,\dots,F_n$ las integrales primeras en involución del sistema. Entonces:
+   \begin{enumerate}
+     \item Los conjuntos de nivel $F^{-1}(a)$ son subvariedades de $M$ invariantes bajo el flujo del sistema,
+     \item Las componentes conexas de los conjuntos de nivel son difeomorfas a $\TT^k\times \RR^{n-k}$ para cierto $0\leq k \leq n$, donde $\TT^k$ denota el toro $k$-dimensional $\TT^k=\SF^1\times \cdots \times \SF^1$, $k$ veces. En particular, las compactas son difeomorfas a toros $\TT^n$, que llamamos \emph{toros de Liouville}.
+     \item En torno a cada toro de Liouville podemos tomar un entorno difeomorfo a un producto de toros de Liouville en los que podemos dar unas coordenadas de Darboux $(\vect{J},\vect{w})$, llamadas \emph{variables de acción-ángulo},tales que las $\vect{J}$ son constantes en cada toro de Liouville y las $\vect{w}$ son coordenadas angulares en esos toros. Como consecuencia, en estos entornos las ecuaciones de Hamilton son integrables por cuadraturas.
+   \end{enumerate}
+  \end{thm}
+  En resumen este teorema nos dice que si un sistema hamiltoniano tiene una cantidad suficiente de integrales primeras (o de simetrías, aunque éstas no son siempre evidentes) el comportamiento de este sistema será muy sencillo. Esto es una motivación suficiente para buscar sistemas integrables, tal vez mediante la metodología de hallar sus grupos de simetría y asociarles sus aplicaciones momento. Concluimos la sección dando un ejemplo clásico de sistema integrable.
+  \begin{ejemplo}[Potencial central]
+    Consideramos el caso genérico de una partícula moviéndose en el espacio tridimensional sujeta a un potencial central, $V(\vect{q},\vect{p})=V(r)$, con $r=|\vect{q}|$. El espacio de fases será $\RR^6=\left\{ (\vect{q},\vect{p}) \right\}$ y el hamiltoniano del sistema vendrá dado por
+    \begin{equation}
+      H(\vect{q},\vect{p})=\frac{\vect{p}^2}{2m}+V(r).
+      \label{eq:central}
+    \end{equation}
+    Como las rotaciones preservan el producto escalar, el sistema será invariante bajo rotaciones y, por tanto, el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$ es una cantidad conservada del sistema. En particular serán cantidades conservadas $L^2=\vect{L}\cdot \vect{L}$ y $L_3=q^1p_2-q^2p_1$ la componente vertical de $\vect{L}$. Ahora, si calculamos el corchete de Poisson
+  \begin{equation*}
+    \pois{L^2}{L_3}=\pois{L_i^2}{L_3}=2L_i\pois{L_i}{L_3},
+  \end{equation*}
+  por la regla de Leibniz. Recordando las reglas de conmutación del momento angular, $\left\{ L_i,L_j \right\}=\epsilon_{ijk}L_k$, tenemos
+\begin{equation*}
+  \pois{L^2}{L_3}=-2L_1L_2+2L_2L_1=0.
+\end{equation*}
+Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el potencial central es completamente integrable.
+
+  \end{ejemplo}
+  \section{Sistemas superintegrables}
+\end{document}
+
+
+
