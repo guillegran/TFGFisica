@@ -19,6 +19,8 @@
 \usepackage{titlepic}
 \usepackage{graphicx}
 
+%\usepackage{bm} Para poner los vectores de otra forma
+
 %Fuente Palatino:
 %\usepackage[sc]{mathpazo}
 %Fuente Times:
@@ -51,18 +53,18 @@
 \def\lie{\mathcal{L}}
 \def\gg{\mathfrak{g}}
 
+%\newcommand{\vect}[1]{\bm{#1}}
 \newcommand{\vect}[1]{\mathbf{#1}}
 %\newcommand{\vect}[1]{\vec{#1}}
 
 \newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\pois}[2]{\left\lbrace#1,#2\right\rbrace}
 
-\author{Guillermo Gallego Sánchez}
+\author{Guillermo Gallego}
 \date{\bf \today}
 
 \begin{document}
 \onecolumn
-
 \title[SIMETRÍAS EN MODELOS INTEGRABLES Y SUPERINTEGRABLES]{
 {\rm\tiny Trabajo  \hspace{-1mm}de  \hspace{-1mm}Fin  \hspace{-1mm}de  \hspace{-1mm}Grado,  
 \hspace{-1mm}Junio  \hspace{-1mm}2018}\\[8pt] 
@@ -76,14 +78,15 @@ Facultad  \hspace{-1mm}de  \hspace{-1mm}Ciencias \hspace{-1mm}Físicas,  \hspace
   El abstract
 \end{abstract}
 \newpage
-\tableofcontents
+
 \twocolumn
+
 \section*{Introducción}
 Aquí la introducción.
 \section{Conceptos básicos: geometría simpléctica, simetrías e integrabilidad}
 La estructura matemática característica de los espacios de fases en Mecánica Clásica es la de \emph{variedad simpléctica}. Una variedad simpléctica es un par $(M,\omega)$, donde $M$ es una variedad diferenciable y $\omega$ es una $2$-forma diferencial (un tensor covariante antisimétrico de grado $2$), no degenerada y cerrada, es decir, tal que $\dd \omega=0$. En el caso en que la forma $\omega$ sea exacta, es decir, que exista una $1$-forma $\theta$ tal que $\omega=\dd \theta$, se dice que la variedad $(M,\omega)$ es exacta. 
 
-El ejemplo más básico de variedad simpléctica es el espacio $\RR^{2n}=\left\{ (\vect{q},\vect{p}) \right\}$, con $\vect{q}=(q^1,\dots,q^n)$ y $\vect{p}=(p_1,\dots,p_n)$, equipado con la forma $\omega=\dd p_i \wedge \dd q^i$. Claramente esta variedad es exacta pues $\omega=\dd \theta$, con $\theta=p_i \dd q^i$. El \emph{teorema de Darboux}, garantiza que para toda variedad simpléctica $(M,\omega)$ localmente es posible encontrar unas coordenadas $(\vect{q},\vect{p})$ en las que la forma toma el aspecto $\omega=\dd p_i \wedge \dd q^i$. Este tipo de coordenadas se llaman \emph{coordenadas de Darboux}.
+El ejemplo más básico de variedad simpléctica es el espacio $\RR^{2n}=\left\{ (\vect{q},\vect{p}) \right\}$, con $\vect{q}=(q_1,\dots,q_n)$ y $\vect{p}=(p_1,\dots,p_n)$, equipado con la forma $\omega=\dd p_i \wedge \dd q_i$. Claramente esta variedad es exacta pues $\omega=\dd \theta$, con $\theta=p_i \dd q_i$. El \emph{teorema de Darboux}, garantiza que para toda variedad simpléctica $(M,\omega)$ localmente es posible encontrar unas coordenadas $(\vect{q},\vect{p})$ en las que la forma toma el aspecto $\omega=\dd p_i \wedge \dd q_i$. Este tipo de coordenadas se llaman \emph{coordenadas de Darboux}.
 
 La forma $\omega$ induce una dualidad entre campos y $1$-formas. Resulta que a cada campo vectorial $\xi$ en la variedad le podemos asignar la forma $i_{\xi}\omega$, donde $i$ denota la \emph{contracción}, es decir $i_{\xi}\omega=\omega(\xi,\bullet)$. Un campo $\xi$ se dice \emph{simpléctico} si $\lie_{\xi}\omega=0$, donde $\lie$ denota la \emph{derivada de Lie}. Ahora, por la fórmula de Cartan, $\lie_{\xi}\omega=i_{\xi}(\dd \omega)+\dd(i_{\xi}\omega)=\dd(i_{\xi}\omega)$, de modo que un campo $\xi$ es simpléctico si y sólo si la forma $i_{\xi}\omega$ es cerrada. En el caso particular en que esta forma $i_{\xi}\omega$ sea exacta, existirá una función $H:M\rightarrow \RR$ tal que $i_{\xi}\omega=\dd H$ y decimos que $\xi$ es un \emph{campo hamiltoniano} de \emph{hamiltoniano} $H$ y se denota $\xi_H$. Un cálculo sencillo muestra que, localmente, en coordenadas de Darboux, las curvas integrales del campo $\xi_H$ seguirán las \emph{ecuaciones de Hamilton}
 \begin{equation}
@@ -93,10 +96,11 @@ La forma $\omega$ induce una dualidad entre campos y $1$-formas. Resulta que a c
   \end{cases}
   \label{eq:hamilton}
 \end{equation}
+Así, entenderemos por un \emph{sistema hamiltoniano} con $n$ grados de libertad una función $H:M\rightarrow \RR$ definida sobre una variedad simpléctica $M$ de dimensión $2n$.
 
 El \emph{corchete de Poisson} también puede recuperarse ahora en el contexto simpléctico definiendo simplemente $\left\{ F,G \right\}=\xi^F G$, que localmente, en coordenadas de Darboux, se expresará en la forma clásica
 \begin{equation}
-  \left\{ F,G \right\}=\parcial{F}{p_i}\parcial{G}{q^i}-\parcial{F}{q^i}\parcial{G}{p_i}.
+  \left\{ F,G \right\}=\parcial{F}{p_i}\parcial{G}{q_i}-\parcial{F}{q_i}\parcial{G}{p_i}.
   \label{eq:poisson}
 \end{equation}
 En este contexto las transformaciones canónicas serán simplemente aplicaciones $\varphi:M\rightarrow M$ que preserven la forma $\omega$, es decir, tales que $\varphi^*\omega=\omega$ o, equivalentemente que preserven el corchete de Poisson, $\left\{ F,G \right\}\circ \varphi^{-1}=\left\{ F\circ \varphi^{-1},G\circ \varphi^{-1} \right\}$.
@@ -108,7 +112,7 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
   \end{align*}
   Decimos entonces que $J$ es una \emph{aplicación momento} para la acción si $\dd \hat{J}(\xi)=i_{\xi_M}\omega$, donde $\xi_M$ denota el generador infinitesimal de la acción correspondiente a $\xi$ (es decir, de la inducida por el subgrupo uniparamétrico $\exp(\xi t)$). Nótese también que el campo de hamiltoniano $\hat{J}(\xi)$ es precisamente $\xi_M$. Formulamos entonces la «versión simpléctica» del teorema de Noether 
   \begin{thm}[Noether]
-    Sea $\Phi:G\times M \rightarrow M$ una acción simpléctica de un grupo de Lie $G$ en una variedad simpléctica $(M,\omega)$ con una aplicación momento $J$. Supongamos que $H:M\rightarrow \RR$ es invariante bajo la acción, esto es, $H(x)=H(\varphi_g(x))$ para cualesquiera $x\in M$ y $g\in G$. Entonces $J$ es una cantidad conservada del campo hamiltoniano $\xi_H$, esto es, si $\varphi_t$ es el flujo de $\xi_H$, $J(\varphi_t(x))=J(x)$ para todo $t$.
+    Sea $\Phi:G\times M \rightarrow M$ una acción simpléctica de un grupo de Lie $G$ en una variedad simpléctica $(M,\omega)$ con una aplicación momento $J$. Supongamos que $H:M\rightarrow \RR$ es invariante bajo la acción, esto es, $H(x)=H(\Phi_g(x))$ para cualesquiera $x\in M$ y $g\in G$. Entonces $J$ es una cantidad conservada del campo hamiltoniano $\xi_H$, esto es, si $\varphi_t$ es el flujo de $\xi_H$, $J(\varphi_t(x))=J(x)$ para todo $t$.
   \end{thm}
 
   La mejor forma de entender esto es ilustrarlo con un ejemplo:
@@ -120,11 +124,11 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
       \end{align*} 
       Los elementos de su álgebra de Lie $\mathfrak{so}(3)$ son los generadores infinitesimales de las rotaciones que, como es bien sabido, pueden asociarse con operadores de la forma $J_{\vect{u}}=\vect{u}\times \bullet$, con $u\in \RR^3$ un vector cuya dirección es la del eje de la rotación y su norma la velocidad angular del giro. Así, a cada $\vect{u}\in \mathfrak{so}(3)$ podemos asociarle el campo en $M$ de la forma $\vect{u}_M=(\vect{u}\times \vect{q}, \vect{u}\times \vect{p})$, que en coordenadas se escribe
       \begin{equation*}
-	\vect{u}_M=\epsilon_{ijk}u_k(q^i \partial_{q^j}+p_i \partial_{p_j}).
+	\vect{u}_M=\epsilon_{ijk}u_k(q_i \partial_{q_j}+p_i \partial_{p_j}).
       \end{equation*}
-      Ahora, si consideramos el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$, que en coordenadas se expresa $L_k(q^i,p_j)=\epsilon_{ijk}q^ip_j$, de modo que $(\vect{L}\times\vect{u})_{k}=\epsilon_{ijk}u_kq^ip_j$ y 
+      Ahora, si consideramos el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$, que en coordenadas se expresa $L_k(q_i,p_j)=\epsilon_{ijk}q_ip_j$, de modo que $(\vect{L}\times\vect{u})_{k}=\epsilon_{ijk}u_kq_ip_j$ y 
       \begin{align*}
-	\dd(\vect{L}\times \vect{u})&=\epsilon_{ijk}u_k(q^i\dd p_j + p_j\dd q^i)\\ &=\epsilon_{ijk}u_k(q^i\dd p_j - p_i\dd q^j)=-i_{\vect{u}_M}\omega.
+	\dd(\vect{L}\times \vect{u})&=\epsilon_{ijk}u_k(q_i\dd p_j + p_j\dd q_i)\\ &=\epsilon_{ijk}u_k(q_i\dd p_j - p_i\dd q_j)=-i_{\vect{u}_M}\omega.
       \end{align*}
       Por tanto, si consideramos la aplicación $L:\RR^6\rightarrow\mathfrak{so}(3)^*$ que a cada $(\vect{q},\vect{p})$ le asigna  
       \begin{align*}
@@ -136,7 +140,7 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
 
   Finalmente, uno de los aspectos de la Mecánica Clásica donde el formalismo simpléctico muestra todo su potencial es la teoría de sistemas integrables. 
   \begin{defn}
-    Un sistema con hamiltoniano $H$ sobre una variedad simpléctica $(M,\omega)$ de dimensión $2n$ se dice \emph{completamente integrable} si admite $n$ integrales primeras $F_1=H,\dots,F_n$ en involución, es decir, tales que
+    Un sistema hamiltoniano $H$ sobre una variedad simpléctica $(M,\omega)$ de dimensión $2n$ se dice \emph{completamente integrable} si admite $n$ integrales primeras $F_1=H,\dots,F_n$ en involución, es decir, tales que
     \begin{equation}
       \left\{ F_i,F_j \right\}=0,  
     \end{equation}
@@ -148,12 +152,12 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
   \end{defn}
 
   El teorema central de toda la teoría de sistemas integrables es el siguiente:
-  \begin{thm}[Arnold-Liouville]
-   Sea un sistema con hamiltoniano $H$ sobre una variedad simpléctica $(M,\omega)$ de dimensión $2n$ que es completamente integrable y sea $F=(F_1,\dots,F_n):M\rightarrow \RR^n$ con $F_1,\dots,F_n$ las integrales primeras en involución del sistema. Entonces:
+  \begin{thm}[Arnold-Liouville]\label{arnoldliouville}
+   Sea un sistema hamiltoniano $H$ sobre una variedad simpléctica $(M,\omega)$ de dimensión $2n$ que es completamente integrable y sea $F=(F_1,\dots,F_n):M\rightarrow \RR^n$ con $F_1,\dots,F_n$ las integrales primeras en involución del sistema. Entonces:
    \begin{enumerate}
      \item Los conjuntos de nivel $F^{-1}(a)$ son subvariedades de $M$ invariantes bajo el flujo del sistema,
-     \item Las componentes conexas de los conjuntos de nivel son difeomorfas a $\TT^k\times \RR^{n-k}$ para cierto $0\leq k \leq n$, donde $\TT^k$ denota el toro $k$-dimensional $\TT^k=\SF^1\times \cdots \times \SF^1$, $k$ veces. En particular, las compactas son difeomorfas a toros $\TT^n$, que llamamos \emph{toros de Liouville}.
-     \item En torno a cada toro de Liouville podemos tomar un entorno difeomorfo a un producto de toros de Liouville en los que podemos dar unas coordenadas de Darboux $(\vect{J},\vect{w})$, llamadas \emph{variables de acción-ángulo},tales que las $\vect{J}$ son constantes en cada toro de Liouville y las $\vect{w}$ son coordenadas angulares en esos toros. Como consecuencia, en estos entornos las ecuaciones de Hamilton son integrables por cuadraturas.
+     \item Las componentes conexas de los conjuntos de nivel son difeomorfas a $\TT^k\times \RR^{n-k}$ para cierto $0\leq k \leq n$, donde $\TT^k$ denota el toro $k$-dimensional $\TT^k=\SF^1\times \cdots \times \SF^1$, $k$ veces. En particular, las compactas son difeomorfas a toros $\TT^n$, que llamamos \emph{toros de Liouville}. Además, en cada uno de estos conjuntos de nivel la dinámica es lineal, es decir, existen unas coordenadas $\vect{w}$ en estos conjuntos tales que $\dot{\vect{w}}=\mathbf{cte}$.
+     \item En torno a cada toro de Liouville podemos tomar un entorno difeomorfo a un producto de toros de Liouville en los que podemos dar unas coordenadas de Darboux $(\vect{J},\vect{w})$, llamadas \emph{variables de acción-ángulo}, tales que las $\vect{J}$ son constantes en cada toro de Liouville y las $\vect{w}$ son coordenadas angulares en esos toros. Como consecuencia, en estos entornos las ecuaciones de Hamilton son integrables por cuadraturas.
    \end{enumerate}
   \end{thm}
   En resumen este teorema nos dice que si un sistema hamiltoniano tiene una cantidad suficiente de integrales primeras (o de simetrías, aunque éstas no son siempre evidentes) el comportamiento de este sistema será muy sencillo. Esto es una motivación suficiente para buscar sistemas integrables, tal vez mediante la metodología de hallar sus grupos de simetría y asociarles sus aplicaciones momento. Concluimos la sección dando un ejemplo clásico de sistema integrable.
@@ -163,7 +167,7 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
       H(\vect{q},\vect{p})=\frac{\vect{p}^2}{2m}+V(r).
       \label{eq:central}
     \end{equation}
-    Como las rotaciones preservan el producto escalar, el sistema será invariante bajo rotaciones y, por tanto, el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$ es una cantidad conservada del sistema. En particular serán cantidades conservadas $L^2=\vect{L}\cdot \vect{L}$ y $L_3=q^1p_2-q^2p_1$ la componente vertical de $\vect{L}$. Ahora, si calculamos el corchete de Poisson
+    nomo las rotaciones preservan el producto escalar, el sistema será invariante bajo rotaciones y, por tanto, el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$ es una cantidad conservada del sistema. En particular serán cantidades conservadas $L^2=\vect{L}\cdot \vect{L}$ y $L_3=q_1p_2-q_2p_1$ la componente vertical de $\vect{L}$. Ahora, si calculamos el corchete de Poisson
   \begin{equation*}
     \pois{L^2}{L_3}=\pois{L_i^2}{L_3}=2L_i\pois{L_i}{L_3},
   \end{equation*}
@@ -174,7 +178,77 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
 Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el potencial central es completamente integrable.
 
   \end{ejemplo}
-  \section{Sistemas superintegrables}
+  \section{Sistemas superintegrables, trayectorias cerradas y simetrías ocultas}
+  Podemos considerar ahora qué sucedería si un sistema integrable con $n$ grados de libertad tuviera cantidades conservadas adicionales, hasta otras $n-1$ para que puedan existir trayectorias, funcionalmente independientes de las anteriores, aunque ya no podrían estar en involución con todas. Esto motiva entonces la noción de \emph{superintegrabilidad} o \emph{integrabilidad no abeliana}.
+  \begin{defn}
+    Un sistema hamiltoniano $H$ sobre una variedad simpléctica $(M,\omega)$ de dimensión $2n$ se dice \emph{superintegrable} si admite $n+k$ integrales primeras funcionalmente independientes para cierto $k=1,\dots,n-1$. En el caso en que $k=n-1$ el sistema se dice \emph{maximalmente superintegrable}.
+  \end{defn}
+
+  Las dos primeras partes del teorema \ref{arnoldliouville} se pueden generalizar al caso superintegrable, es lo que se conoce como el \emph{teorema de Mishchenko-Fomenko}. Destaca especialmente el caso maximalmente superintegrable, para el cual el resultado nos dice que las órbitas serán curvas cerradas con movimiento periódico.
+
+  Vamos a aplicar estas ideas al caso del potencial central, para ver en qué casos el sistema será superintegrable. Como ya hemos visto, en el movimiento en un potencial central, el momento angular $\vect{L}=\vect{q}\times \vect{p}$ se conserva. Puesto que $\vect{L}$ es perpendicular a $\vect{q}$ y a $\vect{p}$, la conservación de $\vect{L}$ significa que, durante todo el movimiento, la posición y el momento de la partícula permanecen en un mismo plano, perpendicular a $\vect{L}$. La invariancia bajo rotaciones nos permite escoger la dirección $\vect{e}_z$ paralela al momento angular $\vect{L}$ y estudiar el sistema «reducido» en el plano perpendicular, que ahora será el plano $XY$. Llamando ahora $r=x^2+y^2$, el hamiltoniano en este «sistema reducido» será
+  \begin{equation}
+    H(x,y,p_x,p_y)= \tfrac{1}{2m}(p_x^2+p_y^2)+V(r).
+  \end{equation}
+  Cambiando a coordenadas polares $(x,y)=r(\cos \phi, \sin \phi)=r\vect{e}_{r}$, $p_r=m\dot r$, $p_{\phi}=mr^2\dot \phi$, tenemos
+  \begin{equation}
+    H(r,\phi,p_r,p_{\phi})=\frac{p_r^2}{2m}+\frac{p_{\phi}^2}{2mr^2}+V(r). 
+  \end{equation}
+  Nótese ahora que, si $\vect{q}=(x,y)=r\vect{e}_r$ y $\vect{p}=m\dot{\vect{q}}=m\dot r \vect{e}_r + mr \dot \phi \vect{e}_{\phi}$, con $\vect{e}_{\phi}=(-\sin \phi,\cos \phi)$, entonces $\vect{L}=\vect{q}\times \vect{p}=mr^2\dot \phi \vect{e}_z$, luego $L=|\vect{L}|=p_{\phi}$. Por tanto, el hamiltoniano queda en la forma
+  \begin{equation}
+    H(r,\phi,p_r,p_{\phi})=\frac{p_r^2}{2m}+\frac{L^2}{2mr^2}+V(r). 
+  \end{equation}
+  Al haber restringido el sistema a un plano y quedarnos con sólo dos grados de libertad, la integrabilidad sigue garantizada por la conservación del momento angular, mientras que la existencia de una cantidad conservada adicional independiente del momento angular nos daría la superintegrabilidad.
+
+  Las trayectorias de energía $E$ y momento angular $L$ verificarán entonces las ecuaciones
+  \begin{equation}
+    \begin{cases}
+    E=\tfrac{1}{2}m\dot r^2+\frac{L^2}{2mr^2}+V(r) \\
+    L=mr^2\dot \phi.
+  \end{cases}
+  \end{equation}
+  De modo que
+  \begin{equation}
+      \dot r=\sqrt{\frac{2}{m}[E-V(r)]-\frac{L^2}{2mr^2}} 
+  \end{equation}
+  y 
+  \begin{equation}
+    t=\int \frac{dr}{\sqrt{\frac{2}{m}[E-V(r)]-\frac{L^2}{2mr^2}}}.
+  \end{equation}
+  Por tanto, el ángulo $\phi$ puede ser integrado por cuadraturas en la forma
+  \begin{equation}
+    \phi=\int\frac{Ldr}{r^2\sqrt{2m[E-V(r)]-L^2/r^2}}. 
+    \label{eq:intphi}
+  \end{equation}
+
+Observemos que podemos considerar la partícula sujeta a un «potencial efectivo»
+\begin{equation}
+  U=\frac{L^2}{2mr^2}+V(r),
+\end{equation}
+donde el término $\frac{L^2}{2mr^2}$ constituye una «energía centrífuga». En los valores de $r$ para los cuales $U$ es constante la velocidad radial $\dot r$ se anula y nos indica los \emph{puntos de retorno} de la trayectoria. En el caso en que el movimiento sea acotado, $r$ varía entre dos límites $r_{\text{min}}$ y $r_{\text{máx}}$ y la trayectoria está contenida enteramente en el interior de una corona circular limitada por las circunferencias de radios $r_{\text{min}}$ y $r_{\text{máx}}$. Sin embargo, esto no implica que la trayectoria sea una curva cerrada. En efecto, si, de acuerdo con \eqref{eq:intphi}, calculamos el ángulo que gira el vector posición en lo que la partícula se mueve entre $r_{\text{min}}$ y $r_{\text{máx}}$ obtenemos
+\begin{equation}
+  \Delta \phi = 2\int_{r_{\text{min}}}^{r_{\text{máx}}} \frac{Ldr}{r^2\sqrt{2m[E-V(r)]-L^2/r^2}}.
+\end{equation}
+La condición que ha de cumplirse para que la trayectoria en cierto momento se cierre es precisamente que este ángulo sea un múltiplo racional de $2\pi$, es decir, que $\Delta \phi = \frac{2\pi m}{n}$, para ciertos enteros $m$ y $n$. En un caso general esta condición no se cumple y la trayectoria va llenando densamente toda la corona en la que se encuentra contenida [figura].
+
+J. Bertrand probó en 1883 que precisamente los únicos potenciales centrales en los cuales todos los movimientos acotados se dan en trayectorias cerradas son aquellos en los que $V(r)$ es proporcional a $1/r$ (potencial de Kepler) o a $r^2$ (oscilador armónico isótropo). Por tanto, en el resto de casos el sistema no es superintegrable. Cabe preguntarse entonces si tanto el potencial de Kepler como el oscilador armónico isótropo tendrán alguna integral primera adicional que nos garantice la superintegrabilidad, tal vez dada por una «simetría oculta» del sistema, es decir, por una simetría que no era aparente a primera vista.
+
+La respuesta es afirmativa en los dos casos. En el potencial de Kepler $V(r)=k/r$ existe una cantidad conservada adicional que es el \emph{vector de Laplace-Runge-Lenz}, definido por
+\begin{equation}
+  \vect{A}=\vect{p}\times \vect{L}-mk\frac{\vect{q}}{r}. 
+\end{equation}
+En el caso del oscilador armónico isótropo $V(r)=kr^2$ existe un tensor simétrico conservado, el \emph{tensor de Fradkin}, dado por
+\begin{equation}
+  A_{ij}=\tfrac{1}{2m}(p_ip_j+kq_iq_j), 
+\end{equation}
+con $i,j=1,2$. La traza del tensor es precisamente la energía $\tfrac{1}{2m}(\vect{p}^2+kr^2)$ y la componente de fuera de la diagonal $F=A_{12}=\tfrac{1}{2m}(p_1p_2+kq_1q_2)$ es precisamente la cantidad conservada adicional, indepentiende de la energía y del momento angular. 
+
+Si se regresa al espacio tridimensional y se consideran ahí las cantidades conservadas adicionales ahora obtenidas, se pueden calcular las relaciones entre las diferentes integrales primeras del sistema con el corchete de Poisson y ver qué subalgebra de Lie del álgebra total de las variables dinámicas del sistema generan, desvelando así el verdadero rostro de estas «simetrías ocultas». Se puede probar que para el caso del potencial de Kepler esta álgebra es $\mathfrak{so}(4)$ mientras que para el caso del oscilador armónico isótropo es $\mathfrak{su}(3)$.
+
+Para terminar la sección, cabe comentar que la superintegrabilidad de un sistema clásico también tiene sus consecuencias en Mecánica Cuántica. Por ejemplo, en el caso del átomo de hidrógeno (que se puede considerar el análogo cuántico del problema de Kepler, de modo que conserva las mismas simetrías) la existencia de la cantidad conservada adicional, el vector de Laplace-Runge-Lenz, es la causante de la degeneración «accidental» de sus niveles de energía. Por degeneración accidental de los niveles del átomo de hidrógeno nos referimos al hecho de que sus niveles de energía dependan tan solo del primer número cuántico, $n$, y no del número cuántico $l$.
+
+\section{El oscilador armónico anisótropo}
+
 \end{document}
 
 

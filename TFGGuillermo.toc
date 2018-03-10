@@ -1,4 +1,4 @@
 \select@language {spanish}
-\contentsline {section}{\tocsection {}{}{Introducci\IeC {\'o}n}}{3}{section*.2}
-\contentsline {section}{\tocsection {}{1}{Conceptos b\IeC {\'a}sicos: geometr\IeC {\'\i }a simpl\IeC {\'e}ctica, simetr\IeC {\'\i }as e integrabilidad}}{3}{section.1}
-\contentsline {section}{\tocsection {}{2}{Sistemas superintegrables}}{5}{section.2}
+\contentsline {section}{\tocsection {}{}{Introducci\IeC {\'o}n}}{2}{section*.2}
+\contentsline {section}{\tocsection {}{1}{Conceptos b\IeC {\'a}sicos: geometr\IeC {\'\i }a simpl\IeC {\'e}ctica, simetr\IeC {\'\i }as e integrabilidad}}{2}{section.1}
+\contentsline {section}{\tocsection {}{2}{Sistemas superintegrables, trayectorias cerradas y simetr\IeC {\'\i }as ocultas}}{4}{section.2}
