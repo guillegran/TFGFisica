@@ -44,6 +44,7 @@
 
 
 \def\CC{\mathbb{C}}
+\def\QQ{\mathbb{Q}}
 \def\ZZ{\mathbb{Z}}
 \def\RR{\mathbb{R}}
 \def\TT{\mathbb{T}}
@@ -52,6 +53,7 @@
 \def\dd{\mathrm{d}}
 \def\lie{\mathcal{L}}
 \def\gg{\mathfrak{g}}
+\def\zz{\bar{z}}
 
 %\newcommand{\vect}[1]{\bm{#1}}
 \newcommand{\vect}[1]{\mathbf{#1}}
@@ -190,11 +192,11 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
   \begin{equation}
     H(x,y,p_x,p_y)= \tfrac{1}{2m}(p_x^2+p_y^2)+V(r).
   \end{equation}
-  Cambiando a coordenadas polares $(x,y)=r(\cos \phi, \sin \phi)=r\vect{e}_{r}$, $p_r=m\dot r$, $p_{\phi}=mr^2\dot \phi$, tenemos
+  Cambiando a coordenadas polares $\vect{q}=(x,y)=r\vect{e}_{r}$, con $\vect{e}_r=(\cos \phi, \sin \phi)$, $p_r=m\dot r$, $p_{\phi}=mr^2\dot \phi$, tenemos
   \begin{equation}
     H(r,\phi,p_r,p_{\phi})=\frac{p_r^2}{2m}+\frac{p_{\phi}^2}{2mr^2}+V(r). 
   \end{equation}
-  Nótese ahora que, si $\vect{q}=(x,y)=r\vect{e}_r$ y $\vect{p}=m\dot{\vect{q}}=m\dot r \vect{e}_r + mr \dot \phi \vect{e}_{\phi}$, con $\vect{e}_{\phi}=(-\sin \phi,\cos \phi)$, entonces $\vect{L}=\vect{q}\times \vect{p}=mr^2\dot \phi \vect{e}_z$, luego $L=|\vect{L}|=p_{\phi}$. Por tanto, el hamiltoniano queda en la forma
+  Nótese ahora que, si $\vect{p}=m\dot{\vect{q}}=m\dot r \vect{e}_r + mr \dot \phi \vect{e}_{\phi}$, con $\vect{e}_{\phi}=(-\sin \phi,\cos \phi)$, entonces $\vect{L}=\vect{q}\times \vect{p}=mr^2\dot \phi \vect{e}_z$, luego $L=|\vect{L}|=p_{\phi}$. Por tanto, el hamiltoniano queda en la forma
   \begin{equation}
     H(r,\phi,p_r,p_{\phi})=\frac{p_r^2}{2m}+\frac{L^2}{2mr^2}+V(r). 
   \end{equation}
@@ -248,6 +250,170 @@ Si se regresa al espacio tridimensional y se consideran ahí las cantidades cons
 Para terminar la sección, cabe comentar que la superintegrabilidad de un sistema clásico también tiene sus consecuencias en Mecánica Cuántica. Por ejemplo, en el caso del átomo de hidrógeno (que se puede considerar el análogo cuántico del problema de Kepler, de modo que conserva las mismas simetrías) la existencia de la cantidad conservada adicional, el vector de Laplace-Runge-Lenz, es la causante de la degeneración «accidental» de sus niveles de energía. Por degeneración accidental de los niveles del átomo de hidrógeno nos referimos al hecho de que sus niveles de energía dependan tan solo del primer número cuántico, $n$, y no del número cuántico $l$.
 
 \section{El oscilador armónico anisótropo}
+En esta sección estudiamos la superintegrabilidad de otro sistema clásico, el oscilador armónico anisótropo. Para encontrar las integrales primeras adicionales nos ayudaremos de unas coordenadas complejas adicionales, que nos permitirán encontrar un tensor conservado. Este procedimiento se debe a Jauch y Hill [citar] y sus ideas principales nos serán útiles más adelante para tratar otros problemas.
+
+El oscilador armónico anisótropo con $n$ grados de libertad está definido sobre el espacio de fases $\RR^{2n}=\left\{ \vect{q},\vect{p} \right\}$ y su hamiltoniano viene dado por
+\begin{equation}
+  H(\vect{q},\vect{p})=\frac{1}{2}\sum_{i=1}^n \left(p_i^2 + \omega_i^2q_i^2\right)=\sum_{i=1}^n H_i(q_i,p_i),
+  \label{eq:anisotropo}
+\end{equation}
+con $H_i(q_i,p_i)=\frac{1}{2}(p_i^2+\omega_i^2q_i^2)$. Para probar la integrabilidad del sistema basta tomar las funciones $F_j=\sum_{i=j}^n H_i$, con $j$ recorriendo desde $1$ hasta $n$, ya que
+\begin{equation*}
+  \left\{ H_i,H_j \right\}=\parcial{H_i}{p_k}\parcial{H_j}{q_k}-\parcial{H_j}{p_k}\parcial{H_i}{q_k}=0.
+\end{equation*}
+
+Los conjuntos de nivel de las funciones $F_j(\vect{q},\vect{p})=a_j$ serán toros de Liouville dados por las ecuaciones
+\begin{equation*}
+  \begin{cases}
+    p_1^2+\omega_1^2q_1^2&= 2(a_1-a_2)\\
+    p_1^2+\omega_2^2q_1^2&= 2(a_2-a_3)\\
+     &\vdots \\
+    p_n^2+\omega_n^2q_n^2&= 2a_n.
+  \end{cases}
+\end{equation*}
+Es posible demostrar que las trayectorias del flujo hamiltoniano en estos toros son cerradas si y sólo si las frecuencias $\omega_i$ son de la forma $\omega_i=n_i \omega$, para cierta $\omega$ y para ciertos números enteros $n_i$, de modo que el hamiltoniano \eqref{eq:anisotropo} toma la forma
+\begin{equation}
+  H(\vect{q},\vect{p})=\frac{1}{2}\sum_{i=1}^n \left(p_i^2 + n_i^2\omega^2q_i^2\right).
+\end{equation}
+Veamos entonces que precisamente en estos casos el oscilador armónico anisótropo es superintegrable.
+
+Para encontrar las integrales primeras adicionales vamos a servirnos de un espacio de fases complejo auxiliar $\CC^n$, con coordenadas $z_i, \bar{z}_i$. Concretamente, definimos
+\begin{equation}
+  z_j=p_j-in_j\omega q_j,\ \ \  \bar{z}_j=p_j+in_j\omega q_j.  
+\end{equation}
+Tenemos entonces que $H_i=\frac{1}{2}z_i\bar{z}_i$ y el hamiltoniano es de la forma
+\begin{equation}
+  H=\frac{1}{2}\sum_{i=1}^n z_i\bar{z}_i. 
+\end{equation}
+Ahora, se comprueba fácilmente que las cantidades
+\begin{equation}
+  c_{ij}=z_i^{n_j}\bar{z}_j^{n_i} 
+\end{equation}
+son integrales primeras del sistema. En el caso en que $n_i=n_j$, entre estas cantidades tenemos los momentos angulares
+\begin{equation}
+  L_{ij}=q_ip_j-q_jp_i 
+\end{equation}
+y un tensor similar al de Fradkin
+\begin{equation}
+  A_{ij}=p_ip_j+n_in_j\omega^2 q_iq_j. 
+\end{equation}
+
+\section{El hamiltoniano de TTW}
+Principalmente por consideraciones al cuantizar, dentro de los sistemas integrables y superintegrables son de especial interés aquellos en los que sus integrales primeras son polinomiales en los momentos. Así, estos sistemas se llamarán \emph{polinomialmente integrables} (respectivamente, \emph{polinomialmente superintegrables}) y llamaremos \emph{orden} de sus integrales primeras al grado que estas tengan como polinomios en los momentos.
+
+Los sistemas superintegrables de segundo orden han sido bastante estudiados y poseen una teoría de clasificación. También han sido tratados varias clases de sistemas de tercer orden. Sin embargo, para sistemas generales de tercer orden y de órdenes superiores se conoce mucho menos. En particular hasta hace unos pocos años había pocos ejemplos y las teorías de estructura y clasificación eran prácticamente inexistentes. 
+
+La situación cambió drásticamente en 2009 con el trabajo de F. Tremblay, A. V. Turbiner y P. Winternitz [citar], donde los autores presentaron una familia de potenciales en el plano, parametrizados por una constante $k$, y conjeturaron que estos sistemas eran superintegrables para todo $k\in \QQ$, con órdenes tan grandes como se quisieran. Un año más tarde, en otro trabajo [citar] calcularon las trayectorias acotadas de esta familia de sistemas y mostraron que eran curvas cerradas para todos los casos con $k \in \QQ$, dando así evidencia a favor de su conjetura. Posteriormente se verificó que, efectivamente, sus conjeturas eran correctas.
+
+Concretamente, el hamiltoniano de Tremblay, Turbiner y Winternitz (que a partir de ahora abreviaremos como \emph{hamiltoniano de TTW}) en coordenadas polares tiene la forma 
+\begin{equation*}
+  H_k=\frac{1}{2}\left( p_r^2+\frac{p^2_{\phi}}{r^2} +\omega^2 r^2 \right) + V_k(r,\phi),
+\end{equation*}
+con
+\begin{equation}
+  V_k(r,\phi)=\frac{\alpha k^2}{2r^2\cos^2 k\phi}+\frac{\beta k^2}{2r^2\sin^2 k\phi}.
+  \label{eq:TTW}
+\end{equation}
+La integrabilidad viene garantizada por la integral primera
+\begin{equation}
+  X_k=L^2+\frac{\alpha k^2}{r^2\cos^2 k\phi}+\frac{\beta k^2}{r^2\sin^2 k\phi},
+\end{equation}
+donde $L=p_{\phi}$ es el momento angular. La existencia de una integral primera adicional $Y_{2k}$ de orden $2k$ para $k\in \QQ$ que diera la superintegrabilidad del sistema fue conjeturada por Tremblay, Turbiner y Winternitz en [citar] y posteriormente demostrada.
+
+\section{El hamiltoniano de TTW en unas nuevas coordenadas}
+En esta sección vamos a hacer un tratamiento novedoso del hamiltoniano de TTW, transformándolo a coordenadas cartesianas y haciendo uso de unas coordenadas complejas auxiliares, al estilo de como hemos hecho con el oscilador armónico anisótropo. Así, el hamiltoniano quedará en una forma distinta sobre la que se pueden  hacer varias interpretaciones.
+
+En coordenadas cartesianas, el hamiltoniano de TTW toma la forma
+\begin{equation*}
+  H_k=\frac{1}{2}[p_x^2+p_y^2+\omega^2(x^2+y^2)]+V_k(x,y),
+\end{equation*}
+a falta de hallar el aspecto del potencial $V_k$ en coordenadas cartesianas.
+Teniendo en cuenta que $(x,y)=r\vect{e}_r$, en coordenadas cartesianas el potencial queda
+\begin{align*}
+  V_k(x,y)&=\frac{\alpha k^2}{2r^2\cos^2(k\arctan \tfrac{y}{x})} \\ &+\frac{\beta k^2}{2r^2\sin^2(k\arctan \tfrac{y}{x})}
+\end{align*}
+o, equivalentemente,
+\begin{align*}
+  V_k(x,y)&=\frac{k^2}{2(x^2+y^2)}\left( \alpha\left[ 1+\tan^2\left( k\arctan\frac{y}{x} \right) \right] \right.\\ & \left. +\beta\left[ 1+\cot^2\left( k\arctan\frac{y}{x} \right) \right]\right).
+\end{align*}
+Esta expresión solo es sencilla para algunos valores de $k$, por ejemplo, para $k=1$,
+\begin{equation*}
+  V_1=\frac{1}{2}\left( \frac{\alpha}{x^2}+\frac{\beta}{y^2} \right).
+\end{equation*}
+Para valores enteros pequeños de $k$ podemos hacer algunas simplificaciones y obtenemos
+\begin{equation*}
+  V_2=\frac{1}{2}(x^2+y^2)\left( \frac{4\alpha}{(x^2-y^2)^2}+\frac{\beta}{x^2y^2} \right)
+\end{equation*}
+y
+\begin{equation*}
+  V_3=\frac{9}{2}(x^2+y^2)^2\left( \frac{\alpha}{(x^3-3xy^2)^2}+\frac{\beta}{(-3x^2y+y^3)^2} \right).
+\end{equation*}
+Destaca también el caso con $k=\tfrac{1}{2}$,
+\begin{equation*}
+  V_{1/2}=\frac{1}{2y^2}\left[ \alpha\left( 1-\frac{x}{\sqrt{x^2+y^2}} \right)+ \beta\left( 1+\frac{x}{\sqrt{x^2+y^2}} \right) \right].
+\end{equation*}
+
+Análogamente al caso del oscilador armónico anisótropo, podemos considerar unas coordenadas complejas 
+\begin{equation*}
+  \begin{cases}
+    z=x+iy \\
+    \bar{z}=x-iy,
+  \end{cases}
+\end{equation*}
+con momentos
+\begin{equation*}
+  \begin{cases}
+    p_z=\tfrac{1}{2}(p_x-ip_y),\\
+    p_{\zz}=\tfrac{1}{2}(p_x+ip_y).
+  \end{cases}
+\end{equation*}
+En estas coordenadas, el hamiltoniano de TTW se escribe
+\begin{equation*}
+  H_k=\tfrac{1}{2}(p_zp_{\zz}+\omega^2 z \zz) + V_k(z,\zz),
+\end{equation*}
+donde $V_k$ toma la forma
+\begin{equation}
+  V_k(z,\zz)=\frac{2\alpha k^2 z^{k-1}\zz^{k-1}}{(z^k+\zz^k)^2}-\frac{2\beta k^2 z^{k-1}\zz^{k-1}}{(z^k-\zz^k)^2}.
+\end{equation}
+Para estos cálculos hemos empleado la fórmula de Moivre
+\begin{equation*}
+  z=re^{i\phi} \ \ z^k=r^k(\cos k\phi+i\sin k\phi),
+\end{equation*}
+de modo que 
+\begin{equation*}
+  \cos k\phi = \frac{z^k+\zz^k}{2|z|^k} \ \  \sin k\phi = \frac{z^k-\zz^k}{2i|z|^k}. 
+\end{equation*}
+
+Si $k=1$ recuperamos el oscilador armónico con términos centrífugos
+\begin{equation*}
+  V_1=\frac{2\alpha}{(z+\zz)^2}-\frac{2\beta}{(z-\zz)^2},
+\end{equation*}
+y, cuando $k$ sea entero el potencial será una función racional
+\begin{align*}
+  V_k&=2k^2(x^2+y^2)^{k-1}\left[ \frac{\alpha}{\left( (x+iy)^k+(x-iy)^k \right)^2}\right.\\ &\left.-\frac{\beta}{\left( (x+iy)^k-(x-iy)^k \right)^2} \right]
+\end{align*}
+
+Haciendo ahora otro cambio a coordenadas reales
+\begin{equation*}
+  \begin{cases}
+    u=\tfrac{1}{2}(z^k+\zz^k), \\
+    v=\tfrac{1}{2i}(z^k-\zz^k)
+  \end{cases}
+\end{equation*}
+con momentos dados por
+\begin{equation*}
+  \begin{cases}
+    p_z=\tfrac{k}{2}z^{k-1}(p_u-ip_v), \\
+    p_{\zz}=\tfrac{k}{2}\zz^{k-1}(p_u+ip_v),
+  \end{cases}
+\end{equation*}
+el hamiltoniano de TTW queda en la forma
+\begin{equation}
+\begin{split}
+  H_k&=\frac{k^2}{4}(u^2+v^2)^{\frac{k-1}{k}}\Bigl[ \frac{1}{2}(p_u^2+p_v^2) \\ &+\frac{2\omega^2}{k^2}(u^2+v^2)^{\frac{2}{k}-1}+\frac{2\alpha}{u^2}+ \frac{2\beta}{v^2}\Bigr]. 
+\end{split}
+\end{equation}
+Si se elimina el factor global $\frac{k^2}{4}(u^2+v^2)^{\frac{k-1}{k}}$, lo que obtenemos es un oscilador no lineal con términos centrífugos. En las siguientes secciones haremos un estudio y una interpretación del hamiltoniano de TTW en este nuevo aspecto.
 
 \end{document}
 
