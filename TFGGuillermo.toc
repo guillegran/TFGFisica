@@ -1,4 +1,9 @@
 \select@language {spanish}
-\contentsline {section}{\tocsection {}{}{Introducci\IeC {\'o}n}}{2}{section*.2}
-\contentsline {section}{\tocsection {}{1}{Conceptos b\IeC {\'a}sicos: geometr\IeC {\'\i }a simpl\IeC {\'e}ctica, simetr\IeC {\'\i }as e integrabilidad}}{2}{section.1}
-\contentsline {section}{\tocsection {}{2}{Sistemas superintegrables, trayectorias cerradas y simetr\IeC {\'\i }as ocultas}}{4}{section.2}
+\contentsline {section}{Introducci\IeC {\'o}n}{2}{Doc-Start}
+\contentsline {section}{\numberline {1}Conceptos b\IeC {\'a}sicos: geometr\IeC {\'\i }a simpl\IeC {\'e}ctica, simetr\IeC {\'\i }as e integrabilidad}{2}{section.1}
+\contentsline {section}{\numberline {2}Sistemas superintegrables, trayectorias cerradas y simetr\IeC {\'\i }as ocultas}{5}{section.2}
+\contentsline {section}{\numberline {3}El oscilador arm\IeC {\'o}nico anis\IeC {\'o}tropo}{7}{section.3}
+\contentsline {section}{\numberline {4}El hamiltoniano de TTW}{8}{section.4}
+\contentsline {section}{\numberline {5}El hamiltoniano de TTW en coordenadas cartesianas}{9}{section.5}
+\contentsline {section}{\numberline {6}El hamiltoniano de TTW en coordenadas complejas}{10}{section.6}
+\contentsline {section}{\numberline {7}El hamiltoniano de TTW en unas nuevas coordenadas}{12}{section.7}

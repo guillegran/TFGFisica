@@ -2,10 +2,10 @@
 %     Created: sáb mar 03 09:00  2018 C
 % Last Change: sáb mar 03 09:00  2018 C
 %
-\documentclass[12pt,a4paper,twocolumn,reqno]{amsart}
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish, es-noquoting]{babel}
-\usepackage[inner=1.5cm,outer=1.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -17,7 +17,33 @@
 \usepackage{remreset}
 \usepackage{enumitem}
 \usepackage{titlepic}
+\usepackage{titlesec}
 \usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{anyfontsize}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+%Otro formato para las secciones
+\titleformat{\section}[block]
+{\fontsize{12}{15}\bfseries\sffamily\filcenter}
+{\S \thesection.}
+{1em}
+{}
+
+\makeatletter
+\@removefromreset{section}{chapter}
+\makeatother
+
+%Márgenes
+%\voffset=-1.5cm
+%\hoffset=-1.5cm
+%\setlength{\textwidth}{16cm}
+%\setlength{\textheight}{23cm}
+%\setlength{\headsep}{25pt}
+%\footskip=30pt
+
+%\parskip=1.2ex
 
 %\usepackage{bm} Para poner los vectores de otra forma
 
@@ -51,7 +77,7 @@
 \def\SF{\mathbb{S}}
 \def\NN{\mathbb{N}}
 \def\dd{\mathrm{d}}
-\def\lie{\mathcal{L}}
+\def\lie{\mathscr{L}}
 \def\gg{\mathfrak{g}}
 \def\zz{\bar{z}}
 
@@ -62,42 +88,44 @@
 \newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\pois}[2]{\left\lbrace#1,#2\right\rbrace}
 
+\title{Simetrías en modelos integrables y superintegrables}
 \author{Guillermo Gallego}
 \date{\bf \today}
 
 \begin{document}
-\onecolumn
-\title[SIMETRÍAS EN MODELOS INTEGRABLES Y SUPERINTEGRABLES]{
-{\rm\tiny Trabajo  \hspace{-1mm}de  \hspace{-1mm}Fin  \hspace{-1mm}de  \hspace{-1mm}Grado,  
-\hspace{-1mm}Junio  \hspace{-1mm}2018}\\[8pt] 
-SIMETRÍAS EN MODELOS INTEGRABLES Y SUPERINTEGRABLES\\[8pt]
-{\rm\tiny Departamento \hspace{-1mm}de  \hspace{-1mm}Física  \hspace{-1mm}Teórica\\
-Facultad  \hspace{-1mm}de  \hspace{-1mm}Ciencias \hspace{-1mm}Físicas,  \hspace{-1mm}UCM\\
-{\rm\tiny Dirigido por Miguel A. Rodríguez}
-}}
+%\title[SIMETRÍAS EN MODELOS INTEGRABLES Y SUPERINTEGRABLES]{
+%{\rm\tiny Trabajo  \hspace{-1mm}de  \hspace{-1mm}Fin  \hspace{-1mm}de  \hspace{-1mm}Grado,  
+%\hspace{-1mm}Junio  \hspace{-1mm}2018}\\[8pt] 
+%SIMETRÍAS EN MODELOS INTEGRABLES Y SUPERINTEGRABLES\\[8pt]
+%{\rm\tiny Departamento \hspace{-1mm}de  \hspace{-1mm}Física  \hspace{-1mm}Teórica\\
+%Facultad  \hspace{-1mm}de  \hspace{-1mm}Ciencias \hspace{-1mm}Físicas,  \hspace{-1mm}UCM\\
+%{\rm\tiny Dirigido por Miguel A. Rodríguez}
+%}}
 \maketitle
 \begin{abstract}
   El abstract
 \end{abstract}
 \newpage
 
-\twocolumn
+\tableofcontents
 
 \section*{Introducción}
+\addcontentsline{toc}{section}{Introducción}
 Aquí la introducción.
 \section{Conceptos básicos: geometría simpléctica, simetrías e integrabilidad}
 La estructura matemática característica de los espacios de fases en Mecánica Clásica es la de \emph{variedad simpléctica}. Una variedad simpléctica es un par $(M,\omega)$, donde $M$ es una variedad diferenciable y $\omega$ es una $2$-forma diferencial (un tensor covariante antisimétrico de grado $2$), no degenerada y cerrada, es decir, tal que $\dd \omega=0$. En el caso en que la forma $\omega$ sea exacta, es decir, que exista una $1$-forma $\theta$ tal que $\omega=\dd \theta$, se dice que la variedad $(M,\omega)$ es exacta. 
 
-El ejemplo más básico de variedad simpléctica es el espacio $\RR^{2n}=\left\{ (\vect{q},\vect{p}) \right\}$, con $\vect{q}=(q_1,\dots,q_n)$ y $\vect{p}=(p_1,\dots,p_n)$, equipado con la forma $\omega=\dd p_i \wedge \dd q_i$. Claramente esta variedad es exacta pues $\omega=\dd \theta$, con $\theta=p_i \dd q_i$. El \emph{teorema de Darboux}, garantiza que para toda variedad simpléctica $(M,\omega)$ localmente es posible encontrar unas coordenadas $(\vect{q},\vect{p})$ en las que la forma toma el aspecto $\omega=\dd p_i \wedge \dd q_i$. Este tipo de coordenadas se llaman \emph{coordenadas de Darboux}.
+El ejemplo más básico de variedad simpléctica es el espacio $\RR^{2n}=\left\{ (\vect{q},\vect{p}) \right\}$, con $\vect{q}=(q_1,\dots,q_n)$ y $\vect{p}=(p_1,\dots,p_n)$, equipado con la forma $\omega=\dd p_i \wedge \dd q_i$. Claramente esta forma es exacta pues $\omega=\dd \theta$, con $\theta=p_i \dd q_i$. El \emph{teorema de Darboux}, garantiza que para toda variedad simpléctica $(M,\omega)$ localmente es posible encontrar unas coordenadas $(\vect{q},\vect{p})$ en las que la forma toma el aspecto $\omega=\dd p_i \wedge \dd q_i$. Este tipo de coordenadas se llaman \emph{coordenadas de Darboux}.
 
-La forma $\omega$ induce una dualidad entre campos y $1$-formas. Resulta que a cada campo vectorial $\xi$ en la variedad le podemos asignar la forma $i_{\xi}\omega$, donde $i$ denota la \emph{contracción}, es decir $i_{\xi}\omega=\omega(\xi,\bullet)$. Un campo $\xi$ se dice \emph{simpléctico} si $\lie_{\xi}\omega=0$, donde $\lie$ denota la \emph{derivada de Lie}. Ahora, por la fórmula de Cartan, $\lie_{\xi}\omega=i_{\xi}(\dd \omega)+\dd(i_{\xi}\omega)=\dd(i_{\xi}\omega)$, de modo que un campo $\xi$ es simpléctico si y sólo si la forma $i_{\xi}\omega$ es cerrada. En el caso particular en que esta forma $i_{\xi}\omega$ sea exacta, existirá una función $H:M\rightarrow \RR$ tal que $i_{\xi}\omega=\dd H$ y decimos que $\xi$ es un \emph{campo hamiltoniano} de \emph{hamiltoniano} $H$ y se denota $\xi_H$. Un cálculo sencillo muestra que, localmente, en coordenadas de Darboux, las curvas integrales del campo $\xi_H$ seguirán las \emph{ecuaciones de Hamilton}
+La forma $\omega$ induce una dualidad entre campos y $1$-formas. Resulta que a cada campo vectorial $\xi$ en la variedad le podemos asignar la forma $i_{\xi}\omega$, donde $i$ denota la \emph{contracción}, es decir $i_{\xi}\omega=\omega(\xi,\bullet)$. Un campo $\xi$ se dice \emph{simpléctico} si $\lie_{\xi}\omega=0$, donde $\lie$ denota la \emph{derivada de Lie}. Ahora, por la fórmula de Cartan, $\lie_{\xi}\omega=i_{\xi}(\dd \omega)+\dd(i_{\xi}\omega)=\dd(i_{\xi}\omega)$, de modo que un campo $\xi$ es simpléctico si y sólo si la forma $i_{\xi}\omega$ es cerrada. En el caso particular en que esta forma $i_{\xi}\omega$ sea exacta, existirá una función $H:M\rightarrow \RR$ tal que $\dd H=-i_{\xi}\omega$ y decimos que $\xi$ es un \emph{campo hamiltoniano} de \emph{hamiltoniano} $H$ y se denota $\xi_H$. Un cálculo sencillo muestra que, localmente, en coordenadas de Darboux, las curvas integrales del campo $\xi_H$ seguirán las \emph{ecuaciones de Hamilton}
 \begin{equation}
   \begin{cases}
-   \dot{\vect{q}}=\parcial{H}{p}\\ 
-    \dot{\vect{p}}=-\parcial{H}{q} .
+    \dot{q_i}=\parcial{H}{p_i}\\ 
+    \dot{p_i}=-\parcial{H}{q_i} ,
   \end{cases}
   \label{eq:hamilton}
 \end{equation}
+con $i=1,\dots,n$.
 Así, entenderemos por un \emph{sistema hamiltoniano} con $n$ grados de libertad una función $H:M\rightarrow \RR$ definida sobre una variedad simpléctica $M$ de dimensión $2n$.
 
 El \emph{corchete de Poisson} también puede recuperarse ahora en el contexto simpléctico definiendo simplemente $\left\{ F,G \right\}=\xi^F G$, que localmente, en coordenadas de Darboux, se expresará en la forma clásica
@@ -105,14 +133,14 @@ El \emph{corchete de Poisson} también puede recuperarse ahora en el contexto si
   \left\{ F,G \right\}=\parcial{F}{p_i}\parcial{G}{q_i}-\parcial{F}{q_i}\parcial{G}{p_i}.
   \label{eq:poisson}
 \end{equation}
-En este contexto las transformaciones canónicas serán simplemente aplicaciones $\varphi:M\rightarrow M$ que preserven la forma $\omega$, es decir, tales que $\varphi^*\omega=\omega$ o, equivalentemente que preserven el corchete de Poisson, $\left\{ F,G \right\}\circ \varphi^{-1}=\left\{ F\circ \varphi^{-1},G\circ \varphi^{-1} \right\}$.
+En este contexto las transformaciones canónicas serán simplemente difeomorfismos $\varphi:M\rightarrow M$ que preserven la forma $\omega$, es decir, tales que $\varphi^*\omega=\omega$ o, equivalentemente que preserven el corchete de Poisson, $\left\{ F,G \right\}\circ \varphi=\left\{ F\circ \varphi,G\circ \varphi \right\}$.
 
 En el formalismo simpléctico el teorema de Noether adquiere también un nuevo cariz. Para ver esto supongamos que la variedad $M$ es conexa y consideremos un grupo de Lie $G$ que actúa sobre $M$ de tal forma que para cada $g\in G$, la aplicación $\Phi_g:M\rightarrow M$ inducida por la acción es una transformación canónica. En tal caso decimos que la acción $\Phi:G\times M\rightarrow M$ es una \emph{acción simpléctica}. Consideramos ahora una función $J:M\rightarrow \gg^*$, donde $\gg^*$ denota el dual del álgebra de Lie $\gg$ de $G$ y, para cada $\xi\in \gg$, llamamos $\hat{J}$ a la función
 \begin{align*}
   \hat{J}(\xi) :M&\longrightarrow \RR\\ 
      x &\longmapsto J(x)\cdot \xi.
   \end{align*}
-  Decimos entonces que $J$ es una \emph{aplicación momento} para la acción si $\dd \hat{J}(\xi)=i_{\xi_M}\omega$, donde $\xi_M$ denota el generador infinitesimal de la acción correspondiente a $\xi$ (es decir, de la inducida por el subgrupo uniparamétrico $\exp(\xi t)$). Nótese también que el campo de hamiltoniano $\hat{J}(\xi)$ es precisamente $\xi_M$. Formulamos entonces la «versión simpléctica» del teorema de Noether 
+  Decimos entonces que $J$ es una \emph{aplicación momento} para la acción si $\dd \hat{J}(\xi)=-i_{\xi_M}\omega$, donde $\xi_M$ denota el generador infinitesimal de la acción correspondiente a $\xi$ (es decir, de la inducida por el subgrupo uniparamétrico $\exp(\xi t)$). Nótese también que el campo de hamiltoniano $\hat{J}(\xi)$ es precisamente $\xi_M$. Formulamos entonces la «versión simpléctica» del teorema de Noether 
   \begin{thm}[Noether]
     Sea $\Phi:G\times M \rightarrow M$ una acción simpléctica de un grupo de Lie $G$ en una variedad simpléctica $(M,\omega)$ con una aplicación momento $J$. Supongamos que $H:M\rightarrow \RR$ es invariante bajo la acción, esto es, $H(x)=H(\Phi_g(x))$ para cualesquiera $x\in M$ y $g\in G$. Entonces $J$ es una cantidad conservada del campo hamiltoniano $\xi_H$, esto es, si $\varphi_t$ es el flujo de $\xi_H$, $J(\varphi_t(x))=J(x)$ para todo $t$.
   \end{thm}
@@ -130,7 +158,7 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
       \end{equation*}
       Ahora, si consideramos el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$, que en coordenadas se expresa $L_k(q_i,p_j)=\epsilon_{ijk}q_ip_j$, de modo que $(\vect{L}\times\vect{u})_{k}=\epsilon_{ijk}u_kq_ip_j$ y 
       \begin{align*}
-	\dd(\vect{L}\times \vect{u})&=\epsilon_{ijk}u_k(q_i\dd p_j + p_j\dd q_i)\\ &=\epsilon_{ijk}u_k(q_i\dd p_j - p_i\dd q_j)=-i_{\vect{u}_M}\omega.
+	\dd(\vect{L}\times \vect{u})&=\epsilon_{ijk}u_k(q_i\dd p_j + p_j\dd q_i)=\epsilon_{ijk}u_k(q_i\dd p_j - p_i\dd q_j)=-i_{\vect{u}_M}\omega.
       \end{align*}
       Por tanto, si consideramos la aplicación $L:\RR^6\rightarrow\mathfrak{so}(3)^*$ que a cada $(\vect{q},\vect{p})$ le asigna  
       \begin{align*}
@@ -307,7 +335,7 @@ La situación cambió drásticamente en 2009 con el trabajo de F. Tremblay, A. V
 
 Concretamente, el hamiltoniano de Tremblay, Turbiner y Winternitz (que a partir de ahora abreviaremos como \emph{hamiltoniano de TTW}) en coordenadas polares tiene la forma 
 \begin{equation*}
-  H_k=\frac{1}{2}\left( p_r^2+\frac{p^2_{\phi}}{r^2} +\omega^2 r^2 \right) + V_k(r,\phi),
+  H_k(r,\phi,p_r,p_{\phi})=\frac{1}{2}\left( p_r^2+\frac{p^2_{\phi}}{r^2} +\omega^2 r^2 \right) + V_k(r,\phi),
 \end{equation*}
 con
 \begin{equation}
@@ -320,21 +348,21 @@ La integrabilidad viene garantizada por la integral primera
 \end{equation}
 donde $L=p_{\phi}$ es el momento angular. La existencia de una integral primera adicional $Y_{2k}$ de orden $2k$ para $k\in \QQ$ que diera la superintegrabilidad del sistema fue conjeturada por Tremblay, Turbiner y Winternitz en [citar] y posteriormente demostrada.
 
-\section{El hamiltoniano de TTW en unas nuevas coordenadas}
-En esta sección vamos a hacer un tratamiento novedoso del hamiltoniano de TTW, transformándolo a coordenadas cartesianas y haciendo uso de unas coordenadas complejas auxiliares, al estilo de como hemos hecho con el oscilador armónico anisótropo. Así, el hamiltoniano quedará en una forma distinta sobre la que se pueden  hacer varias interpretaciones.
+\section{El hamiltoniano de TTW en coordenadas cartesianas}
+Para continuar con el estudio del Hamiltoniano de TTW, en esta sección vamos a ver cómo se expresa en coordenadas cartesianas y vamos a representar el potencial en los casos más sencillos.
 
 En coordenadas cartesianas, el hamiltoniano de TTW toma la forma
 \begin{equation*}
-  H_k=\frac{1}{2}[p_x^2+p_y^2+\omega^2(x^2+y^2)]+V_k(x,y),
+  H_k(x,y,p_x,p_y)=\frac{1}{2}[p_x^2+p_y^2+\omega^2(x^2+y^2)]+V_k(x,y),
 \end{equation*}
 a falta de hallar el aspecto del potencial $V_k$ en coordenadas cartesianas.
 Teniendo en cuenta que $(x,y)=r\vect{e}_r$, en coordenadas cartesianas el potencial queda
 \begin{align*}
-  V_k(x,y)&=\frac{\alpha k^2}{2r^2\cos^2(k\arctan \tfrac{y}{x})} \\ &+\frac{\beta k^2}{2r^2\sin^2(k\arctan \tfrac{y}{x})}
+  V_k(x,y)=\frac{\alpha k^2}{2r^2\cos^2(k\arctan \tfrac{y}{x})} +\frac{\beta k^2}{2r^2\sin^2(k\arctan \tfrac{y}{x})}
 \end{align*}
 o, equivalentemente,
 \begin{align*}
-  V_k(x,y)&=\frac{k^2}{2(x^2+y^2)}\left( \alpha\left[ 1+\tan^2\left( k\arctan\frac{y}{x} \right) \right] \right.\\ & \left. +\beta\left[ 1+\cot^2\left( k\arctan\frac{y}{x} \right) \right]\right).
+  V_k(x,y)=\frac{k^2}{2(x^2+y^2)}\left( \alpha\left[ 1+\tan^2\left( k\arctan\frac{y}{x} \right) \right] \right. \left. +\beta\left[ 1+\cot^2\left( k\arctan\frac{y}{x} \right) \right]\right).
 \end{align*}
 Esta expresión solo es sencilla para algunos valores de $k$, por ejemplo, para $k=1$,
 \begin{equation*}
@@ -353,46 +381,139 @@ Destaca también el caso con $k=\tfrac{1}{2}$,
   V_{1/2}=\frac{1}{2y^2}\left[ \alpha\left( 1-\frac{x}{\sqrt{x^2+y^2}} \right)+ \beta\left( 1+\frac{x}{\sqrt{x^2+y^2}} \right) \right].
 \end{equation*}
 
-Análogamente al caso del oscilador armónico anisótropo, podemos considerar unas coordenadas complejas 
+\section{El hamiltoniano de TTW en coordenadas complejas}
+Inspirados por el cambio a coordenadas complejas que hemos hecho al tratar el oscilador armónico anisótropo, vamos a tratar de introducir unas coordenadas complejas al caso del hamiltoniano TTW, para ver si lo podemos dejar en una forma que nos dé más información sobre su comportamiento. En este caso, sin embargo, el cambio propuesto es ligeramente distinto, ya que no queremos combinar las coordenadas con los momentos sino que queremos obtener unas nuevas coordenadas generalizadas complejas y ver qué aspecto tendrán sus momentos canónicos conjugados. Concretamente, queremos hacer un cambio de esta forma
+\begin{equation}
+  z=x+iy.
+\end{equation}
+Esta clase de tratamientos de las coordenadas generalizadas son realizados comúnmente en física en diversas situaciones, sin embargo, cabe detenerse por un momento para entender qué es lo que está sucediendo geométricamente.
+
+Sea $M$ una variedad diferenciable. Una \emph{estructura cuasicompleja} en $M$ es un endomorfismo
+\begin{align*}
+  J :TM&\longrightarrow TM
+  \end{align*}
+  tal que $J^2=-\mathrm{id}$. Nótese que por tanto $M$ ha de tener dimensión par. Podemos considerar entonces el \emph{fibrado tangente complexificado}
+  \begin{equation*}
+    T_{\CC}M=TM\otimes \CC.
+  \end{equation*}
+Ahora, si consideramos la aplicación bilineal
+\begin{align*}
+  \tilde{J} :TM \times \CC&\longrightarrow TM\otimes \CC\\ 
+    (\xi,z) &\longmapsto J(\xi)\otimes \CC, 
+  \end{align*}
+  entonces, por la propiedad universal del producto tensorial existe una única aplicación lineal $I:T_{\CC}M \rightarrow T_{\CC}M$ tal que el siguiente diagrama conmuta
+  \begin{center}
+    \begin{tikzcd}
+      TM \times \CC      \arrow{rr}{\otimes}\arrow{rrdd}[anchor=north,rotate=-30]{\tilde{J}} && T_{\CC}M = TM \otimes \CC \arrow{dd}[anchor=west]{I} \\ 
+       && \\
+       &&T_{\CC}M.
+     \end{tikzcd}
+   \end{center}
+   La aplicación $I$ es entonces un endomorfismo de $T_{\CC}M$ con autovalores $\pm i$ y podemos descomponer
+   \begin{equation*}
+     T_{\CC}M=\ker(I-i)\oplus \ker(I+i).
+   \end{equation*}
+
+   En el caso particular en que $M$ se una variedad de dimensión $2$ con coordenadas $(x,y)$, podemos considerar entonces la «coordenada compleja» 
+   \begin{equation*}
+     z=x+iy.
+   \end{equation*}
+   Ahora, en el fibrado tangente $TM$ podemos considerar la base holónoma $\left\{ \partial_x, \partial_y \right\}$ y la estructura cuasicompleja dada por
+   \begin{align*}
+     I :TM&\longrightarrow TM\\ 
+       \partial_x &\longmapsto \partial_y \\
+       \partial_y &\longmapsto -\partial_x .
+     \end{align*}
+     Consideremos entonces el fibrado tangente complexificado $T_{\CC}M$ y los vectores
+     \begin{equation*}
+       \begin{cases}
+	 \partial_z=\tfrac{1}{2}(\partial_x-i\partial_y) \\
+	 \partial_{\bar{z}}=\tfrac{1}{2}(\partial_x+i\partial_y) .
+       \end{cases}
+     \end{equation*}
+     Es inmediato comprobar que 
+	 $\partial_z\in \ker(I-i)$ y que
+	 $\partial_{\bar{z}} \in \ker(I+i)$,
+	 de modo que $\left\{ \partial_z, \partial_{\bar{z}} \right\}$ es una base de $T_{\CC}M$. Si tenemos un vector $v \in TM$ que en la base holónoma original se escribe
+     \begin{equation*}
+       v = \dot{x} \partial_x + \dot{y} \partial_y,
+     \end{equation*}
+     entonces, si pensamos en $v$ como vector de $T_{\CC}M$, podemos escribirlo en la base $\left\{ \partial_z, \partial_{\bar{z}} \right\}$ en la forma
+     \begin{equation*}
+       v= \dot{z} \partial_z + \dot{\bar{z}} \partial_{\bar{z}},
+     \end{equation*}
+     con $\dot{z}=\dot{x} + i \dot{y}$. De modo que un lagrangiano $\mathcal{L}:TM\rightarrow \RR$, que localmente puede expresarse en las coordenadas originales
+     \begin{equation*}
+       \mathcal{L}(v)=\mathcal{L}(x,y,\dot{x},\dot{y}),
+     \end{equation*}
+     puede extenderse a $T_{\CC}M$ en las nuevas coordenadas complejas en la forma
+     \begin{equation}
+       \mathcal{L} (v)=\mathcal{L}(z,\bar{z},\dot{z},\dot{\bar{z}}).
+     \end{equation}
+
+     Volviendo al caso que nos incumbe, $M=\RR^2$ y podemos considerar el lagrangiano del sistema TTW
+     \begin{equation}
+       \mathcal{L}_k(x,y,\dot{x},\dot{y})=\tfrac{1}{2}[\dot{x}^2+\dot{y}^2+\omega^2(x^2+y^2)]+V_k(x,y).
+     \end{equation}
+     Tomamos ahora el potencial $V_k$ en coordenadas polares
+\begin{equation*}
+  V_k(r,\phi)=\frac{\alpha k^2}{2r^2\cos^2 k\phi}+\frac{\beta k^2}{2r^2\sin^2 k\phi}
+\end{equation*}
+y lo cambiamos a las nuevas coordenadas
 \begin{equation*}
   \begin{cases}
     z=x+iy \\
     \bar{z}=x-iy,
   \end{cases}
 \end{equation*}
-con momentos
+teniendo en cuenta que $z=r e^{i\phi}$ y la fórmula de Moivre
 \begin{equation*}
-  \begin{cases}
-    p_z=\tfrac{1}{2}(p_x-ip_y),\\
-    p_{\zz}=\tfrac{1}{2}(p_x+ip_y).
-  \end{cases}
+  z^k=r^k(\cos k\phi+i\sin k\phi),
 \end{equation*}
-En estas coordenadas, el hamiltoniano de TTW se escribe
-\begin{equation*}
-  H_k=\tfrac{1}{2}(p_zp_{\zz}+\omega^2 z \zz) + V_k(z,\zz),
-\end{equation*}
-donde $V_k$ toma la forma
-\begin{equation}
-  V_k(z,\zz)=\frac{2\alpha k^2 z^{k-1}\zz^{k-1}}{(z^k+\zz^k)^2}-\frac{2\beta k^2 z^{k-1}\zz^{k-1}}{(z^k-\zz^k)^2}.
-\end{equation}
-Para estos cálculos hemos empleado la fórmula de Moivre
-\begin{equation*}
-  z=re^{i\phi} \ \ z^k=r^k(\cos k\phi+i\sin k\phi),
-\end{equation*}
-de modo que 
+de donde se tiene
 \begin{equation*}
   \cos k\phi = \frac{z^k+\zz^k}{2|z|^k} \ \  \sin k\phi = \frac{z^k-\zz^k}{2i|z|^k}. 
 \end{equation*}
-
-Si $k=1$ recuperamos el oscilador armónico con términos centrífugos
+Obtenemos entonces el potencial
+\begin{equation}
+  V_k(z,\zz)=\frac{2\alpha k^2 z^{k-1}\zz^{k-1}}{(z^k+\zz^k)^2}-\frac{2\beta k^2 z^{k-1}\zz^{k-1}}{(z^k-\zz^k)^2}.
+\end{equation}
+De modo que el lagrangiano del sistema TTW se expresa en las coordenadas complejas en la forma
+\begin{equation}
+  \mathcal{L}_k(z,\zz,\dot{z},\dot{\zz})=\tfrac{1}{2}(\dot{z}\dot{\zz}+\omega^2 z \zz) + V_k(z,\zz).
+\end{equation}
+Ahora, teniendo en cuenta que, en este caso,
+\begin{equation*}
+  \begin{cases}
+    p_x=\dot{x}\\
+    p_y=\dot{y},
+  \end{cases}
+\end{equation*}
+tenemos los nuevos momentos canónicos conjugados
+\begin{equation*}
+  \begin{cases}
+    p_z=\frac{\partial \mathcal{L}_k }{\partial \dot{z}}=\tfrac{1}{2} \dot{\zz}=\tfrac{1}{2}(\dot{x}-i\dot{y})=\tfrac{1}{2}(p_x-ip_y),\\
+    p_{\zz}=\frac{\partial \mathcal{L}_k }{\partial \dot{\zz}}=\tfrac{1}{2} \dot{z}=\tfrac{1}{2}(\dot{x}+i\dot{y})=\tfrac{1}{2}(p_x+ip_y).
+  \end{cases}
+\end{equation*}
+Vemos entonces que el hamiltoniano de TTW se escribe en las coordenadas complejas en la forma
+\begin{equation*}
+  H_k(z,\zz,p_z,p_{\zz})=\tfrac{1}{2}(p_zp_{\zz}+\omega^2 z \zz) + V_k(z,\zz).
+\end{equation*}
+Nótese también que podemos seguir pensando en las coordenadas $(z,\zz,p_z,p_{\zz})$ como coordenadas de Darboux, en efecto, se comprueba fácilmente que
+\begin{equation*}
+  \dd p_z \wedge \dd z + \dd p_{\zz} \wedge \dd \zz=\dd p_x \wedge \dd x + \dd p_y \wedge \dd y.
+\end{equation*}
+Finalmente, nótese que si $k=1$ recuperamos el oscilador armónico con términos centrífugos
 \begin{equation*}
   V_1=\frac{2\alpha}{(z+\zz)^2}-\frac{2\beta}{(z-\zz)^2},
 \end{equation*}
 y, cuando $k$ sea entero el potencial será una función racional
 \begin{align*}
-  V_k&=2k^2(x^2+y^2)^{k-1}\left[ \frac{\alpha}{\left( (x+iy)^k+(x-iy)^k \right)^2}\right.\\ &\left.-\frac{\beta}{\left( (x+iy)^k-(x-iy)^k \right)^2} \right]
+  V_k=2k^2(x^2+y^2)^{k-1}\left[ \frac{\alpha}{\left( (x+iy)^k+(x-iy)^k \right)^2}-\frac{\beta}{\left( (x+iy)^k-(x-iy)^k \right)^2} \right].
 \end{align*}
 
+\section{El hamiltoniano de TTW en unas nuevas coordenadas}
 Haciendo ahora otro cambio a coordenadas reales
 \begin{equation*}
   \begin{cases}
@@ -409,9 +530,7 @@ con momentos dados por
 \end{equation*}
 el hamiltoniano de TTW queda en la forma
 \begin{equation}
-\begin{split}
-  H_k&=\frac{k^2}{4}(u^2+v^2)^{\frac{k-1}{k}}\Bigl[ \frac{1}{2}(p_u^2+p_v^2) \\ &+\frac{2\omega^2}{k^2}(u^2+v^2)^{\frac{2}{k}-1}+\frac{2\alpha}{u^2}+ \frac{2\beta}{v^2}\Bigr]. 
-\end{split}
+  H_k(u,v,p_u,p_v)=\frac{k^2}{4}(u^2+v^2)^{\frac{k-1}{k}}\left[ \frac{1}{2}(p_u^2+p_v^2) \frac{2\omega^2}{k^2}(u^2+v^2)^{\frac{2}{k}-1}+\frac{2\alpha}{u^2}+ \frac{2\beta}{v^2}\right]. 
 \end{equation}
 Si se elimina el factor global $\frac{k^2}{4}(u^2+v^2)^{\frac{k-1}{k}}$, lo que obtenemos es un oscilador no lineal con términos centrífugos. En las siguientes secciones haremos un estudio y una interpretación del hamiltoniano de TTW en este nuevo aspecto.
 
