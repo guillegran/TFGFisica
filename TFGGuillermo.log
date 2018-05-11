@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  9 MAY 2018 20:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  11 MAY 2018 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1607,6 +1607,20 @@ text indent calculated (toc, 1): 12.0pt
 number indent calculated (toc, 1): 0.0pt
 text noindent (toc, 1): 12.0pt
 number noindent (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  18.0pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.0pt
+number indent calculated (toc, 1): 0.0pt
+text noindent (toc, 1): 12.0pt
+number noindent (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  18.0pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.0pt
+number indent calculated (toc, 1): 0.0pt
+text noindent (toc, 1): 12.0pt
+number noindent (toc, 1): 0.0pt
 )
 \tf@toc=\write5
 \openout5 = `TFGGuillermo.toc'.
@@ -1651,9 +1665,9 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [5]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 270.
+(Font)              scaled to size 8.8pt on input line 309.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 270.
+(Font)              scaled to size 6.6pt on input line 309.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1703,7 +1717,28 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[12] (./TFGGuillermo.bbl (./TFGGuillermo.brf)
+[12]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15] (./TFGGuillermo.bbl (./TFGGuillermo.brf)
 \tf@brf=\write6
 \openout6 = `TFGGuillermo.brf'.
 
@@ -1714,27 +1749,37 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 594.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 594.
+[16]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 15.0pt on input line 739.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 741.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 741.
  (./TFGGuillermo.aux
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 594.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 594.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 741.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 741.
 Package rerunfilecheck Info: File `TFGGuillermo.out' has not changed.
-(rerunfilecheck)             Checksum: 87EDB78DF0876A45DC2B5610D31A04A1;746.
+(rerunfilecheck)             Checksum: 472A5C34F68C379B5A400BAD94476055;899.
 Package rerunfilecheck Info: File `TFGGuillermo.brf' has not changed.
-(rerunfilecheck)             Checksum: 44AEB7E73CD77D152F80C3D8C348511B;249.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 594.
+(rerunfilecheck)             Checksum: 509DD9EBCFC732B923156F12B891FDF3;249.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 741.
  ) 
 Here is how much of TeX's memory you used:
- 23036 strings out of 494850
- 421985 string characters out of 6178025
- 489410 words of memory out of 5000000
- 25731 multiletter control sequences out of 15000+600000
- 82729 words of font info for 139 fonts, out of 8000000 for 9000
+ 23076 strings out of 494850
+ 422482 string characters out of 6178025
+ 488633 words of memory out of 5000000
+ 25738 multiletter control sequences out of 15000+600000
+ 85532 words of font info for 140 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  56i,14n,84p,1023b,939s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/sh
@@ -1747,18 +1792,19 @@ re/qtmr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/
-rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txex-bar.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8
-a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TFGGuillermo.pdf (13 pages, 208716 bytes).
+ic/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rt
+xmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/newtx/txex-bar.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t
+xsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on TFGGuillermo.pdf (17 pages, 229318 bytes).
 PDF statistics:
- 300 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
- 91 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 327 compressed objects within 4 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -124,7 +124,7 @@
 \section*{Introducción}
 \addcontentsline{toc}{section}{Introducción}
 Aquí la introducción.
-\section{Conceptos básicos: geometría simpléctica, simetrías e integrabilidad}
+\section{Geometría simpléctica y simetrías en Mecánica Clásica}
 La estructura matemática característica de los espacios de fases en Mecánica Clásica es la de \emph{variedad simpléctica}. Una variedad simpléctica es un par $(M,\omega)$, donde $M$ es una variedad diferenciable y $\omega$ es una $2$-forma diferencial (un tensor covariante antisimétrico de grado $2$), no degenerada y cerrada, es decir, tal que $\dd \omega=0$. En el caso en que la forma $\omega$ sea exacta, es decir, que exista una $1$-forma $\theta$ tal que $\omega=\dd \theta$, se dice que la variedad $(M,\omega)$ es exacta. 
 
 El ejemplo más básico de variedad simpléctica es el espacio $\RR^{2n}=\left\{ (\vect{q},\vect{p}) \right\}$, con $\vect{q}=(q_1,\dots,q_n)$ y $\vect{p}=(p_1,\dots,p_n)$, equipado con la forma $\omega=\dd p_i \wedge \dd q_i$. Claramente esta forma es exacta pues $\omega=\dd \theta$, con $\theta=p_i \dd q_i$. El \emph{teorema de Darboux}, garantiza que para toda variedad simpléctica $(M,\omega)$ localmente es posible encontrar unas coordenadas $(\vect{q},\vect{p})$ en las que la forma toma el aspecto $\omega=\dd p_i \wedge \dd q_i$. Este tipo de coordenadas se llaman \emph{coordenadas de Darboux}.
@@ -180,7 +180,11 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
 	tenemos que $L$ es una aplicación momento de la acción de $\mathrm{SO}(3)$. Por el teorema de Noether, si consideramos un hamiltoniano $H$ en $\RR^6$ que sea invariante bajo rotaciones, tenemos que la aplicación momento $L$ es una integral primera del sistema hamiltoniano dado por $H$. Como consecuencia, el momento angular $\vect{L}$ es una cantidad conservada del sistema.
   \end{ejemplo}
 
-  Finalmente, uno de los aspectos de la Mecánica Clásica donde el formalismo simpléctico muestra todo su potencial es la teoría de sistemas integrables. 
+  \section{Sistemas integrables y variables de acción-ángulo}
+
+  Uno de los aspectos de la Mecánica Clásica donde el formalismo simpléctico muestra todo su potencial es la teoría de sistemas integrables, cuyo resultado central es el \emph{teorema de Arnold-Liouville}.
+  Este teorema nos dice que si un sistema hamiltoniano tiene una cantidad suficiente de integrales primeras (o de simetrías, aunque éstas no son siempre evidentes) el comportamiento de este sistema será muy sencillo. Esto es una motivación suficiente para buscar sistemas de este tipo, tal vez mediante la metodología de hallar sus grupos de simetría y asociarles sus aplicaciones momento.
+
   \begin{defn}
     Un sistema hamiltoniano $H$ sobre una variedad simpléctica $(M,\omega)$ de dimensión $2n$ se dice \emph{completamente integrable} si admite $n$ integrales primeras $F_1=H,\dots,F_n$ en involución, es decir, tales que
     \begin{equation}
@@ -193,16 +197,6 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
     para casi todo punto $x\in M$.
   \end{defn}
 
-  El teorema central de toda la teoría de sistemas integrables es el siguiente:
-  \begin{thm}[Arnold-Liouville]\label{arnoldliouville}
-   Sea un sistema hamiltoniano $H$ sobre una variedad simpléctica $(M,\omega)$ de dimensión $2n$ que es completamente integrable y sea $F=(F_1,\dots,F_n):M\rightarrow \RR^n$ con $F_1,\dots,F_n$ las integrales primeras en involución del sistema. Entonces:
-   \begin{enumerate}
-     \item Los conjuntos de nivel $F^{-1}(a)$ son subvariedades de $M$ invariantes bajo el flujo del sistema,
-     \item Las componentes conexas de los conjuntos de nivel son difeomorfas a $\TT^k\times \RR^{n-k}$ para cierto $0\leq k \leq n$, donde $\TT^k$ denota el toro $k$-dimensional $\TT^k=\SF^1\times \cdots \times \SF^1$, $k$ veces. En particular, las compactas son difeomorfas a toros $\TT^n$, que llamamos \emph{toros de Liouville}. Además, en cada uno de estos conjuntos de nivel la dinámica es lineal, es decir, existen unas coordenadas $\vect{w}$ en estos conjuntos tales que $\dot{\vect{w}}=\mathbf{cte}$.
-     \item En torno a cada toro de Liouville podemos tomar un entorno difeomorfo a un producto de toros de Liouville en los que podemos dar unas coordenadas de Darboux $(\vect{J},\vect{w})$, llamadas \emph{variables de acción-ángulo}, tales que las $\vect{J}$ son constantes en cada toro de Liouville y las $\vect{w}$ son coordenadas angulares en esos toros. Como consecuencia, en estos entornos las ecuaciones de Hamilton son integrables por cuadraturas.
-   \end{enumerate}
-  \end{thm}
-  En resumen este teorema nos dice que si un sistema hamiltoniano tiene una cantidad suficiente de integrales primeras (o de simetrías, aunque éstas no son siempre evidentes) el comportamiento de este sistema será muy sencillo. Esto es una motivación suficiente para buscar sistemas integrables, tal vez mediante la metodología de hallar sus grupos de simetría y asociarles sus aplicaciones momento. Concluimos la sección dando un ejemplo clásico de sistema integrable.
   \begin{ejemplo}[Potencial central]
     Consideramos el caso genérico de una partícula moviéndose en el espacio tridimensional sujeta a un potencial central, $V(\vect{q},\vect{p})=V(r)$, con $r=|\vect{q}|$. El espacio de fases será $\RR^6=\left\{ (\vect{q},\vect{p}) \right\}$ y el hamiltoniano del sistema vendrá dado por
     \begin{equation}
@@ -218,8 +212,53 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
   \pois{L^2}{L_3}=-2L_1L_2+2L_2L_1=0.
 \end{equation*}
 Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el potencial central es completamente integrable.
-
   \end{ejemplo}
+
+  \begin{thm}[Arnold-Liouville]\label{arnoldliouville}
+   Sea un sistema hamiltoniano $H$ con $n$ grados de libertad y sea $F=(F_1,\dots,F_n)$ con $F_1,\dots,F_n$ las integrales primeras en involución del sistema. Entonces:
+   \begin{enumerate}
+     \item Los conjuntos de nivel $M_a:=F^{-1}(a)$ son subvariedades del espacio de fases invariantes bajo el flujo del sistema.
+     \item Si $M_a$ es compacta y conexa entonces es difeomorfa al toro $n$-dimensional. En tal caso $M_a$ se llama un \emph{toro de Liouville}.
+     \item En torno a cada toro de Liouville podemos dar unas coordenadas de Darboux $(\vect{J},\vect{w})$, llamadas \emph{variables de acción-ángulo}, tales que las $\vect{J}$ son constantes en cada toro de Liouville y las $\vect{w}$ son coordenadas angulares en esos toros. 
+   \end{enumerate}
+  \end{thm}
+  Como consecuencia
+       \begin{equation}
+	 \begin{cases}
+	   \frac{\partial H}{\partial w_i}=-\dot{J_i}=0 \\
+	   \dot{w_i}=\frac{\partial H}{\partial J_i}=\omega_i(\vect{J}). 
+	 \end{cases}
+       \end{equation}
+       Como las $\vect{J}$ son constantes en cada toro de Liouville, las $\omega_i$ también lo serán y las variables de ángulo se pueden integrar de modo que obtenemos
+       \begin{equation}
+	 \begin{cases}
+	  J_i(t)=J_i(0) \\
+	 w_i(t)=w_i(0)+t \omega_i(\vect{J}),
+	 \end{cases}
+       \end{equation}
+       para $i=1,\dots,n$.
+       Por tanto, en torno a cada toro de Liouville un sistema completamente integrable es integrable por cuadraturas.
+
+       Para calcular las variables de acción-ángulo existe una técnica estándar, expuesta en todas las referencias clásicas [citar]. En primer lugar, si $M_a$ es un toro de Liouville entonces su primer grupo de homología es
+       \begin{equation*}
+	 H_1(M_a)=H_1(\mathbb{T} ^n)=\mathbb{Z} ^n
+       \end{equation*}
+       y podemos tomar una base de ciclos $\left\{ \gamma_1,\dots,\gamma_n \right\}$. Definimos entonces las variables de acción
+       \begin{equation}
+	 J_i=\oint_{\gamma_i} \vect{p} d \vect{q}
+       \end{equation}
+       y construimos una transformación canónica $(\vect{q},\vect{p})\mapsto (\vect{J},\vect{w})$ generada por la función
+       \begin{equation}
+	 S(\vect{q},\vect{J})=\int_{\vect{q}_0}^{\vect{q}}\vect{p}(\vect{J},\vect{q}) \dd \vect{q} ,	
+       \end{equation}
+       donde esta integral está realizada a lo largo de una curva cualquiera (se puede demostrar que la elección de ésta no influye) que una $\vect{q}_0$ y $\vect{q}$ en $M_a$. Obtenemos ahora las variables de ángulo en la forma
+       \begin{equation}
+	 w_i=\frac{\partial S}{\partial J_i}. 
+       \end{equation}
+      
+
+
+
   \section{Sistemas superintegrables, trayectorias cerradas y simetrías ocultas}
   Podemos considerar ahora qué sucedería si un sistema integrable con $n$ grados de libertad tuviera cantidades conservadas adicionales, hasta otras $n-1$ para que puedan existir trayectorias, funcionalmente independientes de las anteriores, aunque ya no podrían estar en involución con todas. Esto motiva entonces la noción de \emph{superintegrabilidad} o \emph{integrabilidad no abeliana}.
   \begin{defn}
@@ -356,9 +395,114 @@ con
 \end{equation}
 La integrabilidad viene garantizada por la integral primera
 \begin{equation}
-  X_k=L^2+\frac{\alpha k^2}{r^2\cos^2 k\phi}+\frac{\beta k^2}{r^2\sin^2 k\phi},
+  X_k=p_{\phi}^2+\frac{\alpha k^2}{\cos^2 k\phi}+\frac{\beta k^2}{\sin^2 k\phi}.
+  \label{eq:integralprimeraTTW}
 \end{equation}
-donde $L=p_{\phi}$ es el momento angular. La existencia de una integral primera adicional $Y_{2k}$ de orden $2k$ para $k\in \QQ$ que diera la superintegrabilidad del sistema fue conjeturada por Tremblay, Turbiner y Winternitz en \cite{ttw1} y posteriormente demostrada.
+La existencia de una integral primera adicional $Y_{2k}$ de orden $2k$ para $k\in \QQ$ que diera la superintegrabilidad del sistema fue conjeturada por Tremblay, Turbiner y Winternitz en \cite{ttw1} y posteriormente demostrada.
+
+\section{Superintegrabilidad del sistema de TTW}
+En esta sección vamos a demostrar la superintegrabilidad del sistema de TTW con $k\in \QQ$ siguiendo el método de C. Gonera [citar]. Para ello, lo primero que vamos a hacer es obtener las variables de acción-ángulo del sistema. Teniendo en cuenta que las integrales primeras que dan la integrabilidad son el hamiltoniano $\eqref{eq:TTW}$ y la función $X_k$ dada por $\eqref{eq:integralprimeraTTW}$, un toro de Liouville con $H=E$ y $X_k=A$ vendrá dado por las ecuaciones
+\begin{equation}
+  \begin{cases}
+    p_r^2+\frac{p_{\phi}^2}{r^2}+\omega^2r^2 + \frac{k}{r^2}\left( \frac{\alpha}{\cos^2k\phi} +\frac{\beta}{\sin^2k\phi}\right) = 2E \\
+    p_{\phi}^2+k^2\left( \frac{\alpha}{\cos^2k\phi} +\frac{\beta}{\sin^2k\phi}\right)=A.
+  \end{cases}
+\end{equation}
+
+Para que los cálculos sean más sencillos vamos a realizar un cambio de coordenadas 
+\begin{equation}
+ \theta=k\phi. 
+\end{equation}
+Si consideramos ahora el lagrangiano asociado al sistema TTW en coordenadas polares
+\begin{equation}
+  \mathcal{L} _k(r,\phi,\dot{r},\dot{\phi})=\frac{1}{2}\left(\dot{r}^2+r^2\dot{\phi}^2-\omega r^2\right)-V_k(r,\phi), 
+\end{equation}
+podemos escribir
+\begin{equation}
+  \mathcal{L} _k(r,\theta,\dot{r},\dot{\theta})=\frac{1}{2}\left(\dot{r}^2+\frac{r^2}{k^2}\dot{\theta}^2-\omega r^2\right)-V_k(r,\theta), 
+\end{equation}
+con
+\begin{equation}
+  V_k(r,\theta)=\frac{\alpha k^2}{2r^2\cos^2 \theta}+\frac{\beta k^2}{2r^2\sin^2 \theta}.
+\end{equation}
+Ahora, el momento canónico conjugado de $\theta$ sera
+\begin{equation}
+  p_\theta=\frac{\partial \mathcal{L} }{\partial \dot{\theta}}=\frac{r^2}{k^2}\dot{\theta}. 
+\end{equation}
+Teniendo en cuenta ahora que $\dot{\theta}=k\dot{\phi}$ y que $p_{\phi}=r^2\dot{\phi}$, tenemos
+\begin{equation}
+  p_{\phi}=kp_\theta. 
+\end{equation}
+De modo que en las nuevas coordenadas el hamiltoniano es
+\begin{equation}
+  H_k(r,\theta,p_r,p_{\theta})=\frac{1}{2}\left( p_r^2+\frac{k^2}{r^2}p^2_{\theta} +\omega^2 r^2 \right) + V_k(r,\theta),
+\end{equation}
+y la integral primera $X_k$ se escribe
+\begin{equation}
+  X_k=k^2p_{\theta}^2+\frac{\alpha k^2}{\cos^2 \theta}+\frac{\beta k^2}{\sin^2 \theta}.
+\end{equation}
+Por tanto, podemos redefinir entonces la constante $A=\frac{A}{k^2}$ y el toro de Liouville queda
+\begin{equation}
+  \begin{cases}
+    p_r^2+\frac{k^2}{r^2}p_{\theta}^2+\omega^2r^2 + \frac{k}{r^2}\left( \frac{\alpha}{\cos^2\theta} +\frac{\beta}{\sin^2\theta}\right) = 2E \\
+    p_{\theta}^2+ \frac{\alpha}{\cos^2\theta} +\frac{\beta}{\sin^2\theta}=A.
+  \end{cases}
+  \label{eq:toro}
+\end{equation}
+
+Para obtener ahora las variables de acción tomamos como base de ciclos del toro de Liouville los cortes de éste con los planos $(r,p_r)$ y $(\theta,p_{\theta})$, de modo que podemos definir
+\begin{align}
+    J_r=\frac{1}{2\pi}\int_{r_1}^{r_2} p_r dr, \\
+    J_\theta=\frac{1}{2\pi}\int_{\theta_1}^{\theta_2}p_{\theta}d\theta,
+\end{align}
+donde $r_1, r_2$ y $\theta_1, \theta_2$ son los puntos de retorno de $r$ y $\theta$, respectivamente, en el toro de Liouville.
+Despejamos entonces en las ecuaciones \eqref{eq:toro} y obtenemos
+\begin{align}
+    p_r=\sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A}, \\
+    p_{\theta}=\sqrt{A-\frac{\alpha}{\cos^2\theta} -\frac{\beta}{\sin^2\theta}}.
+\end{align}
+Podemos calcular entonces las integrales
+\begin{align}
+  J_r=\frac{1}{2\pi}\int_{r_1}^{r_2} \sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A} dr=\frac{E}{4\omega}-\frac{k\sqrt{A}}{2}, \label{eq:intaccion1} \\ 
+  J_\theta=\frac{1}{2\pi}\int_{\theta_1}^{\theta_2} \sqrt{A-\frac{\alpha}{\cos^2\theta} -\frac{\beta}{\sin^2\theta}}d\theta=-\sqrt{A}+\sqrt{\beta}-\sqrt{\alpha}, 
+\label{eq:intaccion2}
+\end{align}
+y podemos redefinir trivialmente 
+\begin{equation}
+  J_{\theta}=\sqrt{A}. 
+\end{equation}
+El cálculo de estas integrales puede verse detallado en el Apéndice.
+
+Una vez obtenidas las variables de acción, despejamos para obtener el hamiltoniano
+\begin{equation}
+ H(J_r,J_\theta,w_r,w_\theta)=2\omega(2J_r+kJ_\theta),
+\end{equation}
+donde $w_r$ y $w_\theta$ son las variables angulares que, por las ecuaciones de Hamilton, verifican
+\begin{equation}
+  \begin{cases}
+    \dot{w}_r=\frac{\partial H}{\partial J_r}=4\omega, \\ 
+  \dot{w}_{\theta}=\frac{\partial H}{\partial J_\theta}=2\omega k.
+  \end{cases}
+\end{equation}
+Ahora, si $k$ es irracional, entonces las frecuencias $\dot{w}_r$ y $\dot{w}_\theta$ son independientes y las trayectorias son densas en el toro de Liouville [citar Arnold], de forma que en ese caso el sistema no puede ser superintegrable. En el caso en que $k=\frac{m}{n}$, con $m,n \in \NN$ entonces claramente
+\begin{equation*}
+  m\dot{w}_r-n\dot{w}_\theta=0,
+\end{equation*}
+luego 
+\begin{equation}
+  mw_r-nw_\theta
+\end{equation}
+es una constante del movimiento que además por construcción es independiente de $J_r$ y de $J_\theta$, luego de $H$ y $X_k$. En conclusión, tenemos que el sistema de TTW es superintegrable si y sólo si $k\in \QQ$.
+
+Una sutileza a tener en cuenta es que $mw_r-nw_\theta$ es una función multivalorada en el toro de Liouville, pero este problema se soluciona fácilmente si, siguiendo la idea de [citar Landau], consideramos una función trigonométrica de esta magnitud, por conveniencia
+\begin{equation}
+  e^{i(mw_r-nw_{\theta})}=(e^{iw_r})^m(e^{-iw_{\theta}})^n.
+\end{equation}
+Si nos resulta de interés, se pueden calcular las variables angulares explícitamente siguiendo el método explicado en la sección 2 y de ahí obtener el valor de la integral primera adicional. Aunque aquí no lo detallemos (el cálculo completo puede leerse en [citar Gonera]), la cantidad que se obtiene es (en las coordenadas polares originales y tras algunas simplificaciones)
+\begin{equation}
+  Y_{2k}=\left[ \frac{2\sqrt{A}p_r}{r}+i\left( E-\frac{2A}{r^2} \right) \right]^m\left[\sqrt{A}p_{\phi}\sin 2k\phi + i\left[ (\beta-\alpha)k^2+A\cos2k\phi \right] \right]^n.
+\end{equation}
+Una comprobación directa muestra que $Y_{2k}$ es una integral primera independiente de $H$ y de $X_k$ y que, por tanto, el sistema de TTW es superintegrable cuando $k$ es racional.
 
 \section{El hamiltoniano de TTW en coordenadas cartesianas}
 Para continuar con el estudio del Hamiltoniano de TTW, en esta sección vamos a ver cómo se expresa en coordenadas cartesianas y vamos a representar el potencial en los casos más sencillos.
@@ -590,6 +734,9 @@ Esta manera de entender el hamiltoniano de TTW fue originalmente propuesta por M
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{biblio}
+
+\newpage
+\section*{Apéndice: Cálculo de las integrales \eqref{eq:intaccion1} y \eqref{eq:intaccion2}}
 
 \end{document}
 
