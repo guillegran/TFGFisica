@@ -93,14 +93,14 @@
 \newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\pois}[2]{\left\lbrace#1,#2\right\rbrace}
 
-\title{Simetrías en modelos integrables y superintegrables}
+\title{Modelos superintegrables: El hamiltoniano de TTW}
 \author{Guillermo Gallego}
 \date{\bf \today}
 
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[CO]{\small \sc SIMETRÍAS EN MODELOS INTEGRABLES Y SUPERINTEGRABLES}
+\fancyhead[CO]{\small \sc MODELOS SUPERINTEGRABLES: EL HAMILTONIANO DE TTW}
 \fancyhead[CE]{\small \sc GUILLERMO GALLEGO}
 \renewcommand{\headrulewidth}{0pt}
 
@@ -125,9 +125,9 @@
 \addcontentsline{toc}{section}{Introducción}
 Aquí la introducción.
 \section{Geometría simpléctica y simetrías en Mecánica Clásica}
-La estructura matemática característica de los espacios de fases en Mecánica Clásica es la de \emph{variedad simpléctica}. Una variedad simpléctica es un par $(M,\omega)$, donde $M$ es una variedad diferenciable y $\omega$ es una $2$-forma diferencial (un tensor covariante antisimétrico de grado $2$), no degenerada y cerrada, es decir, tal que $\dd \omega=0$. En el caso en que la forma $\omega$ sea exacta, es decir, que exista una $1$-forma $\theta$ tal que $\omega=\dd \theta$, se dice que la variedad $(M,\omega)$ es exacta. 
+La estructura matemática característica de los espacios de fases en Mecánica Clásica es la de \emph{variedad simpléctica}. Una variedad simpléctica es un par $(M,\omega)$, donde $M$ es una variedad diferenciable y $\omega$ es una $2$-forma diferencial no degenerada y cerrada, es decir, tal que $\dd \omega=0$. En el caso en que la forma $\omega$ sea exacta, es decir, que exista una $1$-forma $\theta$ tal que $\omega=\dd \theta$, se dice que la variedad $(M,\omega)$ es exacta. 
 
-El ejemplo más básico de variedad simpléctica es el espacio $\RR^{2n}=\left\{ (\vect{q},\vect{p}) \right\}$, con $\vect{q}=(q_1,\dots,q_n)$ y $\vect{p}=(p_1,\dots,p_n)$, equipado con la forma $\omega=\dd p_i \wedge \dd q_i$. Claramente esta forma es exacta pues $\omega=\dd \theta$, con $\theta=p_i \dd q_i$. El \emph{teorema de Darboux}, garantiza que para toda variedad simpléctica $(M,\omega)$ localmente es posible encontrar unas coordenadas $(\vect{q},\vect{p})$ en las que la forma toma el aspecto $\omega=\dd p_i \wedge \dd q_i$. Este tipo de coordenadas se llaman \emph{coordenadas de Darboux}.
+El ejemplo más básico de variedad simpléctica es el espacio $\RR^{2n}=\left\{ (\vect{q},\vect{p}) \right\}$, con $\vect{q}=(q_1,\dots,q_n)$ y $\vect{p}=(p_1,\dots,p_n)$, equipado con la forma $\omega=\dd p_i \wedge \dd q_i$. Claramente esta variedad es exacta pues $\omega=\dd \theta$, con $\theta=p_i \dd q_i$. El \emph{teorema de Darboux}, garantiza que para toda variedad simpléctica $(M,\omega)$ localmente es posible encontrar unas coordenadas $(\vect{q},\vect{p})$ en las que la forma toma el aspecto $\omega=\dd p_i \wedge \dd q_i$. Este tipo de coordenadas se llaman \emph{coordenadas de Darboux}.
 
 La forma $\omega$ induce una dualidad entre campos y $1$-formas. Resulta que a cada campo vectorial $\xi$ en la variedad le podemos asignar la forma $i_{\xi}\omega$, donde $i$ denota la \emph{contracción}, es decir $i_{\xi}\omega=\omega(\xi,\bullet)$. Un campo $\xi$ se dice \emph{simpléctico} si $\lie_{\xi}\omega=0$, donde $\lie$ denota la \emph{derivada de Lie}. Ahora, por la fórmula de Cartan, $\lie_{\xi}\omega=i_{\xi}(\dd \omega)+\dd(i_{\xi}\omega)=\dd(i_{\xi}\omega)$, de modo que un campo $\xi$ es simpléctico si y sólo si la forma $i_{\xi}\omega$ es cerrada. En el caso particular en que esta forma $i_{\xi}\omega$ sea exacta, existirá una función $H:M\rightarrow \RR$ tal que $\dd H=-i_{\xi}\omega$ y decimos que $\xi$ es un \emph{campo hamiltoniano} de \emph{hamiltoniano} $H$ y se denota $\xi_H$. Un cálculo sencillo muestra que, localmente, en coordenadas de Darboux, las curvas integrales del campo $\xi_H$ seguirán las \emph{ecuaciones de Hamilton}
 \begin{equation}
@@ -218,7 +218,11 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
    Sea un sistema hamiltoniano $H$ con $n$ grados de libertad y sea $F=(F_1,\dots,F_n)$ con $F_1,\dots,F_n$ las integrales primeras en involución del sistema. Entonces:
    \begin{enumerate}
      \item Los conjuntos de nivel $M_a:=F^{-1}(a)$ son subvariedades del espacio de fases invariantes bajo el flujo del sistema.
-     \item Si $M_a$ es compacta y conexa entonces es difeomorfa al toro $n$-dimensional. En tal caso $M_a$ se llama un \emph{toro de Liouville}.
+     \item Si $M_a$ es compacta y conexa entonces es difeomorfa al toro $n$-dimensional
+       \begin{equation*}
+	 \TT^n=\mathbb{S} ^1 \times \cdots \times \mathbb{S}^1 \ (n \text{ veces}).
+       \end{equation*}
+       En tal caso $M_a$ se llama un \emph{toro de Liouville}.
      \item En torno a cada toro de Liouville podemos dar unas coordenadas de Darboux $(\vect{J},\vect{w})$, llamadas \emph{variables de acción-ángulo}, tales que las $\vect{J}$ son constantes en cada toro de Liouville y las $\vect{w}$ son coordenadas angulares en esos toros. 
    \end{enumerate}
   \end{thm}
@@ -226,24 +230,31 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
        \begin{equation}
 	 \begin{cases}
 	   \frac{\partial H}{\partial w_i}=-\dot{J_i}=0 \\
-	   \dot{w_i}=\frac{\partial H}{\partial J_i}=\omega_i(\vect{J}). 
+	   \dot{w_i}=\frac{\partial H}{\partial J_i}=\nu_i(\vect{J}). 
 	 \end{cases}
        \end{equation}
-       Como las $\vect{J}$ son constantes en cada toro de Liouville, las $\omega_i$ también lo serán y las variables de ángulo se pueden integrar de modo que obtenemos
+       Como las $\vect{J}$ son constantes en cada toro de Liouville, las frecuencias $\nu_i$ también lo serán y las variables de ángulo se pueden integrar de modo que obtenemos
        \begin{equation}
 	 \begin{cases}
 	  J_i(t)=J_i(0) \\
-	 w_i(t)=w_i(0)+t \omega_i(\vect{J}),
+	 w_i(t)=w_i(0)+t \nu_i(\vect{J}),
 	 \end{cases}
        \end{equation}
        para $i=1,\dots,n$.
-       Por tanto, en torno a cada toro de Liouville un sistema completamente integrable es integrable por cuadraturas.
+       Por tanto, en torno a cada toro de Liouville un sistema completamente integrable es integrable por cuadraturas. Un flujo de este tipo en el toro se denomina un \emph{movimiento condicionalmente periódico} y se puede demostrar \cite{arnold} que la trayectoria será cerrada si y sólo si las frecuencias $\nu_1,\dots,\nu_n$ no son independientes, esto es, si existen números enteros $k_1,\dots,k_n$ tales que $\sum_i k_i\nu_i=0$. En caso contrario la trayectoria es densa en el toro de Liouville.
 
-       Para calcular las variables de acción-ángulo existe una técnica estándar, expuesta en todas las referencias clásicas [citar]. En primer lugar, si $M_a$ es un toro de Liouville entonces su primer grupo de homología es
+       \begin{figure}[h]
+	 \centering
+	 \includegraphics[width=.4\textwidth]{homology}
+	 \caption{\small Base de ciclos de $\TT^2$}
+	 \label{fig:toro}
+       \end{figure}
+
+       Para calcular las variables de acción-ángulo existe una técnica estándar, expuesta en todas las referencias clásicas \cite{arnold,goldstein,landau}. En primer lugar, si $M_a$ es un toro de Liouville entonces su primer grupo de homología es
        \begin{equation*}
 	 H_1(M_a)=H_1(\mathbb{T} ^n)=\mathbb{Z} ^n
        \end{equation*}
-       y podemos tomar una base de ciclos $\left\{ \gamma_1,\dots,\gamma_n \right\}$. Definimos entonces las variables de acción
+       y podemos tomar una base de ciclos $\left\{ \gamma_1,\dots,\gamma_n \right\}$ (ver figura \ref{fig:toro}). Definimos entonces las variables de acción
        \begin{equation}
 	 J_i=\oint_{\gamma_i} \vect{p} d \vect{q}
        \end{equation}
@@ -255,9 +266,6 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
        \begin{equation}
 	 w_i=\frac{\partial S}{\partial J_i}. 
        \end{equation}
-      
-
-
 
   \section{Sistemas superintegrables, trayectorias cerradas y simetrías ocultas}
   Podemos considerar ahora qué sucedería si un sistema integrable con $n$ grados de libertad tuviera cantidades conservadas adicionales, hasta otras $n-1$ para que puedan existir trayectorias, funcionalmente independientes de las anteriores, aunque ya no podrían estar en involución con todas. Esto motiva entonces la noción de \emph{superintegrabilidad} o \emph{integrabilidad no abeliana}.
@@ -310,15 +318,23 @@ donde el término $\frac{L^2}{2mr^2}$ constituye una «energía centrífuga». E
 \begin{equation}
   \Delta \phi = 2\int_{r_{\text{min}}}^{r_{\text{máx}}} \frac{Ldr}{r^2\sqrt{2m[E-V(r)]-L^2/r^2}}.
 \end{equation}
-La condición que ha de cumplirse para que la trayectoria en cierto momento se cierre es precisamente que este ángulo sea un múltiplo racional de $2\pi$, es decir, que $\Delta \phi = \frac{2\pi m}{n}$, para ciertos enteros $m$ y $n$. En un caso general esta condición no se cumple y la trayectoria va llenando densamente toda la corona en la que se encuentra contenida [figura].
+La condición que ha de cumplirse para que la trayectoria en cierto momento se cierre es precisamente que este ángulo sea un múltiplo racional de $2\pi$, es decir, que $\Delta \phi = \frac{2\pi m}{n}$, para ciertos enteros $m$ y $n$. En un caso general esta condición no se cumple y la trayectoria va llenando densamente toda la corona en la que se encuentra contenida (ver figura \ref{fig:bertrand}).
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.4\textwidth]{bertrand}
+  \caption{\small Avance del ángulo de $r_{\text{máx}}$ (Fuente: \cite{landau})}
+  \label{fig:bertrand}
+\end{figure}
+
 
 J. Bertrand probó en 1883 \cite{bertrand} que precisamente los únicos potenciales centrales en los cuales todos los movimientos acotados se dan en trayectorias cerradas son aquellos en los que $V(r)$ es proporcional a $1/r$ (potencial de Kepler) o a $r^2$ (oscilador armónico isótropo). Por tanto, en el resto de casos el sistema no es superintegrable. Cabe preguntarse entonces si tanto el potencial de Kepler como el oscilador armónico isótropo tendrán alguna integral primera adicional que nos garantice la superintegrabilidad, tal vez dada por una «simetría oculta» del sistema, es decir, por una simetría que no era aparente a primera vista.
 
-La respuesta es afirmativa en los dos casos. En el potencial de Kepler $V(r)=k/r$ existe una cantidad conservada adicional que es el \emph{vector de Laplace-Runge-Lenz}, definido por
+La respuesta es afirmativa en los dos casos. En el potencial de Kepler $V(r)=k/r$ existe una cantidad conservada adicional que es el \emph{vector de Laplace-Runge-Lenz} \cite{goldstein}, definido por
 \begin{equation}
   \vect{A}=\vect{p}\times \vect{L}-mk\frac{\vect{q}}{r}. 
 \end{equation}
-En el caso del oscilador armónico isótropo $V(r)=kr^2$ existe un tensor simétrico conservado, el \emph{tensor de Fradkin}, dado por
+En el caso del oscilador armónico isótropo $V(r)=kr^2$ existe un tensor simétrico conservado, el \emph{tensor de Fradkin} \cite{fradkin}, dado por
 \begin{equation}
   A_{ij}=\tfrac{1}{2m}(p_ip_j+kq_iq_j), 
 \end{equation}
@@ -378,11 +394,11 @@ y un tensor similar al de Fradkin
 \end{equation}
 
 \section{El hamiltoniano de TTW}
-Principalmente por consideraciones al cuantizar, dentro de los sistemas integrables y superintegrables son de especial interés aquellos en los que sus integrales primeras son polinomiales en los momentos. Así, estos sistemas se llamarán \emph{polinomialmente integrables} (respectivamente, \emph{polinomialmente superintegrables}) y llamaremos \emph{orden} de sus integrales primeras al grado que estas tengan como polinomios en los momentos.
+Principalmente por consideraciones al cuantizar, dentro de los sistemas integrables y superintegrables son de especial interés aquellos en los que sus integrales primeras son polinomiales en los momentos. Así, estos sistemas se llamarán \emph{polinomialmente integrables} (respectivamente, \emph{polinomialmente superintegrables}) y llamaremos \emph{orden} de sus integrales primeras al grado que estas tengan como polinomios en los momentos. Para más información al respecto, consultar \cite{miller}.
 
 Los sistemas superintegrables de segundo orden han sido bastante estudiados y poseen una teoría de clasificación. También han sido tratados varias clases de sistemas de tercer orden. Sin embargo, para sistemas generales de tercer orden y de órdenes superiores se conoce mucho menos. En particular hasta hace unos pocos años había pocos ejemplos y las teorías de estructura y clasificación eran prácticamente inexistentes. 
 
-La situación cambió drásticamente en 2009 con el trabajo de F. Tremblay, A. V. Turbiner y P. Winternitz \cite{ttw1}, donde los autores presentaron una familia de potenciales en el plano, parametrizados por una constante $k$, y conjeturaron que estos sistemas eran superintegrables para todo $k\in \QQ$, con órdenes tan grandes como se quisieran. Unos meses más tarde, en otro trabajo \cite{ttw2} los mismos autores calcularon las trayectorias acotadas de esta familia de sistemas y mostraron que eran curvas cerradas para todos los casos con $k \in \QQ$, dando así evidencia a favor de su conjetura. Posteriormente se verificó que, efectivamente, sus conjeturas eran correctas.
+La situación cambió drásticamente en 2009 con el trabajo de F. Tremblay, A. V. Turbiner y P. Winternitz \cite{ttw1}, donde los autores presentaron una familia de potenciales en el plano, parametrizados por una constante $k$, y conjeturaron que estos sistemas eran superintegrables para todo $k\in \QQ$, con órdenes tan grandes como se quisieran. Unos meses más tarde, en otro trabajo \cite{ttw2} los mismos autores calcularon las trayectorias acotadas de esta familia de sistemas y mostraron que eran curvas cerradas para todos los casos con $k \in \QQ$, dando así evidencia a favor de su conjetura. Posteriormente se he verificado por varios métodos que, efectivamente, sus conjeturas eran correctas.
 
 Concretamente, el hamiltoniano de Tremblay, Turbiner y Winternitz (que a partir de ahora abreviaremos como \emph{hamiltoniano de TTW}) en coordenadas polares tiene la forma 
 \begin{equation}
@@ -398,10 +414,10 @@ La integrabilidad viene garantizada por la integral primera
   X_k=p_{\phi}^2+\frac{\alpha k^2}{\cos^2 k\phi}+\frac{\beta k^2}{\sin^2 k\phi}.
   \label{eq:integralprimeraTTW}
 \end{equation}
-La existencia de una integral primera adicional $Y_{2k}$ de orden $2k$ para $k\in \QQ$ que diera la superintegrabilidad del sistema fue conjeturada por Tremblay, Turbiner y Winternitz en \cite{ttw1} y posteriormente demostrada.
+La existencia de una integral primera adicional $Y_{k}$ para $k\in \QQ$ que diera la superintegrabilidad polinomial del sistema fue conjeturada por Tremblay, Turbiner y Winternitz en \cite{ttw1} y posteriormente demostrada.
 
 \section{Superintegrabilidad del sistema de TTW}
-En esta sección vamos a demostrar la superintegrabilidad del sistema de TTW con $k\in \QQ$ siguiendo el método de C. Gonera [citar]. Para ello, lo primero que vamos a hacer es obtener las variables de acción-ángulo del sistema. Teniendo en cuenta que las integrales primeras que dan la integrabilidad son el hamiltoniano $\eqref{eq:TTW}$ y la función $X_k$ dada por $\eqref{eq:integralprimeraTTW}$, un toro de Liouville con $H=E$ y $X_k=A$ vendrá dado por las ecuaciones
+En esta sección vamos a demostrar la superintegrabilidad del sistema de TTW con $k\in \QQ$ siguiendo el método de C. Gonera \cite{gonera}. Para ello, lo primero que vamos a hacer es obtener las variables de acción-ángulo del sistema. Teniendo en cuenta que las integrales primeras que dan la integrabilidad son el hamiltoniano $\eqref{eq:TTW}$ y la función $X_k$ dada por $\eqref{eq:integralprimeraTTW}$, un toro de Liouville con $H=E$ y $X_k=A$ vendrá dado por las ecuaciones
 \begin{equation}
   \begin{cases}
     p_r^2+\frac{p_{\phi}^2}{r^2}+\omega^2r^2 + \frac{k}{r^2}\left( \frac{\alpha}{\cos^2k\phi} +\frac{\beta}{\sin^2k\phi}\right) = 2E \\
@@ -444,7 +460,7 @@ y la integral primera $X_k$ se escribe
 Por tanto, podemos redefinir entonces la constante $A=\frac{A}{k^2}$ y el toro de Liouville queda
 \begin{equation}
   \begin{cases}
-    p_r^2+\frac{k^2}{r^2}p_{\theta}^2+\omega^2r^2 + \frac{k}{r^2}\left( \frac{\alpha}{\cos^2\theta} +\frac{\beta}{\sin^2\theta}\right) = 2E \\
+    p_r^2+\frac{k^2}{r^2}p_{\theta}^2+\omega^2r^2 + \frac{k^2}{r^2}\left( \frac{\alpha}{\cos^2\theta} +\frac{\beta}{\sin^2\theta}\right) = 2E \\
     p_{\theta}^2+ \frac{\alpha}{\cos^2\theta} +\frac{\beta}{\sin^2\theta}=A.
   \end{cases}
   \label{eq:toro}
@@ -452,10 +468,10 @@ Por tanto, podemos redefinir entonces la constante $A=\frac{A}{k^2}$ y el toro d
 
 Para obtener ahora las variables de acción tomamos como base de ciclos del toro de Liouville los cortes de éste con los planos $(r,p_r)$ y $(\theta,p_{\theta})$, de modo que podemos definir
 \begin{align}
-    J_r=\frac{1}{2\pi}\int_{r_1}^{r_2} p_r dr, \\
-    J_\theta=\frac{1}{2\pi}\int_{\theta_1}^{\theta_2}p_{\theta}d\theta,
+    J_r=\frac{1}{2\pi}\oint p_r dr, \\
+    J_\theta=\frac{1}{2\pi}\oint p_{\theta}d\theta,
 \end{align}
-donde $r_1, r_2$ y $\theta_1, \theta_2$ son los puntos de retorno de $r$ y $\theta$, respectivamente, en el toro de Liouville.
+donde las integrales se realizan en ciclos cerrado entre los puntos de retorno de $r$ y $\theta$, respectivamente, en el toro de Liouville.
 Despejamos entonces en las ecuaciones \eqref{eq:toro} y obtenemos
 \begin{align}
     p_r=\sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A}, \\
@@ -463,11 +479,11 @@ Despejamos entonces en las ecuaciones \eqref{eq:toro} y obtenemos
 \end{align}
 Podemos calcular entonces las integrales
 \begin{align}
-  J_r=\frac{1}{2\pi}\int_{r_1}^{r_2} \sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A} dr=\frac{E}{4\omega}-\frac{k\sqrt{A}}{2}, \label{eq:intaccion1} \\ 
-  J_\theta=\frac{1}{2\pi}\int_{\theta_1}^{\theta_2} \sqrt{A-\frac{\alpha}{\cos^2\theta} -\frac{\beta}{\sin^2\theta}}d\theta=-\sqrt{A}+\sqrt{\beta}-\sqrt{\alpha}, 
+  J_r=\frac{1}{2\pi}\oint \sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A} dr=\frac{4E}{\omega}-k\sqrt{A}, \label{eq:intaccion1} \\ 
+  J_\theta=\frac{1}{2\pi}\oint \sqrt{A-\frac{\alpha}{\cos^2\theta} -\frac{\beta}{\sin^2\theta}}d\theta=\sqrt{A}+C(\alpha,\beta), 
 \label{eq:intaccion2}
 \end{align}
-y podemos redefinir trivialmente 
+donde $C(\alpha,\beta)$ es un término que sólo depende de $\alpha$ y $\beta$, de modo que podemos redefinir trivialmente 
 \begin{equation}
   J_{\theta}=\sqrt{A}. 
 \end{equation}
@@ -475,16 +491,16 @@ El cálculo de estas integrales puede verse detallado en el Apéndice.
 
 Una vez obtenidas las variables de acción, despejamos para obtener el hamiltoniano
 \begin{equation}
- H(J_r,J_\theta,w_r,w_\theta)=2\omega(2J_r+kJ_\theta),
+  H(J_r,J_\theta,w_r,w_\theta)=\frac{\omega}{4}(J_r+kJ_\theta),
 \end{equation}
 donde $w_r$ y $w_\theta$ son las variables angulares que, por las ecuaciones de Hamilton, verifican
 \begin{equation}
   \begin{cases}
-    \dot{w}_r=\frac{\partial H}{\partial J_r}=4\omega, \\ 
-  \dot{w}_{\theta}=\frac{\partial H}{\partial J_\theta}=2\omega k.
+    \dot{w}_r=\frac{\partial H}{\partial J_r}=\frac{\omega}{4}, \\ 
+    \dot{w}_{\theta}=\frac{\partial H}{\partial J_\theta}=\frac{\omega}{4} k.
   \end{cases}
 \end{equation}
-Ahora, si $k$ es irracional, entonces las frecuencias $\dot{w}_r$ y $\dot{w}_\theta$ son independientes y las trayectorias son densas en el toro de Liouville [citar Arnold], de forma que en ese caso el sistema no puede ser superintegrable. En el caso en que $k=\frac{m}{n}$, con $m,n \in \NN$ entonces claramente
+Ahora, si $k$ es irracional, entonces las frecuencias $\dot{w}_r$ y $\dot{w}_\theta$ son independientes y las trayectorias son densas en el toro de Liouville \cite{arnold}, de forma que en ese caso el sistema no puede ser superintegrable. En el caso en que $k=\frac{m}{n}$, con $m,n \in \NN$ entonces claramente
 \begin{equation*}
   m\dot{w}_r-n\dot{w}_\theta=0,
 \end{equation*}
@@ -494,15 +510,15 @@ luego
 \end{equation}
 es una constante del movimiento que además por construcción es independiente de $J_r$ y de $J_\theta$, luego de $H$ y $X_k$. En conclusión, tenemos que el sistema de TTW es superintegrable si y sólo si $k\in \QQ$.
 
-Una sutileza a tener en cuenta es que $mw_r-nw_\theta$ es una función multivalorada en el toro de Liouville, pero este problema se soluciona fácilmente si, siguiendo la idea de [citar Landau], consideramos una función trigonométrica de esta magnitud, por conveniencia
+Una sutileza a tener en cuenta es que $2mw_r-nw_\theta$ es una función multivalorada en el toro de Liouville, pero este problema se soluciona fácilmente si, siguiendo la idea de \cite{landau}, consideramos una función trigonométrica de esta magnitud, por conveniencia
 \begin{equation}
-  e^{i(mw_r-nw_{\theta})}=(e^{iw_r})^m(e^{-iw_{\theta}})^n.
+  e^{i(mw_r-nw_{\theta})}=(e^{iw_r})^{m}(e^{-iw_{\theta}})^n.
 \end{equation}
-Si nos resulta de interés, se pueden calcular las variables angulares explícitamente siguiendo el método explicado en la sección 2 y de ahí obtener el valor de la integral primera adicional. Aunque aquí no lo detallemos (el cálculo completo puede leerse en [citar Gonera]), la cantidad que se obtiene es (en las coordenadas polares originales y tras algunas simplificaciones)
+Si nos resulta de interés, se pueden calcular las variables angulares explícitamente siguiendo el método explicado en la sección 2 y de ahí obtener el valor de la integral primera adicional. Aunque aquí no lo detallemos (el cálculo completo puede leerse en \cite{gonera}), la cantidad que se obtiene es (en las coordenadas polares originales y tras algunas simplificaciones)
 \begin{equation}
-  Y_{2k}=\left[ \frac{2\sqrt{A}p_r}{r}+i\left( E-\frac{2A}{r^2} \right) \right]^m\left[\sqrt{A}p_{\phi}\sin 2k\phi + i\left[ (\beta-\alpha)k^2+A\cos2k\phi \right] \right]^n.
+  Y_{k}=\left[ \frac{2\sqrt{A}p_r}{r}+i\left( E-\frac{2A}{r^2} \right) \right]^m\left[\sqrt{A}p_{\phi}\sin 2k\phi + i\left[ (\beta-\alpha)k^2+A\cos2k\phi \right] \right]^n.
 \end{equation}
-Una comprobación directa muestra que $Y_{2k}$ es una integral primera independiente de $H$ y de $X_k$ y que, por tanto, el sistema de TTW es superintegrable cuando $k$ es racional.
+Una comprobación directa muestra que $Y_{k}$ es una integral primera independiente de $H$ y de $X_k$ y que, por tanto, el sistema de TTW es superintegrable cuando $k$ es racional. Nótese además que la integral $Y_k$ es polinomial en los momentos $p_r$ y $p_\theta$.
 
 \section{El hamiltoniano de TTW en coordenadas cartesianas}
 Para continuar con el estudio del Hamiltoniano de TTW, en esta sección vamos a ver cómo se expresa en coordenadas cartesianas y vamos a representar el potencial en los casos más sencillos.
@@ -660,11 +676,11 @@ Nótese también que podemos seguir pensando en las coordenadas $(z,\zz,p_z,p_{\
 \begin{equation}
   \dd p_z \wedge \dd z + \dd p_{\zz} \wedge \dd \zz=\dd p_x \wedge \dd x + \dd p_y \wedge \dd y.
 \end{equation}
-Finalmente, observamos que si $k=1$ recuperamos el oscilador armónico con términos centrífugos
+Finalmente, observamos que si $k=1$ recuperamos el oscilador armónico con términos centrífugos (barreras de Rosochatius)
 \begin{equation}
   V_1=\frac{2\alpha}{(z+\zz)^2}-\frac{2\beta}{(z-\zz)^2},
 \end{equation}
-y, cuando $k$ sea entero el potencial será una función racional
+y, cuando $k$ sea entero, el potencial será una función racional
 \begin{align}
   V_k=2k^2(x^2+y^2)^{k-1}\left[ \frac{\alpha}{\left( (x+iy)^k+(x-iy)^k \right)^2}-\frac{\beta}{\left( (x+iy)^k-(x-iy)^k \right)^2} \right].
 \end{align}
@@ -731,12 +747,74 @@ Lo interesante de ver el hamiltoniano en estas coordenadas es que, si se elimina
 
 Esta manera de entender el hamiltoniano de TTW fue originalmente propuesta por M. A. Rodríguez (el director de este trabajo) y no publicada, aunque sí propuesta en un congreso. Muy recientemente el hamiltoniano de TTW ha sido estudiado en este aspecto por G. Gubbiotti y D. Latini en su trabajo \cite{gubbiottilatini}, donde sugieren un nuevo argumento a favor de su superintegrabilidad para $k$ racional empleando un método novedoso basado en la técnica de escalas múltiples.
 
+\appendix
+\section{Cálculo de las integrales \eqref{eq:intaccion1} y \eqref{eq:intaccion2}}
+En este apéndice vamos a detallar los cálculos de las integrales \eqref{eq:intaccion1} y \eqref{eq:intaccion2}. El método de integración que seguiremos en ambas es la técnica estándar presentada en \cite{goldstein}, donde se aplica al caso del problema de Kepler.
+
+Para hallar la integral
+\begin{equation*}
+  \oint f(r)dr, 
+\end{equation*}
+con
+\begin{equation}
+f(r)=\sqrt{2E-\omega^2r^2-\frac{k^2A}{r^2}},
+\end{equation}
+tengamos en cuenta que $f$ es una función multivalorada en el toro de Liouville y que precisamente $f(r)=p_r=m\dot{r}$, de modo que los límites del movimiento serán dos puntos de retorno $r_1$ y $r_2$, análogos a los $r_{\text{min}}$ y $r_{\text{máx}}$ de la figura \ref{fig:bertrand}, y vendrán dados precisamente por las raíces de la expresión dentro de la raíz cuadrada. Vamos a estudiar ahora esta integral como una integral en un contorno complejo teniendo en cuenta varias sutilezas. Si $r_1$ es la cota inferior del movimiento, un ciclo de $r$ comprende un movimiento de $r_1$ a $r_2$, donde $p_r>0$, de modo que en esta parte escogemos la raíz cuadrada positiva; y después comprende un movimiento de $r_2$ a $r_1$, donde $p_r<0$ y hay que tomar la raíz cuadrada negativa. La integración entonces comprende las dos ramas de una función doblemente valorada en el plano complejo, con $r_1$ y $r_2$ los puntos de ramificación. Podemos por tanto representar el plano complejo como una de las hojas de una superficie de Riemann, pegadas a lo largo del eje real como se muestra en la figura [figura] de forma que en los puntos del eje real mayores que $r_2$ se toma raíz cuadrada positiva y los menores que $r_1$ se toma la negativa. Por simplificar la notación, $\sqrt{\cdots}$ indicará a partir de ahora la raíz cuadrada positiva. 
+
+Como el contorno de integración encierra la línea entre los puntos de ramificación, no podemos aplicar directamente el método de los residuos, pero sí que podemos considerar que el camino encierra el resto del plano complejo, con la dirección de integración opuesta (ver figura [figura]). En esta región el integrando sí es una función univalorada, de modo que aquí sí que podemos aplicar el teorema de los residuos. Notamos también que los polos de $f(r)$ están en $0$ y en $\infty$, de modo que
+\begin{equation}
+  \oint f(r)dr =-2\pi i \mathrm{Res}(f,0) -2\pi i \mathrm{Res}(f,\infty).
+\end{equation}
+
+El polo en $0$ es de orden 1, de modo que podemos calcular el residuo
+\begin{equation}
+  \mathrm{Res}(f,0)=\lim_{r\rightarrow 0} rf(r)=\lim_{r\rightarrow 0}-\sqrt{2Er^2-\omega^2r^4-k^2A}=-ik\sqrt{A}.   
+\end{equation}
+Nótese que, de acuerdo con la discusión anterior, estamos tomando la raíz cuadrada negativa.
+Para calcular el residuo en $\infty$ empleamos un cambio de variable $z=r^{-1}$, de modo que $dr=-2z^{-2}dz$ y, si $f(r)dr=\tilde{f}(z)dz$,
+\begin{equation}
+  \tilde{f}(z)=-2z^{-2}\sqrt{2E-\frac{\omega^2}{z^2}-k^2z^2A}=-2\sqrt{\frac{2E}{z^4}-\frac{\omega^2}{z^6}-\frac{k^2A}{z^2}}.
+\end{equation}
+Por tanto, $z=0$ es un polo de orden $3$ de $\tilde{f}(z)$ y
+\begin{equation}
+  \mathrm{Res}(f,\infty)=\mathrm{Res}(\tilde{f},0)=\lim_{z\rightarrow 0}\left( \frac{d}{d z} \right)^2 z^3 \tilde{f}(z)=\frac{4E\sqrt{-\omega^2}}{\omega^2}=i\frac{4E}{\omega}. 
+\end{equation}
+Finalmente
+\begin{equation}
+  J_r=\frac{1}{2\pi}\oint f(r)dr=-i\mathrm{Res}(f,0)-i\mathrm{Res}(f,\infty)=\frac{4E}{\omega}-k\sqrt{A}. 
+\end{equation}
+
+Queremos hallar ahora la integral
+\begin{equation*}
+  \oint g(\theta) d\theta,
+\end{equation*}
+con
+\begin{equation}
+  g(\theta)=\sqrt{A-\frac{\alpha}{\cos^2\theta}-\frac{\beta}{\sin^2 \theta}}.
+\end{equation}
+Podemos hacer ahora un cambio de variable $z=e^{i\theta}$, de modo que $dz=izd\theta$ y, si $f(\theta)d\theta=\tilde{f}(z)dz$,
+\begin{equation}
+  \tilde{g}(z)=\frac{-i}{z}\sqrt{ A-\frac{4\alpha}{(z+\frac{1}{z})^2}+\frac{4\beta}{(z-\frac{1}{z})^2}} = -i\sqrt{\frac{A}{z^2}-\frac{4\alpha}{(z^2+1)^2}+\frac{4\beta}{(z^2-1)^2}}.
+\end{equation}
+
+Tenemos que tener en cuenta ahora que, como $g(\theta)=p_{\theta}=\frac{r^2}{k^2}\dot{\theta}$ de nuevo los puntos de retorno serán las raíces de la expresión dentro de la raíz cuadrada. Tenemos que realizar la integral en un contorno que rodee en sentido antihorario el segmento que une $z_1$ y $z_2$, con $z_1=e^{i\theta_1}$ y $z_2=e^{i\theta_2}$ y $\theta_1, \theta_2$ los puntos de retorno. Nótese también que en todo caso los puntos de retorno deben estar en el mismo cuadrante, ya que en los puntos $\theta=0,\frac{\pi}{2},\pi, \frac{3\pi}{2}$ la integral diverge. Por tanto, podemos evitar que el contorno pase por los polos de la función $\tilde{f}$, que a primera vista se ve que están en $0$, $\pm 1$ y $\pm i$. De nuevo podemos aplicar la técnica anterior, la función ha de ramificarse necesariamente en el interior del contorno, pero igualmente podemos considerar que el camino encierra el resto del plano complejo con la dirección de integración opuesta y aquí sí que podemos aplicar el teorema de los residuos. Así,
+\begin{equation}
+  \oint g(\theta)d\theta = 2\pi i (\mathrm{Res}(g,0) +\mathrm{Res}(g,1)+\mathrm{Res}(g,-1)+\mathrm{Res}(g,i)+\mathrm{Res}(g,-i)).
+\end{equation}
+No es necesario preocuparse ahora de los signos de las raíces en cada uno de los términos puesto que, como vamos a ver ahora, el único término relevante es el residuo en $0$.
+Así es, como todos los polos son de orden 1, se comprueba rápidamente que 
+\begin{equation}
+  \mathrm{Res}(g,0)=-i\sqrt{A},
+\end{equation}
+mientras que los términos correspondientes a los otros residuos sólo dependerán de $\alpha$ y de $\beta$. Por tanto podemos escribir
+\begin{equation}
+  J_{\theta}=\frac{1}{2\pi}\oint g(\theta)d\theta=\sqrt{A}+C(\alpha,\beta), 
+\end{equation}
+con $C(\alpha,\beta)$ un término de poco interés que solo depende de $\alpha$ y $\beta$.
+
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{biblio}
-
-\newpage
-\section*{Apéndice: Cálculo de las integrales \eqref{eq:intaccion1} y \eqref{eq:intaccion2}}
 
 \end{document}
 

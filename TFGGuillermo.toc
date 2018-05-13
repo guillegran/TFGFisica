@@ -3,11 +3,12 @@
 \contentsline {section}{Introducci\IeC {\'o}n}{2}{Doc-Start}
 \contentsline {section}{\numberline {1}Geometr\IeC {\'\i }a simpl\IeC {\'e}ctica y simetr\IeC {\'\i }as en Mec\IeC {\'a}nica Cl\IeC {\'a}sica}{2}{section.1}
 \contentsline {section}{\numberline {2}Sistemas integrables y variables de acci\IeC {\'o}n-\IeC {\'a}ngulo}{4}{section.2}
-\contentsline {section}{\numberline {3}Sistemas superintegrables, trayectorias cerradas y simetr\IeC {\'\i }as ocultas}{5}{section.3}
-\contentsline {section}{\numberline {4}El oscilador arm\IeC {\'o}nico anis\IeC {\'o}tropo}{7}{section.4}
+\contentsline {section}{\numberline {3}Sistemas superintegrables, trayectorias cerradas y simetr\IeC {\'\i }as ocultas}{6}{section.3}
+\contentsline {section}{\numberline {4}El oscilador arm\IeC {\'o}nico anis\IeC {\'o}tropo}{8}{section.4}
 \contentsline {section}{\numberline {5}El hamiltoniano de TTW}{9}{section.5}
-\contentsline {section}{\numberline {6}Superintegrabilidad del sistema de TTW}{9}{section.6}
+\contentsline {section}{\numberline {6}Superintegrabilidad del sistema de TTW}{10}{section.6}
 \contentsline {section}{\numberline {7}El hamiltoniano de TTW en coordenadas cartesianas}{12}{section.7}
-\contentsline {section}{\numberline {8}El hamiltoniano de TTW en coordenadas complejas}{12}{section.8}
-\contentsline {section}{\numberline {9}El hamiltoniano de TTW en unas nuevas coordenadas}{15}{section.9}
-\contentsline {section}{Referencias}{16}{equation.9.83}
+\contentsline {section}{\numberline {8}El hamiltoniano de TTW en coordenadas complejas}{13}{section.8}
+\contentsline {section}{\numberline {9}El hamiltoniano de TTW en unas nuevas coordenadas}{16}{section.9}
+\contentsline {section}{\numberline {A}C\IeC {\'a}lculo de las integrales \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:intaccion1}\unskip \@@italiccorr )}} y \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:intaccion2}\unskip \@@italiccorr )}}}{17}{appendix.Alph1}
+\contentsline {section}{Referencias}{19}{equation.Alph1.94}
