@@ -2,13 +2,20 @@
 
 \bibitem{abraham}
 R.~Abraham and J.~E. Marsden.
-\newblock {\em Foundations of mechanics}, volume~36.
+\newblock {\em Foundations of {M}echanics}, volume~36.
 \newblock Benjamin/Cummings Publishing Company Reading, Massachusetts, 1978.
 
 \bibitem{arnold}
 V.~I. Arnold.
-\newblock {\em Mathematical methods of classical mechanics}.
+\newblock {\em Mathematical {M}ethods of {C}lassical {M}echanics}.
 \newblock Springer Science \& Business Media, 2013.
+
+\bibitem{ballesteros}
+A.~Ballesteros, A.~Blasco, F.~J. Herranz, and F.~Musso.
+\newblock A new integrable anisotropic oscillator on the two-dimensional sphere
+  and the hyperbolic plane.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  47(34):345204, 2014.
 
 \bibitem{bertrand}
 J.~Bertrand.
@@ -23,7 +30,7 @@ D.~M. Fradkin.
 
 \bibitem{goldstein}
 H.~Goldstein, C.~P. Poole, and J.~Safko.
-\newblock {\em Classical mechanics}.
+\newblock {\em Classical {M}echanics}.
 \newblock Pearson Education India, 2011.
 
 \bibitem{gonera}
@@ -36,6 +43,12 @@ G.~Gubbiotti and D.~Latini.
 \newblock A multiple scales approach to maximal superintegrability.
 \newblock {\em Journal of Physics A: Mathematical and Theoretical}, 2018.
 
+\bibitem{higgs}
+P.~W. Higgs.
+\newblock Dynamical symmetries in a spherical geometry. i.
+\newblock {\em Journal of Physics A: Mathematical and General}, 12(3):309,
+  1979.
+
 \bibitem{jauchhill}
 J.M. Jauch and E.L. Hill.
 \newblock On the problem of degeneracy in quantum mechanics.
@@ -43,7 +56,7 @@ J.M. Jauch and E.L. Hill.
 
 \bibitem{landau}
 L.~D. Landau and E.~M. Lifshitz.
-\newblock {\em Curso de física teórica. Volumen 1: Mecánica}.
+\newblock {\em Curso de física teórica. {V}olumen 1: {M}ecánica}.
 \newblock Editorial Reverté, S. A., 1985.
 
 \bibitem{miller}
@@ -52,9 +65,22 @@ W.~Miller~Jr, S.~Post, and P.~Winternitz.
 \newblock {\em Journal of Physics A: Mathematical and Theoretical},
   46(42):423001, 2013.
 
+\bibitem{mishchenko}
+A.~S. Mishchenko and A.~T. Fomenko.
+\newblock Generalized {L}iouville method of integration of hamiltonian systems.
+\newblock {\em Functional analysis and its applications}, 12(2):113--121, 1978.
+
+\bibitem{ranada}
+M.~F. Rañada.
+\newblock The {T}remblay--{T}urbiner--{W}internitz system on spherical and
+  hyperbolic spaces: superintegrability, curvature-dependent formalism and
+  complex factorization.
+\newblock {\em Journal of Physics A: Mathematical and Theoretical},
+  47(16):165203, 2014.
+
 \bibitem{spivak}
 M.~Spivak.
-\newblock {\em Physics for mathematicians: Mechanics I}.
+\newblock {\em Physics for mathematicians: {M}echanics I}.
 \newblock Publish or Perish, 2010.
 
 \bibitem{ttw1}
