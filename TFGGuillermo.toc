@@ -11,4 +11,4 @@
 \contentsline {section}{\numberline {8}El hamiltoniano de TTW en coordenadas complejas}{13}{section.8}
 \contentsline {section}{\numberline {9}El hamiltoniano de TTW en unas nuevas coordenadas}{16}{section.9}
 \contentsline {section}{\numberline {A}C\IeC {\'a}lculo de las integrales \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:intaccion1}\unskip \@@italiccorr )}} y \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:intaccion2}\unskip \@@italiccorr )}}}{17}{appendix.Alph1}
-\contentsline {section}{Referencias}{19}{equation.Alph1.94}
+\contentsline {section}{Referencias}{19}{AMS.91}

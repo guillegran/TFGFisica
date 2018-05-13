@@ -25,6 +25,7 @@
 \usepackage[tocflat]{tocstyle}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
+\usepackage[overload]{empheq}
 
 
 \renewcommand{\thesection}{\arabic{section}}
@@ -358,14 +359,12 @@ con $H_i(q_i,p_i)=\frac{1}{2}(p_i^2+\omega_i^2q_i^2)$. Para probar la integrabil
 \end{equation*}
 
 Los conjuntos de nivel de las funciones $F_j(\vect{q},\vect{p})=a_j$ serán toros de Liouville dados por las ecuaciones
-\begin{equation*}
-  \begin{cases}
+\begin{align*}[left=\empheqlbrace]
     p_1^2+\omega_1^2q_1^2&= 2(a_1-a_2)\\
     p_1^2+\omega_2^2q_1^2&= 2(a_2-a_3)\\
-     &\vdots \\
+    &\vdotswithin{=} \\
     p_n^2+\omega_n^2q_n^2&= 2a_n.
-  \end{cases}
-\end{equation*}
+\end{align*}
 Es posible demostrar que las trayectorias del flujo hamiltoniano en estos toros son cerradas si y sólo si las frecuencias $\omega_i$ son de la forma $\omega_i=n_i \omega$, para cierta $\omega$ y para ciertos números enteros $n_i$, de modo que el hamiltoniano \eqref{eq:anisotropo} toma la forma
 \begin{equation}
   H(\vect{q},\vect{p})=\frac{1}{2}\sum_{i=1}^n \left(p_i^2 + n_i^2\omega^2q_i^2\right).
