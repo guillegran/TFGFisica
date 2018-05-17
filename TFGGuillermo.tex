@@ -94,9 +94,10 @@
 \newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\pois}[2]{\left\lbrace#1,#2\right\rbrace}
 
-\title{\sf TRABAJO DE FIN DE GRADO \\  Modelos superintegrables: El hamiltoniano de TTW}
-\author{\sf Guillermo Gallego}
-\date{\bf \today}
+\title{TRABAJO DE FIN DE GRADO \\  Modelos superintegrables: El hamiltoniano de TTW}
+\author{\bf Guillermo Gallego}
+%\date{\bf \today}
+\date{Junio 2018}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -114,16 +115,84 @@
 %Facultad  \hspace{-1mm}de  \hspace{-1mm}Ciencias \hspace{-1mm}Físicas,  \hspace{-1mm}UCM\\
 %{\rm\tiny Dirigido por Miguel A. Rodríguez}
 %}}
-\maketitle
+
+\begin{titlepage}
+%\vspace*{-2cm}
+%\makebox[.5\textwidth][l]{\Large\bfseries\sffamily TRABAJO DE FIN DE GRADO \\ JUNIO 2018} 
+%\makebox[.5\textwidth][r]{\includegraphics[height=1.5cm]{Negro-transparente}} 
+%\makebox[\dimexpr\textwidth][r]{\includegraphics[height=1.5cm]{Negro-transparente}} 
+\begin{minipage}{0.5\textwidth}
+  \centering
+    \Large TRABAJO DE FIN DE GRADO 
+  \end{minipage}
+\begin{minipage}{0.5\textwidth}
+  \centering
+\includegraphics[height=1.5cm]{Negro-transparente}
+  \end{minipage}
+
+\vspace*{2cm}
+\begin{center}
+%\sc \large TRABAJO DE FIN DE GRADO, JUNIO 2018 \\
+%\vspace*{.25 cm}
+%    \today
+
+%\vspace*{.5cm}
+\rm \Huge\bfseries\sffamily Modelos superintegrables: el hamiltoniano de Tremblay-Turbiner-Winternitz
+
+\vspace*{1cm}
+\rm \large 
+\sc GUILLERMO GALLEGO
+
+\vspace*{.5 cm}
+\sc \normalsize JUNIO 2018 \\
+%    \today
+\end{center}
+
+\vspace*{2cm}
+
 \begin{abstract}
   Este trabajo es una introducción a la teoría de sistemas integrables y superintegrables en mecánica clásica. En particular, nos centramos en el estudio del hamiltoniano de Tremblay--Turbiner--Winternitz, demostrando su superintegrabilidad, viendo su aspecto en distintos sistemas de coordenadas y comentando su generalización a espacios de curvatura constante.
 \end{abstract}
 \selectlanguage{english}
 \begin{abstract}
- This work is an introduction to the theory of Integrable and Superintegrable Systems in Classical Mechanics. More precisely, we study the hamiltonian of Tremblay--Turbiner--Winternitz, proving its superintegrability, making some changes between several coordinate systems and taking a look at its generalization to constant curvature spaces.
+ This piece of work is an introduction to the theory of Integrable and Superintegrable Systems in Classical Mechanics. More precisely, we study the hamiltonian of Tremblay--Turbiner--Winternitz, proving its superintegrability, making some changes between several coordinate systems and taking a look at its generalization to constant curvature spaces.
 \end{abstract}
 \selectlanguage{spanish}
-\newpage
+
+%\enlargethispage{3cm}
+\vfill
+%\parbox[t]{0.45\textwidth}{%
+%  Universidad Complutense de Madrid \\
+%    Facultad de Ciencias Físicas \\
+%    Departamento de Física Teórica          
+%  }%
+%\hfill
+%\begin{tabular}[t]{l@{}}%{\raggedleft%
+%Dirigido por:\\
+%  Miguel Ángel Rodríguez
+%\end{tabular}
+%}%
+\begin{minipage}{0.5\textwidth}
+
+    Facultad de Ciencias Físicas \\
+    Departamento de Física Teórica          
+ \end{minipage}
+ \hfill
+\begin{minipage}{0.3\textwidth}
+Dirigido por:\\
+  Miguel Ángel Rodríguez
+  \end{minipage}
+\end{titlepage}
+
+%\maketitle
+%\begin{abstract}
+%  Este trabajo es una introducción a la teoría de sistemas integrables y superintegrables en mecánica clásica. En particular, nos centramos en el estudio del hamiltoniano de Tremblay--Turbiner--Winternitz, demostrando su superintegrabilidad, viendo su aspecto en distintos sistemas de coordenadas y comentando su generalización a espacios de curvatura constante.
+%\end{abstract}
+%\selectlanguage{english}
+%\begin{abstract}
+% This work is an introduction to the theory of Integrable and Superintegrable Systems in Classical Mechanics. More precisely, we study the hamiltonian of Tremblay--Turbiner--Winternitz, proving its superintegrability, making some changes between several coordinate systems and taking a look at its generalization to constant curvature spaces.
+%\end{abstract}
+%\selectlanguage{spanish}
 
 \tableofcontents
 
@@ -402,7 +471,7 @@ Principalmente por consideraciones al cuantizar, dentro de los sistemas integrab
 
 Los sistemas superintegrables de segundo orden han sido bastante estudiados y poseen una teoría de clasificación. También han sido tratados varias clases de sistemas de tercer orden. Sin embargo, para sistemas generales de tercer orden y de órdenes superiores se conoce mucho menos. En particular hasta hace unos pocos años había pocos ejemplos y las teorías de estructura y clasificación eran prácticamente inexistentes. 
 
-La situación cambió drásticamente en 2009 con el trabajo de F. Tremblay, A. V. Turbiner y P. Winternitz \cite{ttw1}, donde los autores presentaron una familia de potenciales en el plano, parametrizados por una constante $k$, y conjeturaron que estos sistemas eran superintegrables para todo $k\in \QQ$, con órdenes tan grandes como se quisieran. Unos meses más tarde, en otro trabajo \cite{ttw2} los mismos autores calcularon las trayectorias acotadas de esta familia de sistemas y mostraron que eran curvas cerradas para todos los casos con $k \in \QQ$, dando así evidencia a favor de su conjetura. Posteriormente se he verificado por varios métodos que, efectivamente, sus conjeturas eran correctas.
+La situación cambió drásticamente en 2009 con el trabajo de F. Tremblay, A. V. Turbiner y P. Winternitz \cite{ttw1}, donde los autores presentaron una familia de potenciales en el plano, parametrizados por una constante $k$, y conjeturaron que estos sistemas eran superintegrables para todo $k\in \QQ$, con órdenes tan grandes como se quisieran. Unos meses más tarde, en otro trabajo \cite{ttw2} los mismos autores calcularon las trayectorias acotadas de esta familia de sistemas y mostraron que eran curvas cerradas para todos los casos con $k \in \QQ$, dando así evidencia a favor de su conjetura. Posteriormente se ha verificado por varios métodos que, efectivamente, sus conjeturas eran correctas.
 
 Concretamente, el hamiltoniano de Tremblay, Turbiner y Winternitz (que a partir de ahora abreviaremos como \emph{hamiltoniano de TTW}) en coordenadas polares tiene la forma 
 \begin{equation}
@@ -751,7 +820,7 @@ Lo interesante de ver el hamiltoniano en estas coordenadas es que, si se elimina
 
 Esta manera de entender el hamiltoniano de TTW fue originalmente propuesta por M. A. Rodríguez (el director de este trabajo) y no publicada, aunque sí propuesta en un congreso. Muy recientemente el hamiltoniano de TTW ha sido estudiado en este aspecto por G. Gubbiotti y D. Latini en su trabajo \cite{gubbiottilatini}, donde sugieren un nuevo argumento a favor de su superintegrabilidad para $k$ racional empleando un método novedoso basado en la técnica de escalas múltiples.
 
-\section{El hamiltoninano de TTW en espacios de curvatura constante}
+\section{El hamiltoniano de TTW en espacios de curvatura constante}
 En esta sección hacemos una breve exposición de las generalizaciones del hamiltoniano de TTW a la esfera $\mathbb{S} ^2$ y al plano hiperbólico $\mathbb{H} ^2.$ El estudio de sistemas de este tipo se remonta al trabajo de Higgs \cite{higgs}, donde trató con la generalización del oscilador armónico a la esfera. Siguiendo estas ideas, recientemente se han tratado generalizaciones de sistemas superintegrables conocidos a espacios de curvatura constante. Una exposición detallada de los métodos utilizados para estas generalizaciones puede encontrarse en \cite{ballesteros}. Concretamente, el estudio del hamiltoniano de TTW en estos espacios así como una demostración de su superintegrabilidad puede leerse en \cite{ranada}.
 
 Para modelizar las geometrías esférica e hiperbólica seguimos el método clásico del programa de Erlangen, que consiste en tratar cada uno de estos espacios como un espacio homogéneo de un determinado grupo de isometrías actuando sobre $\mathbb{R}^3$. Así, en general el espacio a tratar vendrá modelizado por la superficie $S_\kappa \subset \mathbb{R} ^3$ de ecuación

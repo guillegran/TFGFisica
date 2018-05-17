@@ -1,6 +1,8 @@
 \select@language {spanish}
 \select@language {english}
 \select@language {spanish}
+\select@language {english}
+\select@language {spanish}
 \contentsline {section}{\'{I}ndice}{2}{Doc-Start}
 \contentsline {section}{Introducci\IeC {\'o}n}{2}{Doc-Start}
 \contentsline {section}{\numberline {1}Geometr\IeC {\'\i }a simpl\IeC {\'e}ctica y simetr\IeC {\'\i }as en mec\IeC {\'a}nica cl\IeC {\'a}sica}{2}{section.1}
@@ -12,6 +14,6 @@
 \contentsline {section}{\numberline {7}El hamiltoniano de TTW en coordenadas cartesianas}{13}{section.7}
 \contentsline {section}{\numberline {8}El hamiltoniano de TTW en coordenadas complejas}{13}{section.8}
 \contentsline {section}{\numberline {9}El hamiltoniano de TTW en unas nuevas coordenadas}{16}{section.9}
-\contentsline {section}{\numberline {10}El hamiltoninano de TTW en espacios de curvatura constante}{17}{section.10}
+\contentsline {section}{\numberline {10}El hamiltoniano de TTW en espacios de curvatura constante}{17}{section.10}
 \contentsline {section}{\numberline {A}C\IeC {\'a}lculo de las integrales \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:intaccion1}\unskip \@@italiccorr )}} y \textup {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref {eq:intaccion2}\unskip \@@italiccorr )}}}{19}{appendix.Alph1}
 \contentsline {section}{Referencias}{20}{AMS.102}
