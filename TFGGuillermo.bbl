@@ -59,6 +59,11 @@ L.~D. Landau and E.~M. Lifshitz.
 \newblock {\em Curso de física teórica. {V}olumen 1: {M}ecánica}.
 \newblock Editorial Reverté, S. A., 1985.
 
+\bibitem{lechtenfeld}
+O.~Lechtenfeld, A.~Nersessian, and V.~Yeghikyan.
+\newblock Action-angle variables for dihedral systems on the circle.
+\newblock {\em Physics Letters A}, 374(46):4647--4652, 2010.
+
 \bibitem{miller}
 W.~Miller~Jr, S.~Post, and P.~Winternitz.
 \newblock Classical and quantum superintegrability with applications.
@@ -77,11 +82,6 @@ M.~F. Rañada.
   complex factorization.
 \newblock {\em Journal of Physics A: Mathematical and Theoretical},
   47(16):165203, 2014.
-
-\bibitem{spivak}
-M.~Spivak.
-\newblock {\em Physics for mathematicians: {M}echanics I}.
-\newblock Publish or Perish, 2010.
 
 \bibitem{ttw1}
 F.~Tremblay, A.~V. Turbiner, and P.~Winternitz.

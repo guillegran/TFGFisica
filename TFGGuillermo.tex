@@ -316,12 +316,12 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
 	 \end{cases}
        \end{equation}
        para $i=1,\dots,n$.
-       Por tanto, en torno a cada toro de Liouville un sistema completamente integrable es integrable por cuadraturas. Un flujo de este tipo en el toro se denomina un \emph{movimiento condicionalmente periódico} y se puede demostrar \cite{arnold} que la trayectoria será cerrada si y sólo si las frecuencias $\nu_1,\dots,\nu_n$ no son independientes, esto es, si existen números enteros $k_1,\dots,k_n$ tales que $\sum_i k_i\nu_i=0$. En caso contrario la trayectoria es densa en el toro de Liouville.
+       Por tanto, en torno a cada toro de Liouville un sistema completamente integrable es integrable por cuadraturas. Un flujo de este tipo en el toro se denomina un \emph{movimiento condicionalmente periódico} y se puede demostrar \cite{arnold} que la trayectoria será cerrada si y sólo si las frecuencias $\nu_1,\dots,\nu_n$ son conmesurables, esto es, si existen números enteros $k_1,\dots,k_n$ tales que $\sum_i k_i\nu_i=0$. En caso contrario la trayectoria es densa en el toro de Liouville.
 
        \begin{figure}[h]
 	 \centering
 	 \includegraphics[width=.4\textwidth]{homology}
-	 \caption{\small Base de ciclos de $\TT^2$}
+	 \caption{\small Base de ciclos de $\TT^2$.}
 	 \label{fig:toro}
        \end{figure}
 
@@ -398,7 +398,7 @@ La condición que ha de cumplirse para que la trayectoria en cierto momento se c
 \begin{figure}[h!]
   \centering
   \includegraphics[width=.4\textwidth]{bertrand}
-  \caption{\small Avance del ángulo de $r_{\text{máx}}$ (Fuente: \cite{landau})}
+  \caption{\small Avance del ángulo de $r_{\text{máx}}$ (Fuente: \cite{landau}).}
   \label{fig:bertrand}
 \end{figure}
 
@@ -427,15 +427,15 @@ El oscilador armónico anisótropo con $n$ grados de libertad está definido sob
   H(\vect{q},\vect{p})=\frac{1}{2}\sum_{i=1}^n \left(p_i^2 + \omega_i^2q_i^2\right)=\sum_{i=1}^n H_i(q_i,p_i),
   \label{eq:anisotropo}
 \end{equation}
-con $H_i(q_i,p_i)=\frac{1}{2}(p_i^2+\omega_i^2q_i^2)$. Para probar la integrabilidad del sistema basta tomar las funciones $F_j=\sum_{i=j}^n H_i$, con $j$ recorriendo desde $1$ hasta $n$, ya que
+con $H_i(q_i,p_i)=\frac{1}{2}(p_i^2+\omega_i^2q_i^2)$. Para probar la integrabilidad del sistema basta tomar las funciones $H_i$, ya que
 \begin{equation*}
   \left\{ H_i,H_j \right\}=\parcial{H_i}{p_k}\parcial{H_j}{q_k}-\parcial{H_j}{p_k}\parcial{H_i}{q_k}=0.
 \end{equation*}
 
 Los conjuntos de nivel de las funciones $F_j(\vect{q},\vect{p})=a_j$ serán toros de Liouville dados por las ecuaciones
 \begin{align*}[left=\empheqlbrace]
-    p_1^2+\omega_1^2q_1^2&= 2(a_1-a_2)\\
-    p_1^2+\omega_2^2q_1^2&= 2(a_2-a_3)\\
+    p_1^2+\omega_1^2q_1^2&= 2a_1\\
+    p_1^2+\omega_2^2q_1^2&= 2a_2\\
     &\vdotswithin{=} \\
     p_n^2+\omega_n^2q_n^2&= 2a_n.
 \end{align*}
@@ -544,36 +544,42 @@ Para obtener ahora las variables de acción tomamos como base de ciclos del toro
     J_r=\frac{1}{2\pi}\oint p_r dr, \\
     J_\theta=\frac{1}{2\pi}\oint p_{\theta}d\theta,
 \end{align}
-donde las integrales se realizan en ciclos cerrado entre los puntos de retorno de $r$ y $\theta$, respectivamente, en el toro de Liouville.
-Despejamos entonces en las ecuaciones \eqref{eq:toro} y obtenemos
+donde las integrales se realizan precisamente en estos ciclos que hemos tomado (ver figura \ref{fig:ciclos}). Los cortes de estos ciclos con los ejes $r$ y $\theta$, respectivamente, serán precisamente las raíces de las expresiones que se obtienen al despejar en las ecuaciones \eqref{eq:toro} 
 \begin{align}
     p_r=\sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A}, \\
     p_{\theta}=\sqrt{A-\frac{\alpha}{\cos^2\theta} -\frac{\beta}{\sin^2\theta}}.
 \end{align}
 Podemos calcular entonces las integrales
 \begin{align}
-  J_r=\frac{1}{2\pi}\oint \sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A} dr=\frac{4E}{\omega}-k\sqrt{A}, \label{eq:intaccion1} \\ 
-  J_\theta=\frac{1}{2\pi}\oint \sqrt{A-\frac{\alpha}{\cos^2\theta} -\frac{\beta}{\sin^2\theta}}d\theta=\sqrt{A}+C(\alpha,\beta), 
+  J_r=\frac{1}{2\pi}\oint \sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A} dr=\frac{E}{2\omega}-\frac{k\sqrt{A}}{2}, \label{eq:intaccion1} \\ 
+  J_\theta=\frac{1}{2\pi}\oint \sqrt{A-\frac{\alpha}{\cos^2\theta} -\frac{\beta}{\sin^2\theta}}d\theta=\frac{\sqrt{A}}{2}-\frac{\sqrt{\alpha}+\sqrt{\beta}}{2}. 
 \label{eq:intaccion2}
 \end{align}
-donde $C(\alpha,\beta)$ es un término que sólo depende de $\alpha$ y $\beta$, de modo que podemos redefinir trivialmente 
+Como $\frac{\sqrt{\alpha}+\sqrt{\beta}}{2}$ es un término que sólo depende de $\alpha$ y $\beta$ podemos redefinir trivialmente 
 \begin{equation}
-  J_{\theta}=\sqrt{A}. 
+  J_{\theta}=\frac{\sqrt{A}}{2}. 
 \end{equation}
-El cálculo de estas integrales puede verse detallado en el Apéndice.
+El cálculo de la integral \eqref{eq:intaccion1} puede hacerse con técnicas de variable compleja, como aparece detallado en el Apéndice \ref{apendice}, mientras que la integral \eqref{eq:intaccion2} está calculada usando técnicas elementales en \cite{lechtenfeld}.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{ciclos}
+  \caption{\small Ciclos del toro de Liouville y variables de acción.}
+  \label{fig:ciclos}
+\end{figure}
 
 Una vez obtenidas las variables de acción, despejamos para obtener el hamiltoniano
 \begin{equation}
-  H(J_r,J_\theta,w_r,w_\theta)=\frac{\omega}{4}(J_r+kJ_\theta),
+  H(J_r,J_\theta,w_r,w_\theta)=2\omega(J_r+kJ_\theta),
 \end{equation}
 donde $w_r$ y $w_\theta$ son las variables angulares que, por las ecuaciones de Hamilton, verifican
 \begin{equation}
   \begin{cases}
-    \dot{w}_r=\frac{\partial H}{\partial J_r}=\frac{\omega}{4}, \\ 
-    \dot{w}_{\theta}=\frac{\partial H}{\partial J_\theta}=\frac{\omega}{4} k.
+    \nu_r=\dot{w}_r=\frac{\partial H}{\partial J_r}=2\omega, \\ 
+    \nu_{\theta}=\dot{w}_{\theta}=\frac{\partial H}{\partial J_\theta}=2\omega k.
   \end{cases}
 \end{equation}
-Ahora, si $k$ es irracional, entonces las frecuencias $\dot{w}_r$ y $\dot{w}_\theta$ son independientes y las trayectorias son densas en el toro de Liouville \cite{arnold}, de forma que en ese caso el sistema no puede ser superintegrable. En el caso en que $k=\frac{m}{n}$, con $m,n \in \NN$ entonces claramente
+Ahora, si $k$ es irracional, entonces las frecuencias $\nu_r$ y $\nu_\theta$ no son conmesurables y las trayectorias son densas en el toro de Liouville \cite{arnold}, de forma que en ese caso el sistema no puede ser superintegrable. En el caso en que $k=\frac{m}{n}$, con $m,n \in \NN$ entonces claramente
 \begin{equation*}
   m\dot{w}_r-n\dot{w}_\theta=0,
 \end{equation*}
@@ -886,8 +892,8 @@ donde $T_{\kappa}=\frac{S_\kappa}{C_\kappa}$ y
 Nótese que en el \emph{límite euclídeo}, cuando $\kappa\rightarrow 0$, se recupera el hamiltoniano de TTW en el plano \eqref{eq:TTW}. Varias consideraciones sobre este hamiltoniano y, en particular, una prueba de su superintegrabilidad para $k$ racional pueden leerse en \cite{ranada}.
 
 \appendix
-\section{Cálculo de las integrales \eqref{eq:intaccion1} y \eqref{eq:intaccion2}}
-En este apéndice vamos a detallar los cálculos de las integrales \eqref{eq:intaccion1} y \eqref{eq:intaccion2}. El método de integración que seguiremos en ambas es la técnica estándar presentada en \cite{goldstein}, donde se aplica al caso del problema de Kepler.
+\section{Cálculo de la integral \eqref{eq:intaccion1}}\label{apendice}
+En este apéndice vamos a detallar el cálculo de la integral \eqref{eq:intaccion1}. El método de integración que seguiremos es la técnica estándar presentada en \cite{goldstein}, donde se aplica al caso del problema de Kepler.
 
 Para hallar la integral
 \begin{equation*}
@@ -897,58 +903,47 @@ con
 \begin{equation}
 f(r)=\sqrt{2E-\omega^2r^2-\frac{k^2A}{r^2}},
 \end{equation}
-tengamos en cuenta que $f$ es una función multivalorada en el toro de Liouville y que precisamente $f(r)=p_r=m\dot{r}$, de modo que los límites del movimiento serán dos puntos de retorno $r_1$ y $r_2$, análogos a los $r_{\text{min}}$ y $r_{\text{máx}}$ de la figura \ref{fig:bertrand}, y vendrán dados precisamente por las raíces de la expresión dentro de la raíz cuadrada. Vamos a estudiar ahora esta integral como una integral en un contorno complejo teniendo en cuenta varias sutilezas. Si $r_1$ es la cota inferior del movimiento, un ciclo de $r$ comprende un movimiento de $r_1$ a $r_2$, donde $p_r>0$, de modo que en esta parte escogemos la raíz cuadrada positiva; y después comprende un movimiento de $r_2$ a $r_1$, donde $p_r<0$ y hay que tomar la raíz cuadrada negativa. La integración entonces comprende las dos ramas de una función doblemente valorada en el plano complejo, con $r_1$ y $r_2$ los puntos de ramificación. Podemos por tanto representar el plano complejo como una de las hojas de una superficie de Riemann, pegadas a lo largo del eje real como se muestra en la figura [figura] de forma que en los puntos del eje real mayores que $r_2$ se toma raíz cuadrada positiva y los menores que $r_1$ se toma la negativa. Por simplificar la notación, $\sqrt{\cdots}$ indicará a partir de ahora la raíz cuadrada positiva. 
+tengamos en cuenta que $f$ es una función multivalorada en el toro de Liouville y que precisamente $f(r)=p_r=m\dot{r}$, de modo que los límites del movimiento serán dos puntos de retorno $r_1$ y $r_2$, análogos a los $r_{\text{min}}$ y $r_{\text{máx}}$ de la figura \ref{fig:bertrand}, y vendrán dados precisamente por las raíces de la expresión dentro de la raíz cuadrada. Si $r_1$ es la cota inferior del movimiento, un ciclo de $r$ comprende un movimiento de $r_1$ a $r_2$, donde $p_r>0$, de modo que en esta parte escogemos la raíz cuadrada positiva; y después comprende un movimiento de $r_2$ a $r_1$, donde $p_r<0$ y hay que tomar la raíz cuadrada negativa (ver figura \ref{fig:ciclos}). 
 
-Como el contorno de integración encierra la línea entre los puntos de ramificación, no podemos aplicar directamente el método de los residuos, pero sí que podemos considerar que el camino encierra el resto del plano complejo, con la dirección de integración opuesta (ver figura [figura]). En esta región el integrando sí es una función univalorada, de modo que aquí sí que podemos aplicar el teorema de los residuos. Notamos también que los polos de $f(r)$ están en $0$ y en $\infty$, de modo que
+Como siempre $r>0$ podemos hacer un cambio de variable $t=r^2$, de modo que $dr=\frac{dt}{2\sqrt{t}}$ y la integral queda en la forma
+\begin{equation*}
+  \oint \tilde{f}(t) dt,
+\end{equation*}
+con
 \begin{equation}
-  \oint f(r)dr =-2\pi i \mathrm{Res}(f,0) -2\pi i \mathrm{Res}(f,\infty).
+  \tilde{f}(t)=\frac{1}{2} \sqrt{\frac{2E}{t}-\omega^2-\frac{k^2A}{t^2}}, 
+\end{equation}
+en torno a un cierto ciclo y con unos nuevos puntos de retorno $t_1$ y $t_2$ también positivos. Esta integral puede resolverse por el método de los residuos teniendo en cuenta que la integración comprende las dos ramas de una función doblemente valorada en el plano complejo, con $t_1$ y $t_2$ los puntos de ramificación. Podemos por tanto representar el plano complejo como una de las hojas de una superficie de Riemann, pegadas a lo largo del eje real como se muestra en la figura \ref{fig:polos} de forma que en los puntos del eje real mayores que $t_2$ se toma raíz cuadrada positiva y en los menores que $t_1$ se toma la negativa. Por simplificar la notación, $\sqrt{\cdots}$ indicará a partir de ahora la raíz cuadrada positiva. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics{polos}
+  \caption{\small Contornos de integración en el plano complejo.}
+  \label{fig:polos}
+\end{figure}
+
+Como el contorno de integración encierra la línea entre los puntos de ramificación, no podemos aplicar directamente el método de los residuos, pero sí que podemos considerar que el camino encierra el resto del plano complejo, con la dirección de integración opuesta (ver figura \ref{fig:polos}). En esta región el integrando sí es una función univalorada, ya que $t_1$ y $t_2$ son las únicas raíces del término que hay debajo de la raíz en todo el plano complejo, de modo que aquí sí que podemos aplicar el teorema de los residuos. Notamos también que los polos de $\tilde{f}$ están en $0$ y en $\infty$, de modo que
+\begin{equation}
+  \oint \tilde{f}(t)dt =-2\pi i \mathrm{Res}(\tilde{f},0) -2\pi i \mathrm{Res}(\tilde{f},\infty).
 \end{equation}
 
 El polo en $0$ es de orden 1, de modo que podemos calcular el residuo
 \begin{equation}
-  \mathrm{Res}(f,0)=\lim_{r\rightarrow 0} rf(r)=\lim_{r\rightarrow 0}-\sqrt{2Er^2-\omega^2r^4-k^2A}=-ik\sqrt{A}.   
+  \mathrm{Res}(\tilde{f},0)=\lim_{t\rightarrow 0} tf(t)=\lim_{t\rightarrow 0}-\frac{1}{2}\sqrt{2Et-\omega^2t^2-k^2A}=-i\frac{k\sqrt{A}}{2}.   
 \end{equation}
 Nótese que, de acuerdo con la discusión anterior, estamos tomando la raíz cuadrada negativa.
-Para calcular el residuo en $\infty$ empleamos un cambio de variable $z=r^{-1}$, de modo que $dr=-2z^{-2}dz$ y, si $f(r)dr=\tilde{f}(z)dz$,
+Para calcular el residuo en $\infty$ empleamos un cambio de variable $z=t^{-1}$, de modo que $dt=-z^{-2}dz$ y, si $\tilde{f}(t)dt=\hat{f}(z)dz$,
 \begin{equation}
-  \tilde{f}(z)=-2z^{-2}\sqrt{2E-\frac{\omega^2}{z^2}-k^2z^2A}=-2\sqrt{\frac{2E}{z^4}-\frac{\omega^2}{z^6}-\frac{k^2A}{z^2}}.
+  \hat{f}(z)=-\frac{1}{2}z^{-2}\sqrt{2Ez-\omega^2-k^2Az^2}.
 \end{equation}
-Por tanto, $z=0$ es un polo de orden $3$ de $\tilde{f}(z)$ y
+Por tanto, $z=0$ es un polo de orden $2$ de $\hat{f}(z)$ y
 \begin{equation}
-  \mathrm{Res}(f,\infty)=\mathrm{Res}(\tilde{f},0)=\lim_{z\rightarrow 0}\left( \frac{d}{d z} \right)^2 z^3 \tilde{f}(z)=\frac{4E\sqrt{-\omega^2}}{\omega^2}=i\frac{4E}{\omega}. 
+  \mathrm{Res}(\tilde{f},\infty)=\mathrm{Res}(\hat{f},0)=\lim_{z\rightarrow 0}\frac{d}{d z}  z^2 \hat{f}(z)=\lim_{z\rightarrow 0}\frac{-2E+2k^2Az}{4\sqrt{2Ez-\omega^2-k^2Az^2}}=i\frac{E}{2\omega}. 
 \end{equation}
 Finalmente
 \begin{equation}
-  J_r=\frac{1}{2\pi}\oint f(r)dr=-i\mathrm{Res}(f,0)-i\mathrm{Res}(f,\infty)=\frac{4E}{\omega}-k\sqrt{A}. 
+  J_r=\frac{1}{2\pi}\oint f(r)dr=-i\mathrm{Res}(\tilde{f},0)-i\mathrm{Res}(\tilde{f},\infty)=\frac{E}{2\omega}-\frac{k\sqrt{A}}{2}. 
 \end{equation}
-
-Queremos hallar ahora la integral
-\begin{equation*}
-  \oint g(\theta) d\theta,
-\end{equation*}
-con
-\begin{equation}
-  g(\theta)=\sqrt{A-\frac{\alpha}{\cos^2\theta}-\frac{\beta}{\sin^2 \theta}}.
-\end{equation}
-Podemos hacer ahora un cambio de variable $z=e^{i\theta}$, de modo que $dz=izd\theta$ y, si $f(\theta)d\theta=\tilde{f}(z)dz$,
-\begin{equation}
-  \tilde{g}(z)=\frac{-i}{z}\sqrt{ A-\frac{4\alpha}{(z+\frac{1}{z})^2}+\frac{4\beta}{(z-\frac{1}{z})^2}} = -i\sqrt{\frac{A}{z^2}-\frac{4\alpha}{(z^2+1)^2}+\frac{4\beta}{(z^2-1)^2}}.
-\end{equation}
-
-Tenemos que tener en cuenta ahora que, como $g(\theta)=p_{\theta}=\frac{r^2}{k^2}\dot{\theta}$ de nuevo los puntos de retorno serán las raíces de la expresión dentro de la raíz cuadrada. Tenemos que realizar la integral en un contorno que rodee en sentido antihorario el segmento que une $z_1$ y $z_2$, con $z_1=e^{i\theta_1}$ y $z_2=e^{i\theta_2}$ y $\theta_1, \theta_2$ los puntos de retorno. Nótese también que en todo caso los puntos de retorno deben estar en el mismo cuadrante, ya que en los puntos $\theta=0,\frac{\pi}{2},\pi, \frac{3\pi}{2}$ la integral diverge. Por tanto, podemos evitar que el contorno pase por los polos de la función $\tilde{f}$, que a primera vista se ve que están en $0$, $\pm 1$ y $\pm i$. De nuevo podemos aplicar la técnica anterior, la función ha de ramificarse necesariamente en el interior del contorno, pero igualmente podemos considerar que el camino encierra el resto del plano complejo con la dirección de integración opuesta y aquí sí que podemos aplicar el teorema de los residuos. Así,
-\begin{equation}
-  \oint g(\theta)d\theta = 2\pi i (\mathrm{Res}(g,0) +\mathrm{Res}(g,1)+\mathrm{Res}(g,-1)+\mathrm{Res}(g,i)+\mathrm{Res}(g,-i)).
-\end{equation}
-No es necesario preocuparse ahora de los signos de las raíces en cada uno de los términos puesto que, como vamos a ver ahora, el único término relevante es el residuo en $0$.
-Así es, como todos los polos son de orden 1, se comprueba rápidamente que 
-\begin{equation}
-  \mathrm{Res}(g,0)=-i\sqrt{A},
-\end{equation}
-mientras que los términos correspondientes a los otros residuos sólo dependerán de $\alpha$ y de $\beta$. Por tanto podemos escribir
-\begin{equation}
-  J_{\theta}=\frac{1}{2\pi}\oint g(\theta)d\theta=\sqrt{A}+C(\alpha,\beta), 
-\end{equation}
-con $C(\alpha,\beta)$ un término de poco interés que solo depende de $\alpha$ y $\beta$.
 
 \nocite{*}
 \bibliographystyle{plain}
