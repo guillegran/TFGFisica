@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.979899"
-     inkscape:cx="345.62286"
+     inkscape:cx="335.05311"
      inkscape:cy="554.69182"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -34,7 +34,7 @@
      inkscape:window-width="1366"
      inkscape:window-height="741"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="25"
      inkscape:window-maximized="0">
     <inkscape:grid
        id="grid4136"
@@ -42,6 +42,35 @@
   </sodipodi:namedview>
   <defs
      id="defs4">
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible;"
+       id="marker4718"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path4720" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Mend"
+       style="overflow:visible;"
+       inkscape:isstock="true"
+       inkscape:collect="always">
+      <path
+         id="path4319"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.4) rotate(180) translate(10,0)" />
+    </marker>
     <marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
@@ -76,7 +105,7 @@
       <stop
          id="stop25848"
          offset="0"
-         style="stop-color:#000000;stop-opacity:0.6857143;" />
+         style="stop-color:#000000;stop-opacity:0.39215687;" />
     </linearGradient>
     <linearGradient
        osb:paint="solid"
@@ -84,7 +113,7 @@
       <stop
          id="stop25758"
          offset="0"
-         style="stop-color:#000000;stop-opacity:0.62285715;" />
+         style="stop-color:#000000;stop-opacity:0.39215687;" />
     </linearGradient>
     <marker
        inkscape:isstock="true"
@@ -127,21 +156,6 @@
          style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
          d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
          id="path4168" />
-    </marker>
-    <marker
-       inkscape:isstock="true"
-       style="overflow:visible;"
-       id="Arrow1Lend"
-       refX="0.0"
-       refY="0.0"
-       orient="auto"
-       inkscape:stockid="Arrow1Lend"
-       inkscape:collect="always">
-      <path
-         transform="scale(0.8) rotate(180) translate(12.5,0)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
-         id="path4171" />
     </marker>
     <marker
        inkscape:isstock="true"
@@ -200,7 +214,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -243,7 +257,7 @@
        sodipodi:cx="244.73282"
        sodipodi:type="arc"
        id="path4162"
-       style="fill:url(#linearGradient25850);fill-opacity:1;stroke:#000000;stroke-width:0.921;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Lend);marker-mid:url(#Arrow1Lend)" />
+       style="fill:url(#linearGradient25850);fill-opacity:1;stroke:#000000;stroke-width:0.921;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#Arrow1Mend);marker-mid:url(#Arrow1Mend)" />
     <path
        sodipodi:open="true"
        d="m 529.68148,516.32928 a 61.290092,42.658756 0 0 1 -50.97161,48.7311 61.290092,42.658756 0 0 1 -70.10135,-35.39382 61.290092,42.658756 0 0 1 50.73258,-48.85178 61.290092,42.658756 0 0 1 70.27433,35.22724"
@@ -255,7 +269,7 @@
        sodipodi:cx="469.12866"
        sodipodi:type="arc"
        id="path4162-7"
-       style="fill:url(#linearGradient25760);fill-opacity:1;stroke:#000000;stroke-width:0.944;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker27910);marker-mid:url(#marker27946);fill-rule:nonzero" />
+       style="fill:url(#linearGradient25760);fill-opacity:1;stroke:#000000;stroke-width:0.944;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker-start:url(#marker4718);marker-mid:url(#marker4718);fill-rule:nonzero" />
     <g
        transform="matrix(0.29819861,0,0,0.29819861,249.92604,427.26903)"
        id="g13575">

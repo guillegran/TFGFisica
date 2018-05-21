@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  20 MAY 2018 23:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  21 MAY 2018 18:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1831,15 +1831,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [11]
 Package epstopdf Info: Source file: <ciclos.eps>
-(epstopdf)                    date: 2018-05-20 22:05:29
-(epstopdf)                    size: 64042 bytes
+(epstopdf)                    date: 2018-05-21 18:41:19
+(epstopdf)                    size: 63783 bytes
 (epstopdf)             Output file: <ciclos-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-05-20 22:05:34
-(epstopdf)                    size: 34658 bytes
+(epstopdf)                    date: 2018-05-21 18:39:17
+(epstopdf)                    size: 35321 bytes
 (epstopdf)             Command: <repstopdf --outfile=ciclos-eps-converted-to.pd
 f ciclos.eps>
 (epstopdf)             \includegraphics on input line 566.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=ciclos-eps-converted-to.pdf ciclos.eps)...execute
+d safely (allowed).
+
+Package epstopdf Info: Result file: <ciclos-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-05-21 18:41:36
+(epstopdf)                    size: 34934 bytes.
  <ciclos-eps-converted-to.pdf, id=304, 335.2525pt x 117.43875pt>
 File: ciclos-eps-converted-to.pdf Graphic file (type pdf)
 
@@ -2006,7 +2011,7 @@ exlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf
 c/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t
 xsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TFGGuillermo.pdf (21 pages, 466866 bytes).
+Output written on TFGGuillermo.pdf (21 pages, 467139 bytes).
 PDF statistics:
  637 PDF objects out of 1000 (max. 8388607)
  573 compressed objects within 6 object streams
