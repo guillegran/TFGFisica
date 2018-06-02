@@ -1,100 +1,109 @@
 \begin{thebibliography}{10}
-
-\bibitem{abraham}
-R.~Abraham and J.~E. Marsden.
-\newblock {\em Foundations of {M}echanics}, volume~36.
-\newblock Benjamin/Cummings Publishing Company Reading, Massachusetts, 1978.
-
-\bibitem{arnold}
-V.~I. Arnold.
-\newblock {\em Mathematical {M}ethods of {C}lassical {M}echanics}.
-\newblock Springer Science \& Business Media, 2013.
-
-\bibitem{ballesteros}
-A.~Ballesteros, A.~Blasco, F.~J. Herranz, and F.~Musso.
-\newblock A new integrable anisotropic oscillator on the two-dimensional sphere
-  and the hyperbolic plane.
-\newblock {\em Journal of Physics A: Mathematical and Theoretical},
-  47(34):345204, 2014.
-
-\bibitem{bertrand}
-J.~Bertrand.
-\newblock Th{\'e}oreme relatif au mouvement d’un point attir{\'e} vers un
-  centre fixe.
-\newblock {\em CR Acad. Sci}, 77(849-853):2, 1873.
-
-\bibitem{fradkin}
-D.~M. Fradkin.
-\newblock Three-dimensional isotropic harmonic oscillator and {SU}(3).
-\newblock {\em American Journal of Physics}, 33(3):207--211, 1965.
-
-\bibitem{goldstein}
-H.~Goldstein, C.~P. Poole, and J.~Safko.
-\newblock {\em Classical {M}echanics}.
-\newblock Pearson Education India, 2011.
-
-\bibitem{gonera}
-C.~Gonera.
-\newblock On the superintegrability of {TTW} model.
-\newblock {\em Physics Letters A}, 376(35):2341--2343, 2012.
-
-\bibitem{gubbiottilatini}
-G.~Gubbiotti and D.~Latini.
-\newblock A multiple scales approach to maximal superintegrability.
-\newblock {\em Journal of Physics A: Mathematical and Theoretical}, 2018.
-
-\bibitem{higgs}
-P.~W. Higgs.
-\newblock Dynamical symmetries in a spherical geometry. {I}.
-\newblock {\em Journal of Physics A: Mathematical and General}, 12(3):309,
-  1979.
-
-\bibitem{jauchhill}
-J.M. Jauch and E.L. Hill.
-\newblock On the problem of degeneracy in quantum mechanics.
-\newblock {\em Physical Review}, 57(7):641, 1940.
-
-\bibitem{landau}
-L.~D. Landau and E.~M. Lifshitz.
-\newblock {\em Curso de física teórica. {V}olumen 1: {M}ecánica}.
-\newblock Editorial Reverté, S. A., 1985.
-
-\bibitem{lechtenfeld}
-O.~Lechtenfeld, A.~Nersessian, and V.~Yeghikyan.
-\newblock Action-angle variables for dihedral systems on the circle.
-\newblock {\em Physics Letters A}, 374(46):4647--4652, 2010.
-
-\bibitem{miller}
-W.~Miller~Jr, S.~Post, and P.~Winternitz.
-\newblock Classical and quantum superintegrability with applications.
-\newblock {\em Journal of Physics A: Mathematical and Theoretical},
-  46(42):423001, 2013.
-
-\bibitem{mishchenko}
-A.~S. Mishchenko and A.~T. Fomenko.
-\newblock Generalized {L}iouville method of integration of hamiltonian systems.
-\newblock {\em Functional analysis and its applications}, 12(2):113--121, 1978.
-
-\bibitem{ranada}
-M.~F. Rañada.
-\newblock The {T}remblay--{T}urbiner--{W}internitz system on spherical and
-  hyperbolic spaces: superintegrability, curvature-dependent formalism and
-  complex factorization.
-\newblock {\em Journal of Physics A: Mathematical and Theoretical},
-  47(16):165203, 2014.
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{\\URL: }
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+\begin{quotation}\noindent\textsc{Annotation:}\ #2\end{quotation}}
 
 \bibitem{ttw1}
-F.~Tremblay, A.~V. Turbiner, and P.~Winternitz.
-\newblock An infinite family of solvable and integrable quantum systems on a
-  plane.
-\newblock {\em Journal of Physics A: Mathematical and Theoretical},
-  42(24):242001, 2009.
+F.~Tremblay, A.~V. Turbiner and P.~Winternitz, An infinite family of solvable
+  and integrable quantum systems on a plane, \emph{J. Phys. A: Math. Theor.}
+  \textbf{42} (2009)~(24), p. 242001
+\bibAnnoteFile{ttw1}
+
+\bibitem{gonera}
+C.~Gonera, On the superintegrability of {TTW} model, \emph{Phys. Lett. A}
+  \textbf{376} (2012)~(35), pp. 2341--2343
+\bibAnnoteFile{gonera}
+
+\bibitem{burgos}
+M.~A. Rodríguez, A.~Sampedro and P.~Tempesta, ``On classical harmonic
+  oscillators and their generalizations'', {W}orkshop on Nonlinear Integrable
+  Systems. Burgos (Spain). October 20-22, 2016
+\bibAnnoteFile{burgos}
+
+\bibitem{arnold}
+V.~I. Arnold, \emph{Mathematical {M}ethods of {C}lassical {M}echanics}
+  (Springer Science \& Business Media, 2013)
+\bibAnnoteFile{arnold}
+
+\bibitem{goldstein}
+H.~Goldstein, C.~P. Poole and J.~Safko, \emph{Classical {M}echanics} (Pearson
+  Education India, 2011)
+\bibAnnoteFile{goldstein}
+
+\bibitem{landau}
+L.~D. Landau and E.~M. Lifshitz, \emph{Curso de física teórica. {V}olumen 1:
+  {M}ecánica} (Editorial Reverté, S. A., 1985)
+\bibAnnoteFile{landau}
+
+\bibitem{bertrand}
+J.~Bertrand, Th{\'e}oreme relatif au mouvement d’un point attir{\'e} vers un
+  centre fixe, \emph{CR. Acad. Sci.} \textbf{77} (1873)~(849-853), p.~2
+\bibAnnoteFile{bertrand}
+
+\bibitem{fradkin}
+D.~M. Fradkin, Three-dimensional isotropic harmonic oscillator and {SU}(3),
+  \emph{Am. J. Phys.} \textbf{33} (1965)~(3), pp. 207--211
+\bibAnnoteFile{fradkin}
+
+\bibitem{jauchhill}
+J.~Jauch and E.~Hill, On the problem of degeneracy in quantum mechanics,
+  \emph{Phys. Rev.} \textbf{57} (1940)~(7), p. 641
+\bibAnnoteFile{jauchhill}
+
+\bibitem{miller}
+W.~Miller~Jr, S.~Post and P.~Winternitz, Classical and quantum
+  superintegrability with applications, \emph{J. Phys. A: Math. Theor.}
+  \textbf{46} (2013)~(42), p. 423001
+\bibAnnoteFile{miller}
 
 \bibitem{ttw2}
-F.~Tremblay, A.~V. Turbiner, and P.~Winternitz.
-\newblock Periodic orbits for an infinite family of classical superintegrable
-  systems.
-\newblock {\em Journal of Physics A: Mathematical and Theoretical},
-  43(1):015202, 2009.
+F.~Tremblay, A.~V. Turbiner and P.~Winternitz, Periodic orbits for an infinite
+  family of classical superintegrable systems, \emph{J. Phys. A: Math. Theor.}
+  \textbf{43} (2009)~(1), p. 015202
+\bibAnnoteFile{ttw2}
+
+\bibitem{lechtenfeld}
+O.~Lechtenfeld, A.~Nersessian and V.~Yeghikyan, Action-angle variables for
+  dihedral systems on the circle, \emph{Phys. Lett. A} \textbf{374}
+  (2010)~(46), pp. 4647--4652
+\bibAnnoteFile{lechtenfeld}
+
+\bibitem{frivs}
+J.~Fri{\v{s}}, V.~Mandrosov, Y.~A. Smorodinsky, M.~Uhl{\'\i}{\v{r}} and
+  P.~Winternitz, On higher symmetries in quantum mechanics, \emph{Phys. Lett.}
+  \textbf{16} (1965)~(3), pp. 354--356
+\bibAnnoteFile{frivs}
+
+\bibitem{gubbiottilatini}
+G.~Gubbiotti and D.~Latini, A multiple scales approach to maximal
+  superintegrability, \emph{J. Phys. A: Math. Theor.}  (2018)
+\bibAnnoteFile{gubbiottilatini}
+
+\bibitem{higgs}
+P.~W. Higgs, Dynamical symmetries in a spherical geometry. {I}, \emph{J. Phys.
+  A: Math. Gen.} \textbf{12} (1979)~(3), p. 309
+\bibAnnoteFile{higgs}
+
+\bibitem{ballesteros}
+A.~Ballesteros, A.~Blasco, F.~J. Herranz and F.~Musso, A new integrable
+  anisotropic oscillator on the two-dimensional sphere and the hyperbolic
+  plane, \emph{J. Phys. A: Math. Theor.} \textbf{47} (2014)~(34), p. 345204
+\bibAnnoteFile{ballesteros}
+
+\bibitem{ranada}
+M.~F. Rañada, The {T}remblay--{T}urbiner--{W}internitz system on spherical and
+  hyperbolic spaces: superintegrability, curvature-dependent formalism and
+  complex factorization, \emph{J. Phys. A: Math. Theor.} \textbf{47}
+  (2014)~(16), p. 165203
+\bibAnnoteFile{ranada}
+
+\bibitem{abraham}
+R.~Abraham and J.~E. Marsden, \emph{Foundations of {M}echanics}
+  (Benjamin/Cummings Publishing Company Reading, Massachusetts, 1978)
+\bibAnnoteFile{abraham}
 
 \end{thebibliography}

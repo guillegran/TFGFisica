@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  22 MAY 2018 17:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  3 JUN 2018 00:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -9,8 +9,8 @@ LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 8 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -913,18 +913,9 @@ Package hyperref Info: Hyper figures OFF on input line 4443.
 Package hyperref Info: Link nesting OFF on input line 4448.
 Package hyperref Info: Hyper index ON on input line 4451.
 Package hyperref Info: Plain pages OFF on input line 4458.
-Package hyperref Info: Backreferencing ON on input line 4461.
+Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
-Package: backref 2012/07/25 v1.38 Bibliographical back referencing
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
-Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
-))
 \c@Hy@tempcnt=\count131
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen184
@@ -934,7 +925,7 @@ LaTeX Info: Redefining \url on input line 5041.
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
-Package hyperref Info: backreferencing ON on input line 6308.
+Package hyperref Info: backreferencing OFF on input line 6310.
 Package hyperref Info: Link coloring ON on input line 6313.
 Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
@@ -951,6 +942,12 @@ Package hyperref Message: Driver (autodetected): hpdftex.
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count136
 \c@bookmark@seq@number=\count137
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
 \Hy@SectionHShift=\skip53
 )
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/remreset.sty)
@@ -1236,7 +1233,7 @@ LaTeX Font Info:    Try loading font information for T1+ntxtlf on input line 25
 File: t1ntxtlf.fd 2015/01/17 v1.0 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 250.
+(Font)              scaled to size 10.95pt on input line 250.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxmath.sty
 Package: newtxmath 2016/01/31 v1.465
@@ -1332,8 +1329,8 @@ LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
-LaTeX Info: Redefining \. on input line 36.
-LaTeX Info: Redefining \% on input line 36.
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
 )
 \openout1 = `TFGGuillermo.aux'.
 
@@ -1388,23 +1385,23 @@ LaTeX Info: Redefining \% on input line 109.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(85.35826pt, 674.33032pt, 85.35826pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
+* \textwidth=426.79135pt
+* \textheight=674.33032pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-23.91173pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=85.0pt
+* \marginparwidth=103.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1463,18 +1460,18 @@ LaTeX Info: Redefining \nameref on input line 109.
 \openout4 = `TFGGuillermo.out'.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 109.
-LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 109.
-
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 109.
-Package tocstyle Info: prepare \l@part for redefinition on input line 109.
+(Font)              scaled to size 12.0pt on input line 109.
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <12> not available
 (Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 109.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 109.
+Package tocstyle Info: prepare \l@part for redefinition on input line 109.
+LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 109.
+
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.95pt on input line 109.
 Package tocstyle Info: prepare \l@section for redefinition on input line 109.
 Package tocstyle Info: prepare \l@subsection for redefinition on input line 109
 .
@@ -1485,11 +1482,11 @@ LaTeX Font Info:    Try loading font information for OT1+ntxtlf on input line 1
 File: ot1ntxtlf.fd 2015/01/17 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 109.
+(Font)              scaled to size 10.95pt on input line 109.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 109.
+(Font)              scaled to size 8.0pt on input line 109.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 109.
+(Font)              scaled to size 6.1pt on input line 109.
 LaTeX Font Info:    Try loading font information for U+msa on input line 109.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1532,7 +1529,7 @@ LaTeX Info: Redefining \] on input line 109.
 \c@mv@tabular=\count156
 \c@mv@boldtabular=\count157
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 126.
+(Font)              scaled to size 14.4pt on input line 126.
 Package epstopdf Info: Source file: <Negro-transparente.eps>
 (epstopdf)                    date: 2018-05-16 19:15:50
 (epstopdf)                    size: 899231 bytes
@@ -1544,7 +1541,7 @@ verted-to.pdf Negro-transparente.eps>
 (epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 
-<Negro-transparente-eps-converted-to.pdf, id=62, 380.42125pt x 98.3675pt>
+<Negro-transparente-eps-converted-to.pdf, id=66, 380.42125pt x 98.3675pt>
 File: Negro-transparente-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Negro-transparente-eps-converted-to.pdf>
@@ -1552,40 +1549,40 @@ Package pdftex.def Info: Negro-transparente-eps-converted-to.pdf used on input
 line 130.
 (pdftex.def)             Requested size: 165.05234pt x 42.67912pt.
 
-Overfull \hbox (19.42474pt too wide) in paragraph at lines 124--132
+Overfull \hbox (18.64243pt too wide) in paragraph at lines 124--132
 []$[]$ $[]$ 
  []
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.88pt on input line 140.
-LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <24.88> not available
+(Font)              scaled to size 17.28pt on input line 140.
+LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 140.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 140.
+(Font)              scaled to size 17.28pt on input line 140.
 LaTeX Font Info:    Try loading font information for T1+qhv on input line 140.
 (/usr/share/texmf/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
-LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <24.88> not available
+LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/qhv/b/n' tried instead on input line 140.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 140.
+(Font)              scaled to size 15.55188pt on input line 140.
 LaTeX Font Info:    Font shape `T1/qhv/bx/n' in size <12> not available
 (Font)              Font shape `T1/qhv/b/n' tried instead on input line 143.
 LaTeX Font Info:    Font shape `T1/qhv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 143.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 14.4pt on input line 147.
+(Font)              scaled to size 12.0pt on input line 147.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 150.
+(Font)              scaled to size 10.95pt on input line 150.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 156.
-LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <10.95> not available
+(Font)              scaled to size 10.0pt on input line 156.
+LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <10> not available
 (Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 156.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 156.
+(Font)              scaled to size 10.0pt on input line 156.
 LaTeX Info: Redefining \. on input line 163.
 LaTeX Info: Redefining \% on input line 163.
  [1
@@ -1613,223 +1610,235 @@ LaTeX Info: Redefining \. on input line 5.
 LaTeX Info: Redefining \% on input line 5.
 
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  18.0pt
+text indent by \l@... (toc, 1):  16.42499pt
 number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.0pt
+text indent calculated (toc, 1): 16.42497pt
 number indent calculated (toc, 1): 0.0pt
-text noindent (toc, 1): 18.0pt
+text noindent (toc, 1): 16.42497pt
+number noindent (toc, 1): 0.0pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42499pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 16.42497pt
+number indent calculated (toc, 1): 0.0pt
+text noindent (toc, 1): 16.42497pt
 number noindent (toc, 1): 0.0pt
 )
 \tf@toc=\write5
 \openout5 = `TFGGuillermo.toc'.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 206.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 208.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.8pt on input line 208.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 6.6pt on input line 208.
+(Font)              scaled to size 10.95pt on input line 204.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 225.
+(Font)              scaled to size 10.0pt on input line 213.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [2]
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.95pt on input line 213.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 8.0pt on input line 213.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 6.1pt on input line 213.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [3]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 8.8pt on input line 302.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 6.6pt on input line 302.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] <homology.png, id=137, 311.1625pt x 260.975pt>
+[4]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 8.0pt on input line 307.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 6.1pt on input line 307.
+ <homology.png, id=153, 311.1625pt x 260.975pt>
 File: homology.png Graphic file (type png)
  <use homology.png>
-Package pdftex.def Info: homology.png used on input line 326.
-(pdftex.def)             Requested size: 182.09486pt x 152.72351pt.
+Package pdftex.def Info: homology.png used on input line 332.
+(pdftex.def)             Requested size: 128.0387pt x 107.3867pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 327.
+(Font)              scaled to size 10.0pt on input line 333.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 327.
+(Font)              scaled to size 7.3pt on input line 333.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.1pt on input line 327.
+(Font)              scaled to size 5.5pt on input line 333.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 327.
+(Font)              scaled to size 10.0pt on input line 333.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 327.
+(Font)              scaled to size 7.3pt on input line 333.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 6.1pt on input line 327.
+(Font)              scaled to size 5.5pt on input line 333.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5 <./homology.png>]
+[5]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[6]
+[6 <./homology.png>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 395.
+(Font)              scaled to size 8.0pt on input line 397.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 395.
- <bertrand.png, id=183, 363.3575pt x 310.15875pt>
+(Font)              scaled to size 6.1pt on input line 397.
+ <bertrand.png, id=195, 363.3575pt x 310.15875pt>
 File: bertrand.png Graphic file (type png)
- <use bertrand.png>
-Package pdftex.def Info: bertrand.png used on input line 403.
-(pdftex.def)             Requested size: 182.09486pt x 155.43867pt.
+
+<use bertrand.png>
+Package pdftex.def Info: bertrand.png used on input line 405.
+(pdftex.def)             Requested size: 128.0387pt x 109.29547pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 404.
+(Font)              scaled to size 7.3pt on input line 406.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.1pt on input line 404.
+(Font)              scaled to size 5.5pt on input line 406.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [7]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [8 <./bertrand.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [9]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [10]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
@@ -1844,85 +1853,85 @@ Package epstopdf Info: Source file: <ciclos.eps>
 f ciclos.eps>
 (epstopdf)             \includegraphics on input line 569.
 Package epstopdf Info: Output file is already uptodate.
- <ciclos-eps-converted-to.pdf, id=304, 335.2525pt x 117.43875pt>
+ <ciclos-eps-converted-to.pdf, id=317, 335.2525pt x 117.43875pt>
 File: ciclos-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ciclos-eps-converted-to.pdf>
 Package pdftex.def Info: ciclos-eps-converted-to.pdf used on input line 569.
-(pdftex.def)             Requested size: 335.25168pt x 117.43845pt.
+(pdftex.def)             Requested size: 298.75264pt x 104.65274pt.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [12 <./ciclos-eps-converted-to.pdf>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [13]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [14]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [15]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [16]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [17]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 15.0pt on input line 881.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\hbox' on input line 881.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\mathsurround' on input line 881.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\z@' on input line 881.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\unskip' on input line 881.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@@italiccorr' on input line 881.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
 [18]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.0pt on input line 898.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\hbox' on input line 898.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\mathsurround' on input line 898.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 898.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\unskip' on input line 898.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\@@italiccorr' on input line 898.
-
 Package epstopdf Info: Source file: <polos.eps>
 (epstopdf)                    date: 2018-05-20 23:21:33
 (epstopdf)                    size: 32964 bytes
@@ -1931,66 +1940,53 @@ Package epstopdf Info: Source file: <polos.eps>
 (epstopdf)                    size: 12689 bytes
 (epstopdf)             Command: <repstopdf --outfile=polos-eps-converted-to.pdf
  polos.eps>
-(epstopdf)             \includegraphics on input line 923.
+(epstopdf)             \includegraphics on input line 906.
 Package epstopdf Info: Output file is already uptodate.
-<polos-eps-converted-to.pdf, id=455, 424.58624pt x 56.21pt>
+ <polos-eps-converted-to.pdf, id=471, 424.58624pt x 56.21pt>
 File: polos-eps-converted-to.pdf Graphic file (type pdf)
 
 <use polos-eps-converted-to.pdf>
-Package pdftex.def Info: polos-eps-converted-to.pdf used on input line 923.
+Package pdftex.def Info: polos-eps-converted-to.pdf used on input line 906.
 (pdftex.def)             Requested size: 424.5852pt x 56.20985pt.
-
+ (./TFGGuillermo.bbl
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[19 <./polos-eps-converted-to.pdf>] (./TFGGuillermo.bbl (./TFGGuillermo.brf)
-\tf@brf=\write6
-\openout6 = `TFGGuillermo.brf'.
-
-
+[19 <./polos-eps-converted-to.pdf>])
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
+ Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[20])
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 14.49998pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 955.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 955.
+[20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 938.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 938.
  (./TFGGuillermo.aux
 LaTeX Info: Redefining \. on input line 20.
 LaTeX Info: Redefining \% on input line 20.
 LaTeX Info: Redefining \. on input line 28.
 LaTeX Info: Redefining \% on input line 28.
-LaTeX Info: Redefining \. on input line 36.
-LaTeX Info: Redefining \% on input line 36.
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 955.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 955.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 938.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 938.
 Package rerunfilecheck Info: File `TFGGuillermo.out' has not changed.
-(rerunfilecheck)             Checksum: 5EFA1D74330945DD74460D04EB62809C;1059.
-Package rerunfilecheck Info: File `TFGGuillermo.brf' has not changed.
-(rerunfilecheck)             Checksum: 8105B5CE2D941C882176BF15381E5F24;948.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 955.
+(rerunfilecheck)             Checksum: E813C895E1FA747B481526C515D5BEED;1104.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 938.
  ) 
 Here is how much of TeX's memory you used:
- 23672 strings out of 494850
- 431507 string characters out of 6178025
- 508183 words of memory out of 5000000
- 26161 multiletter control sequences out of 15000+600000
- 118761 words of font info for 159 fonts, out of 8000000 for 9000
+ 23472 strings out of 494850
+ 428160 string characters out of 6178025
+ 506459 words of memory out of 5000000
+ 25960 multiletter control sequences out of 15000+600000
+ 117584 words of font info for 159 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 56i,22n,84p,1023b,939s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,19n,84p,1023b,939s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/sh
 are/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-di
 st/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/en
@@ -1999,21 +1995,23 @@ c/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec
 onts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gy
 re/qtmr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/newtx/rntxmi7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rt
-xmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/newtx/txex-bar.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/txfonts/txmia.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/txfonts/txsyb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t
-xsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TFGGuillermo.pdf (21 pages, 467249 bytes).
+mf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/newtx/rntxmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/
+rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rtxmi5.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/newtx/txex-bar.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/txfonts/txmia.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t
+xsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/times/utmri8a.pfb>
+Output written on TFGGuillermo.pdf (20 pages, 485125 bytes).
 PDF statistics:
- 637 PDF objects out of 1000 (max. 8388607)
- 573 compressed objects within 6 object streams
- 263 named destinations out of 1000 (max. 500000)
- 150 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 624 PDF objects out of 1000 (max. 8388607)
+ 559 compressed objects within 6 object streams
+ 252 named destinations out of 1000 (max. 500000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 

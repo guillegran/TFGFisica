@@ -1,0 +1,46 @@
+This directory contains a collection of BibTeX style files for various
+physics journals due to Charles Karney (Karney@Princeton.EDU). The
+compilation of this archive and some extensions to the physj* files were
+done by Hans-Hermann Bode (HHBODE@DOSUNI1.BITNET).
+
+Herein are the following files:
+
+./README	this file
+./physics.btx	master file for creating the bst files
+./physjful.btx	full journal names, to be included in physics.btx
+./physjabb.btx	abbreviated journal names, to be included in physics.btx
+./physjful.bib	full journal names, for use with other BibTeX styles
+./physjabb.bib	abbreviated journal names, for use with other BibTeX styles
+./cpp.el	preprocessor for GNU-Emacs to generate the bst files from
+		physics.btx
+./aip.bst	BibTeX style for American Institute of Physics journals
+./aip.sty	associated LaTeX document style
+./cpc.bst	BibTeX style for Computer Physics Communications
+./iaea.bst	BibTeX style for IAEA conferences
+./jcp.bst	BibTeX style for the Journal of Computational Physics
+./nf.bst	BibTeX style for Nuclear Fusion
+./nf.sty	associated LaTeX document style
+./nflet.bst	BibTeX style for Nuclear Fusion Letters
+./pf.bst	BibTeX style for Physics of Fluids
+./ppcf.bst	a physics version of the apalike BibTeX style
+./report.bst	BibTeX style for internal reports
+./rmp.bst	BibTeX style for Reviews of Modern Physics
+
+To use the styles, copy all *.bst files needed into a directory where BibTeX
+looks for style files. This will usually be a directory in the TEXINPUT(S)
+path, i.e., in the same path where TeX looks for its input files.
+
+In addition, if appropriate, copy the *.sty files into a directory where TeX
+looks for its input files, see above.
+
+For use of the physj*.bib files with other BibTeX styles, copy them into a
+directory where BibTeX looks for bibliography databases. This will usually
+be a directory in the BIBINPUT(S) path.
+
+If you want to re-generate the *.bst files from physics.btx, change the line
+
+#include "physics-journal-abbrev.btx"
+
+to include one of the physj*.btx files.
+
+   									--H2B

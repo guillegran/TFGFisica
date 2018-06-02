@@ -2,10 +2,10 @@
 %     Created: sáb mar 03 09:00  2018 C
 % Last Change: sáb mar 03 09:00  2018 C
 %
-\documentclass[12pt,a4paper,twoside]{article}
+\documentclass[11pt,a4paper,twoside]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[english, spanish, es-noquoting]{babel}
-\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -13,7 +13,7 @@
 \usepackage{tikz,tikz-cd}
 \usetikzlibrary{arrows, babel}
 \usepackage{url}
-\usepackage[colorlinks=true,linktocpage=true,pagebackref=true,linkcolor=blue]{hyperref}
+\usepackage[colorlinks=true,linktocpage=true,linkcolor=blue]{hyperref}
 \usepackage{remreset}
 \usepackage{enumitem}
 \usepackage{titlepic}
@@ -94,10 +94,10 @@
 \newcommand{\parcial}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\pois}[2]{\left\lbrace#1,#2\right\rbrace}
 
-\title{TRABAJO DE FIN DE GRADO \\  Modelos superintegrables: El hamiltoniano de TTW}
-\author{\bf Guillermo Gallego}
+%\title{TRABAJO DE FIN DE GRADO \\  Modelos superintegrables: El hamiltoniano de TTW}
+%\author{\bf Guillermo Gallego}
 %\date{\bf \today}
-\date{Junio 2018}
+%\date{Junio 2018}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -117,10 +117,10 @@
 %}}
 
 \begin{titlepage}
-%\vspace*{-2cm}
 %\makebox[.5\textwidth][l]{\Large\bfseries\sffamily TRABAJO DE FIN DE GRADO \\ JUNIO 2018} 
 %\makebox[.5\textwidth][r]{\includegraphics[height=1.5cm]{Negro-transparente}} 
 %\makebox[\dimexpr\textwidth][r]{\includegraphics[height=1.5cm]{Negro-transparente}} 
+\vspace*{-1cm}
 \begin{minipage}{0.5\textwidth}
   \centering
     \Large TRABAJO DE FIN DE GRADO 
@@ -130,17 +130,17 @@
 \includegraphics[height=1.5cm]{Negro-transparente}
   \end{minipage}
 
-\vspace*{2cm}
+\vspace*{1.5cm}
 \begin{center}
 %\sc \large TRABAJO DE FIN DE GRADO, JUNIO 2018 \\
 %\vspace*{.25 cm}
 %    \today
 
 %\vspace*{.5cm}
-\rm \Huge\bfseries\sffamily Modelos superintegrables: el hamiltoniano de Tremblay-Turbiner-Winternitz
+\rm \LARGE\bfseries\sffamily Modelos superintegrables: el hamiltoniano de Tremblay-Turbiner-Winternitz
 
-\vspace*{1cm}
-\rm \normalsize \bfseries\sffamily Superintegrable models: the Tremblay-Turbiner-Winternitz hamiltonian
+\vspace*{0.5cm}
+\rm \large \bfseries\sffamily Superintegrable models: the Tremblay-Turbiner-Winternitz hamiltonian
 
 \vspace*{1cm}
 \rm \large 
@@ -151,14 +151,14 @@
 %    \today
 \end{center}
 
-\vspace*{2cm}
+\vspace*{1cm}
 
 \begin{abstract}
-  Este trabajo es una introducción a la teoría de sistemas integrables y superintegrables en mecánica clásica. En particular, nos centramos en el estudio del hamiltoniano de Tremblay--Turbiner--Winternitz, demostrando su superintegrabilidad, viendo su aspecto en distintos sistemas de coordenadas y comentando su generalización a espacios de curvatura constante.
+  Este trabajo es una introducción a la teoría de sistemas integrables y superintegrables en mecánica clásica. En particular, nos centramos en el estudio del hamiltoniano de Tremblay--Turbiner--Winternitz, demostrando su superintegrabilidad, viendo su forma en distintos sistemas de coordenadas y discutiendo su generalización a espacios de curvatura constante.
 \end{abstract}
 \selectlanguage{english}
 \begin{abstract}
- This piece of work is an introduction to the theory of Integrable and Superintegrable Systems in Classical Mechanics. More precisely, we study the Tremblay--Turbiner--Winternitz hamiltonian, proving its superintegrability, making some changes between several coordinate systems and taking a look at its generalization to constant curvature spaces.
+ This piece of work is an introduction to the theory of Integrable and Superintegrable Systems in Classical Mechanics. More precisely, we study the Tremblay--Turbiner--Winternitz hamiltonian, proving its superintegrability, making some changes between several coordinate systems and discussing its generalization to constant curvature spaces.
 \end{abstract}
 \selectlanguage{spanish}
 
@@ -189,7 +189,7 @@ Dirigido por:\\
 
 %\maketitle
 %\begin{abstract}
-%  Este trabajo es una introducción a la teoría de sistemas integrables y superintegrables en mecánica clásica. En particular, nos centramos en el estudio del hamiltoniano de Tremblay--Turbiner--Winternitz, demostrando su superintegrabilidad, viendo su aspecto en distintos sistemas de coordenadas y comentando su generalización a espacios de curvatura constante.
+%  Este trabajo es una introducción a la teoría de sistemas integrables y superintegrables en mecánica clásica. En particular, nos centramos en el estudio del hamiltoniano de Tremblay--Turbiner--Winternitz, demostrando su superintegrabilidad, viendo su forma en distintos sistemas de coordenadas y discutiendo su generalización a espacios de curvatura constante.
 %\end{abstract}
 %\selectlanguage{english}
 %\begin{abstract}
@@ -201,7 +201,12 @@ Dirigido por:\\
 
 \section*{Introducción}
 \addcontentsline{toc}{section}{Introducción}
-Aquí la introducción.
+La teoría de sistemas integrables tiene unas profundas raíces históricas, remontándose casi hasta los mismos orígenes de la mecánica clásica. El \emph{teorema de Noether} así como los resultados que hoy se agrupan en lo que conocemos como el \emph{teorema de Arnold-Liouville} y sus posteriores generalizaciones nos dan unas profundas conexiones entre las intregrales primeras de un sistema mecánico, sus simetrías y las propiedades generales de su dinámica, como por ejemplo la posibilidad de ser resuelta por cuadraturas. 
+
+En las dos primeras secciones de este trabajo reexponemos la teoría clásica en el lenguaje moderno de la geometría simpléctica, definiendo los términos básicos en este formalismo y enunciando los teoremas fundamentales: el de Noether y el de Arnold-Liouville. Introducimos también la noción de las variables de acción-ángulo, así como el método general de su construcción. En la sección \ref{superintegrables} definimos \emph{sistema superintegrable} y exponemos los casos del problema de Kepler y del oscilador armónico, con los que ya estamos familiarizados. En la sección \ref{anisotropo} estudiamos otro conocido sistema superintegrable, el oscilador armónico anisótropo, que aporta varias ideas para el desarrollo posterior del trabajo.
+
+Seguimos con lo que constituye el núcleo del trabajo, el estudio del \emph{sistema de Tremblay, Turbiner y Winternitz}, un sistema hamiltoniano introducido en \cite{ttw1} y que ha recibido mucho interés en los últimos años. En la sección \ref{superintTTW} exponemos la demostración dada por C. Gonera \cite{gonera} de la superintegrabilidad de este sistema. En las secciones \ref{cartesianas}-\ref{nuevascoordenadas} estudiamos la forma del hamiltoniano del sistema en distintos sistemas de coordenadas, especialmente en una nueva forma introducida en \cite{burgos}. Finalmente, en la sección \ref{curvo} se estudia la generalización del sistema a espacios de curvatura constante. Se incluye también un apéndice donde se detalla uno de los cálculos involucrados en la sección \ref{superintTTW}.
+
 \section{Geometría simpléctica y simetrías en mecánica clásica}
 La estructura matemática característica de los espacios de fases en Mecánica Clásica es la de \emph{variedad simpléctica}. Una variedad simpléctica es un par $(M,\omega)$, donde $M$ es una variedad diferenciable y $\omega$ es una $2$-forma diferencial no degenerada y cerrada, es decir, tal que $\dd \omega=0$. En el caso en que la forma $\omega$ sea exacta, es decir, que exista una $1$-forma $\theta$ tal que $\omega=\dd \theta$, se dice que la variedad $(M,\omega)$ es exacta. 
 
@@ -210,15 +215,15 @@ El ejemplo más básico de variedad simpléctica es el espacio $\RR^{2n}=\left\{
 La forma $\omega$ induce una dualidad entre campos y $1$-formas. Resulta que a cada campo vectorial $\xi$ en la variedad le podemos asignar la forma $i_{\xi}\omega$, donde $i$ denota la \emph{contracción}, es decir $i_{\xi}\omega=\omega(\xi,\bullet)$. Un campo $\xi$ se dice \emph{simpléctico} si $\lie_{\xi}\omega=0$, donde $\lie$ denota la \emph{derivada de Lie}. Ahora, por la fórmula de Cartan, $\lie_{\xi}\omega=i_{\xi}(\dd \omega)+\dd(i_{\xi}\omega)=\dd(i_{\xi}\omega)$, de modo que un campo $\xi$ es simpléctico si y sólo si la forma $i_{\xi}\omega$ es cerrada. En el caso particular en que esta forma $i_{\xi}\omega$ sea exacta, existirá una función $H:M\rightarrow \RR$ tal que $\dd H=-i_{\xi}\omega$ y decimos que $\xi$ es un \emph{campo hamiltoniano} de \emph{hamiltoniano} $H$ y se denota $\xi_H$. Un cálculo sencillo muestra que, localmente, en coordenadas de Darboux, las curvas integrales del campo $\xi_H$ seguirán las \emph{ecuaciones de Hamilton}
 \begin{equation}
   \begin{cases}
-    \dot{q_i}=\parcial{H}{p_i}\\ 
-    \dot{p_i}=-\parcial{H}{q_i} ,
+    \dot{q_i}=\dfrac{\partial H}{\partial p_i}\\[6 pt] 
+    \dot{p_i}=-\dfrac{\partial H}{\partial q_i} ,
   \end{cases}
   \label{eq:hamilton}
 \end{equation}
 con $i=1,\dots,n$.
 Así, entenderemos por un \emph{sistema hamiltoniano con $n$ grados de libertad} una función $H:M\rightarrow \RR$ definida sobre una variedad simpléctica $M$ de dimensión $2n$.
 
-El  \emph{corchete de Poisson} también puede recuperarse ahora en el contexto simpléctico definiendo simplemente $\left\{ F,G \right\}=\xi^F G$, que localmente, en coordenadas de Darboux, se expresará en la forma clásica
+El  \emph{corchete de Poisson} también puede recuperarse ahora en el contexto simpléctico definiendo simplemente $\left\{ F,G \right\}=\xi_F G$, que localmente, en coordenadas de Darboux, se expresará en la forma clásica
 \begin{equation}
   \left\{ F,G \right\}=\parcial{F}{p_i}\parcial{G}{q_i}-\parcial{F}{q_i}\parcial{G}{p_i}.
   \label{eq:poisson}
@@ -242,13 +247,13 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
       \mathrm{SO}(3)\times \RR^6&\longrightarrow \RR^6\\ 
       (R,(\vect{q},\vect{p})) &\longmapsto (R\vect{q},R\vect{p}) .
       \end{align*} 
-      Los elementos de su álgebra de Lie $\mathfrak{so}(3)$ son los generadores infinitesimales de las rotaciones que, como es bien sabido, pueden asociarse con operadores de la forma $J_{\vect{u}}=\vect{u}\times \bullet$, con $\vect{u}\in \RR^3$ un vector cuya dirección es la del eje de la rotación y su norma la velocidad angular del giro. Así, a cada $\vect{u}\in \mathfrak{so}(3)$ podemos asociarle el campo en $M$ de la forma $\vect{u}_M=(\vect{u}\times \vect{q}, \vect{u}\times \vect{p})$, que en coordenadas se escribe
+      Los elementos de su álgebra de Lie $\mathfrak{so}(3)$ son los generadores infinitesimales de las rotaciones que, como es bien sabido, pueden asociarse con operadores de la forma $J_{\vect{u}}=\vect{u}\times \bullet$, con $\vect{u}\in \RR^3$ un vector cuya dirección es la del eje de la rotación y su norma la velocidad angular del giro. Así, a cada $J_{\vect{u}}\in \mathfrak{so}(3)$ podemos asociarle el campo en $\RR^6$ de la forma $\vect{u}_{\RR^6}=(\vect{u}\times \vect{q}, \vect{u}\times \vect{p})$, que en coordenadas se escribe
       \begin{equation*}
-	\vect{u}_M=\epsilon_{ijk}u_k(q_i \partial_{q_j}+p_i \partial_{p_j}).
+	\vect{u}_{\RR^6}=\epsilon_{ijk}u_k(q_i \partial_{q_j}+p_i \partial_{p_j}).
       \end{equation*}
       Ahora, si consideramos el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$, que en coordenadas se expresa $L_k(q_i,p_j)=\epsilon_{ijk}q_ip_j$, de modo que $(\vect{L}\times\vect{u})_{k}=\epsilon_{ijk}u_kq_ip_j$ y 
       \begin{align*}
-	\dd(\vect{L}\times \vect{u})&=\epsilon_{ijk}u_k(q_i\dd p_j + p_j\dd q_i)=\epsilon_{ijk}u_k(q_i\dd p_j - p_i\dd q_j)=-i_{\vect{u}_M}\omega.
+	\dd(\vect{L}\times \vect{u})&=\epsilon_{ijk}u_k(q_i\dd p_j + p_j\dd q_i)=\epsilon_{ijk}u_k(q_i\dd p_j - p_i\dd q_j)=-i_{\vect{u}_{\RR^6}}\omega.
       \end{align*}
       Por tanto, si consideramos la aplicación $L:\RR^6\rightarrow\mathfrak{so}(3)^*$ que a cada $(\vect{q},\vect{p})$ le asigna  
       \begin{align*}
@@ -258,7 +263,7 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
 	tenemos que $L$ es una aplicación momento de la acción de $\mathrm{SO}(3)$. Por el teorema de Noether, si consideramos un hamiltoniano $H$ en $\RR^6$ que sea invariante bajo rotaciones, tenemos que la aplicación momento $L$ es una integral primera del sistema hamiltoniano dado por $H$. Como consecuencia, el momento angular $\vect{L}$ es una cantidad conservada del sistema.
   \end{ejemplo}
 
-  \section{Sistemas integrables y variables de acción-ángulo}
+  \section{Sistemas integrables y variables de acción-ángulo}\label{integrables}
 
   Uno de los aspectos de la Mecánica Clásica donde el formalismo simpléctico muestra todo su potencial es la teoría de sistemas integrables, cuyo resultado central es el \emph{teorema de Arnold-Liouville}.
   Este teorema nos dice que si un sistema hamiltoniano tiene una cantidad suficiente de integrales primeras (o de simetrías, aunque éstas no son siempre evidentes) el comportamiento de este sistema será muy sencillo. Esto es una motivación suficiente para buscar sistemas de este tipo, tal vez mediante la metodología de hallar sus grupos de simetría y asociarles sus aplicaciones momento.
@@ -281,7 +286,7 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
       H(\vect{q},\vect{p})=\frac{\vect{p}^2}{2m}+V(r).
       \label{eq:central}
     \end{equation}
-    nomo las rotaciones preservan el producto escalar, el sistema será invariante bajo rotaciones y, por tanto, el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$ es una cantidad conservada del sistema. En particular serán cantidades conservadas $L^2=\vect{L}\cdot \vect{L}$ y $L_3=q_1p_2-q_2p_1$ la componente vertical de $\vect{L}$. Ahora, si calculamos el corchete de Poisson
+    Como las rotaciones preservan el producto escalar, el sistema será invariante bajo rotaciones y, por tanto, el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$ es una cantidad conservada del sistema. En particular serán cantidades conservadas $L^2=\vect{L}\cdot \vect{L}$ y $L_3=q_1p_2-q_2p_1$ la componente vertical de $\vect{L}$. Ahora, si calculamos el corchete de Poisson
   \begin{equation*}
     \pois{L^2}{L_3}=\pois{L_i^2}{L_3}=2L_i\pois{L_i}{L_3},
   \end{equation*}
@@ -307,10 +312,11 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
   Como consecuencia
        \begin{equation}
 	 \begin{cases}
-	   \frac{\partial H}{\partial w_i}=-\dot{J_i}=0 \\
-	   \dot{w_i}=\frac{\partial H}{\partial J_i}=\nu_i(\vect{J}). 
+	   \dfrac{\partial H}{\partial w_i}=-\dot{J_i}=0 \\[5 pt]
+	   \dot{w_i}=\dfrac{\partial H}{\partial J_i}=\nu_i(\vect{J}), 
 	 \end{cases}
        \end{equation}
+       con las $\nu_i$ unas frecuencias angulares que sólo dependen de $\vect{J}$.
        Como las $\vect{J}$ son constantes en cada toro de Liouville, las frecuencias $\nu_i$ también lo serán y las variables de ángulo se pueden integrar de modo que obtenemos
        \begin{equation}
 	 \begin{cases}
@@ -323,7 +329,7 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
 
        \begin{figure}[h]
 	 \centering
-	 \includegraphics[width=.4\textwidth]{homology}
+	 \includegraphics[width=.3\textwidth]{homology}
 	 \caption{\small Base de ciclos de $\TT^2$.}
 	 \label{fig:toro}
        \end{figure}
@@ -345,13 +351,12 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
 	 w_i=\frac{\partial S}{\partial J_i}. 
        \end{equation}
 
-  \section{Sistemas superintegrables, trayectorias cerradas y simetrías ocultas}
-  Podemos considerar ahora qué sucedería si un sistema integrable con $n$ grados de libertad tuviera cantidades conservadas adicionales, hasta otras $n-1$ para que puedan existir trayectorias, funcionalmente independientes de las anteriores, aunque ya no podrían estar en involución con todas. Esto motiva entonces la noción de \emph{superintegrabilidad} o \emph{integrabilidad no abeliana}.
+       \section{Sistemas superintegrables, trayectorias cerradas y simetrías ocultas}\label{superintegrables}
+  Podemos considerar ahora qué sucedería si un sistema integrable con $n$ grados de libertad tuviera cantidades conservadas adicionales, hasta otras $n-1$ para que puedan existir trayectorias, funcionalmente independientes de las anteriores, aunque ya no podrían estar en involución con todas. Esto motiva entonces la noción de \emph{superintegrabilidad}.
   \begin{defn}
     Un sistema hamiltoniano con $n$ grados de libertad se dice \emph{superintegrable} si admite $n+k$ integrales primeras funcionalmente independientes para cierto $k=1,\dots,n-1$. En el caso en que $k=n-1$ el sistema se dice \emph{maximalmente superintegrable}.
   \end{defn}
-
-  Las dos primeras partes del teorema \ref{arnoldliouville} se pueden generalizar al caso superintegrable, es lo que se conoce como el \emph{teorema de Mishchenko-Fomenko} \cite{mishchenko}. Destaca especialmente el caso maximalmente superintegrable, para el cual el resultado nos dice que las órbitas serán curvas cerradas con movimiento periódico.
+  La primera parte del teorema \ref{arnoldliouville} se puede generalizar al caso superintegrable, destacando especialmente el caso maximalmente superintegrable, para el cual el resultado nos dice que las órbitas serán curvas cerradas con movimiento periódico.
 
   Vamos a aplicar estas ideas al caso del potencial central, para ver en qué casos el sistema será superintegrable. Como ya hemos visto, en el movimiento en un potencial central, el momento angular $\vect{L}=\vect{q}\times \vect{p}$ se conserva. Puesto que $\vect{L}$ es perpendicular a $\vect{q}$ y a $\vect{p}$, la conservación de $\vect{L}$ significa que, durante todo el movimiento, la posición y el momento de la partícula permanecen en un mismo plano, perpendicular a $\vect{L}$. La invariancia bajo rotaciones nos permite escoger la dirección $\vect{e}_z$ paralela al momento angular $\vect{L}$ y estudiar el sistema «reducido» en el plano perpendicular, que ahora será el plano $XY$. Llamando ahora $r=x^2+y^2$, el hamiltoniano en este «sistema reducido» será
   \begin{equation}
@@ -376,10 +381,7 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
   \end{equation}
   De modo que
   \begin{equation}
-      \dot r=\sqrt{\frac{2}{m}[E-V(r)]-\frac{L^2}{2mr^2}} 
-  \end{equation}
-  y 
-  \begin{equation}
+      \dot r=\sqrt{\frac{2}{m}[E-V(r)]-\frac{L^2}{2mr^2}}, \ \ \  
     t=\int \frac{dr}{\sqrt{\frac{2}{m}[E-V(r)]-\frac{L^2}{2mr^2}}}.
   \end{equation}
   Por tanto, el ángulo $\phi$ puede ser integrado por cuadraturas en la forma
@@ -400,7 +402,7 @@ La condición que ha de cumplirse para que la trayectoria en cierto momento se c
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[width=.4\textwidth]{bertrand}
+  \includegraphics[width=.3\textwidth]{bertrand}
   \caption{\small Avance del ángulo de $r_{\text{máx}}$ (Fuente: \cite{landau}).}
   \label{fig:bertrand}
 \end{figure}
@@ -416,13 +418,13 @@ En el caso del oscilador armónico isótropo $V(r)=kr^2$ existe un tensor simét
 \begin{equation}
   A_{ij}=\tfrac{1}{2m}(p_ip_j+kq_iq_j), 
 \end{equation}
-con $i,j=1,2$. La traza del tensor es precisamente la energía $\tfrac{1}{2m}(\vect{p}^2+kr^2)$ y la componente de fuera de la diagonal $F=A_{12}=\tfrac{1}{2m}(p_1p_2+kq_1q_2)$ es precisamente la cantidad conservada adicional, indepentiende de la energía y del momento angular. 
+con $i,j=1,2$. La traza del tensor es precisamente la energía $\tfrac{1}{2m}(\vect{p}^2+kr^2)$ y la componente de fuera de la diagonal $F=A_{12}=\tfrac{1}{2m}(p_1p_2+kq_1q_2)$ es precisamente la cantidad conservada adicional, independiente de la energía y del momento angular. 
 
 Si se regresa al espacio tridimensional y se consideran ahí las cantidades conservadas adicionales ahora obtenidas, se pueden calcular las relaciones entre las diferentes integrales primeras del sistema con el corchete de Poisson y ver qué subalgebra de Lie del álgebra total de las variables dinámicas del sistema generan, desvelando así el verdadero rostro de estas «simetrías ocultas». Se puede probar que para el caso del potencial de Kepler esta álgebra es $\mathfrak{so}(4)$ mientras que para el caso del oscilador armónico isótropo es $\mathfrak{su}(3)$.
 
 Para terminar la sección, cabe comentar que la superintegrabilidad de un sistema clásico también tiene sus consecuencias en Mecánica Cuántica. Por ejemplo, en el caso del átomo de hidrógeno (que se puede considerar el análogo cuántico del problema de Kepler, de modo que conserva las mismas simetrías) la existencia de la cantidad conservada adicional, el vector de Laplace-Runge-Lenz, es la causante de la degeneración «accidental» de sus niveles de energía. Por degeneración accidental de los niveles del átomo de hidrógeno nos referimos al hecho de que sus niveles de energía dependan tan solo del primer número cuántico, $n$, y no del número cuántico $l$.
 
-\section{El oscilador armónico anisótropo}
+\section{El oscilador armónico anisótropo}\label{anisotropo}
 En esta sección estudiamos la superintegrabilidad de otro sistema clásico, el oscilador armónico anisótropo. Para encontrar las integrales primeras adicionales nos ayudaremos de unas coordenadas complejas adicionales, que nos permitirán encontrar un tensor conservado. Este procedimiento se debe a J.M. Jauch y E. L. Hill \cite{jauchhill} y sus ideas principales nos serán útiles más adelante para tratar otros problemas.
 
 El oscilador armónico anisótropo con $n$ grados de libertad está definido sobre el espacio de fases $\RR^{2n}=\left\{ \vect{q},\vect{p} \right\}$ y su hamiltoniano viene dado por
@@ -435,7 +437,7 @@ con $H_i(q_i,p_i)=\frac{1}{2}(p_i^2+\omega_i^2q_i^2)$. Para probar la integrabil
   \left\{ H_i,H_j \right\}=\parcial{H_i}{p_k}\parcial{H_j}{q_k}-\parcial{H_j}{p_k}\parcial{H_i}{q_k}=0.
 \end{equation*}
 
-Los conjuntos de nivel de las funciones $F_j(\vect{q},\vect{p})=a_j$ serán toros de Liouville dados por las ecuaciones
+Los conjuntos de nivel de las funciones $H_i(q_i,p_i)=a_i$ serán toros de Liouville dados por las ecuaciones
 \begin{align*}[left=\empheqlbrace]
     p_1^2+\omega_1^2q_1^2&= 2a_1\\
     p_1^2+\omega_2^2q_1^2&= 2a_2\\
@@ -464,17 +466,17 @@ son integrales primeras del sistema. En el caso en que $n_i=n_j$, entre estas ca
 \begin{equation}
   L_{ij}=q_ip_j-q_jp_i 
 \end{equation}
-y un tensor similar al de Fradkin
+y un tensor de Fradkin
 \begin{equation}
   A_{ij}=p_ip_j+n_in_j\omega^2 q_iq_j. 
 \end{equation}
 
 \section{El hamiltoniano de TTW}
-Principalmente por consideraciones al cuantizar, dentro de los sistemas integrables y superintegrables son de especial interés aquellos en los que sus integrales primeras son polinomiales en los momentos. Así, estos sistemas se llamarán \emph{polinomialmente integrables} (respectivamente, \emph{polinomialmente superintegrables}) y llamaremos \emph{orden} de sus integrales primeras al grado que estas tengan como polinomios en los momentos. Para más información al respecto, consultar \cite{miller}.
+Principalmente por consideraciones al cuantizar, dentro de los sistemas integrables y superintegrables son de especial interés aquellos en los que sus integrales primeras son polinomiales en los momentos. Así, estos sistemas se llamarán \emph{polinomialmente integrables} (respectivamente, \emph{polinomialmente superintegrables}) y llamaremos \emph{orden} de sus integrales primeras al grado que éstas tengan como polinomios en los momentos. Para más información al respecto, consultar \cite{miller}.
 
 Los sistemas superintegrables de segundo orden han sido bastante estudiados y poseen una teoría de clasificación. También han sido tratados varias clases de sistemas de tercer orden. Sin embargo, para sistemas generales de tercer orden y de órdenes superiores se conoce mucho menos. En particular hasta hace unos pocos años había pocos ejemplos y las teorías de estructura y clasificación eran prácticamente inexistentes. 
 
-La situación cambió drásticamente en 2009 con el trabajo de F. Tremblay, A. V. Turbiner y P. Winternitz \cite{ttw1}, donde los autores presentaron una familia de potenciales en el plano, parametrizados por una constante $k$, y conjeturaron que estos sistemas eran superintegrables para todo $k\in \QQ$, con órdenes tan grandes como se quisieran. Unos meses más tarde, en otro trabajo \cite{ttw2} los mismos autores calcularon las trayectorias acotadas de esta familia de sistemas y mostraron que eran curvas cerradas para todos los casos con $k \in \QQ$, dando así evidencia a favor de su conjetura. Posteriormente se ha verificado por varios métodos que, efectivamente, sus conjeturas eran correctas.
+La situación cambió drásticamente en 2009 con el trabajo de F. Tremblay, A. V. Turbiner y P. Winternitz \cite{ttw1}, donde los autores presentaron una familia de potenciales en el plano, parametrizados por una constante $k$, y conjeturaron que estos sistemas eran superintegrables para todo $k\in \QQ$, con órdenes tan grandes como se quisieran. Unos meses más tarde, en otro trabajo \cite{ttw2} (algunas aclaraciones a este texto fueron presentadas posteriormente en \cite{burgos}) los mismos autores calcularon las trayectorias acotadas de esta familia de sistemas y mostraron que eran curvas cerradas para todos los casos con $k \in \QQ$, dando así evidencia a favor de su conjetura. Posteriormente se ha verificado por varios métodos que, efectivamente, sus conjeturas eran correctas.
 
 Concretamente, el hamiltoniano de Tremblay, Turbiner y Winternitz (que a partir de ahora abreviaremos como \emph{hamiltoniano de TTW}) en coordenadas polares tiene la forma 
 \begin{equation}
@@ -492,7 +494,7 @@ La integrabilidad viene garantizada por la integral primera
 \end{equation}
 La existencia de una integral primera adicional $Y_{k}$ para $k\in \QQ$ que diera la superintegrabilidad polinomial del sistema fue conjeturada por Tremblay, Turbiner y Winternitz en \cite{ttw1} y posteriormente demostrada.
 
-\section{Superintegrabilidad del sistema de TTW}
+\section{Superintegrabilidad del sistema de TTW}\label{superintTTW}
 En esta sección vamos a demostrar la superintegrabilidad del sistema de TTW con $k\in \QQ$ siguiendo el método de C. Gonera \cite{gonera}. Para ello, lo primero que vamos a hacer es obtener las variables de acción-ángulo del sistema. Teniendo en cuenta que las integrales primeras que dan la integrabilidad son el hamiltoniano $\eqref{eq:TTW}$ y la función $X_k$ dada por $\eqref{eq:integralprimeraTTW}$, un toro de Liouville con $H=E$ y $X_k=A$ vendrá dado por las ecuaciones
 \begin{equation}
   \begin{cases}
@@ -517,7 +519,7 @@ con
 \begin{equation}
   V_k(r,\theta)=\frac{\alpha k^2}{2r^2\cos^2 \theta}+\frac{\beta k^2}{2r^2\sin^2 \theta}.
 \end{equation}
-Ahora, el momento canónico conjugado de $\theta$ sera
+Ahora, el momento canónico conjugado de $\theta$ será
 \begin{equation}
   p_\theta=\frac{\partial \mathcal{L} }{\partial \dot{\theta}}=\frac{r^2}{k^2}\dot{\theta}. 
 \end{equation}
@@ -544,13 +546,11 @@ Por tanto, podemos redefinir entonces la constante $A=\frac{A}{k^2}$ y el toro d
 
 Para obtener ahora las variables de acción tomamos como base de ciclos del toro de Liouville los cortes de éste con los planos $(r,p_r)$ y $(\theta,p_{\theta})$, de modo que podemos definir
 \begin{align}
-    J_r=\frac{1}{2\pi}\oint p_r dr, \\
-    J_\theta=\frac{1}{2\pi}\oint p_{\theta}d\theta,
+    J_r=\frac{1}{2\pi}\oint p_r dr, \ \ \   J_\theta=\frac{1}{2\pi}\oint p_{\theta}d\theta,
 \end{align}
 donde las integrales se realizan precisamente en estos ciclos que hemos tomado (ver figura \ref{fig:ciclos}). Los cortes de estos ciclos con los ejes $r$ y $\theta$, respectivamente, serán precisamente las raíces de las expresiones que se obtienen al despejar en las ecuaciones \eqref{eq:toro} 
 \begin{align}
-    p_r=\sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A}, \\
-    p_{\theta}=\sqrt{A-\frac{\alpha}{\cos^2\theta} -\frac{\beta}{\sin^2\theta}}.
+    p_r=\sqrt{2E-\omega^2r^2-\frac{k^2}{r^2}A}, \ \ \    p_{\theta}=\sqrt{A-\frac{\alpha}{\cos^2\theta} -\frac{\beta}{\sin^2\theta}}.
 \end{align}
 Podemos calcular entonces las integrales
 \begin{align}
@@ -566,7 +566,7 @@ El cálculo de la integral \eqref{eq:intaccion1} puede hacerse con técnicas de 
 
 \begin{figure}[h]
   \centering
-  \includegraphics{ciclos}
+  \includegraphics[width=.7\textwidth]{ciclos}
   \caption{\small Ciclos del toro de Liouville y variables de acción.}
   \label{fig:ciclos}
 \end{figure}
@@ -578,8 +578,8 @@ Una vez obtenidas las variables de acción, despejamos para obtener el hamiltoni
 donde $w_r$ y $w_\theta$ son las variables angulares que, por las ecuaciones de Hamilton, verifican
 \begin{equation}
   \begin{cases}
-    \nu_r=\dot{w}_r=\frac{\partial H}{\partial J_r}=2\omega, \\ 
-    \nu_{\theta}=\dot{w}_{\theta}=\frac{\partial H}{\partial J_\theta}=2\omega k.
+    \nu_r=\dot{w}_r=\dfrac{\partial H}{\partial J_r}=2\omega, \\[6 pt]
+    \nu_{\theta}=\dot{w}_{\theta}=\dfrac{\partial H}{\partial J_\theta}=2\omega k.
   \end{cases}
 \end{equation}
 Ahora, si $k$ es irracional, entonces las frecuencias $\nu_r$ y $\nu_\theta$ no son conmesurables y las trayectorias son densas en el toro de Liouville \cite{arnold}, de forma que en ese caso el sistema no puede ser superintegrable. En el caso en que $k=\frac{m}{n}$, con $m,n \in \NN$ entonces claramente
@@ -592,19 +592,19 @@ luego
 \end{equation}
 es una constante del movimiento que además por construcción es independiente de $J_r$ y de $J_\theta$, luego de $H$ y $X_k$. En conclusión, tenemos que el sistema de TTW es superintegrable si y sólo si $k\in \QQ$.
 
-Una sutileza a tener en cuenta es que $2mw_r-nw_\theta$ es una función multivalorada en el toro de Liouville, pero este problema se soluciona fácilmente si, siguiendo la idea de \cite{landau}, consideramos una función trigonométrica de esta magnitud, por conveniencia
+Una sutileza a tener en cuenta es que $mw_r-nw_\theta$ es una función multivaluada en el toro de Liouville, pero este problema se soluciona fácilmente si, siguiendo la idea de \cite{landau}, consideramos una función trigonométrica de esta magnitud, por conveniencia
 \begin{equation}
   e^{i(mw_r-nw_{\theta})}=(e^{iw_r})^{m}(e^{-iw_{\theta}})^n.
 \end{equation}
-Si nos resulta de interés, se pueden calcular las variables angulares explícitamente siguiendo el método explicado en la sección 2 y de ahí obtener el valor de la integral primera adicional. Aunque aquí no lo detallemos (el cálculo completo puede leerse en \cite{gonera}), la cantidad que se obtiene es (en las coordenadas polares originales y tras algunas simplificaciones)
+Si nos resulta de interés, se pueden calcular las variables angulares explícitamente siguiendo el método explicado en la sección \ref{integrables} y de ahí obtener el valor de la integral primera adicional. Aunque aquí no lo detallemos (el cálculo completo puede leerse en \cite{gonera}), la cantidad que se obtiene es (en las coordenadas polares originales y tras algunas simplificaciones)
 \begin{equation}
   Y_{k}=\left[ \frac{2\sqrt{A}p_r}{r}+i\left( E-\frac{2A}{r^2} \right) \right]^m\left[\sqrt{A}p_{\phi}\sin 2k\phi + i\left[ (\beta-\alpha)k^2+A\cos2k\phi \right] \right]^n.
 \end{equation}
-Una comprobación directa muestra que $Y_{k}$ es una integral primera independiente de $H$ y de $X_k$ y que, por tanto, el sistema de TTW es superintegrable cuando $k$ es racional. Nótese además que la integral $Y_k$ es polinomial en los momentos $p_r$ y $p_\theta$.
+Una comprobación directa muestra que $Y_{k}$ es una integral primera independiente de $H$ y de $X_k$ y que, por tanto, el sistema de TTW es superintegrable cuando $k$ es racional. Nótese además que la integral $Y_k$ es polinomial en los momentos $p_r$ y $p_\theta$. 
+Que esta cantidad sea compleja no debe preocuparnos ya que a partir de ella pueden obtenerse cantidades reales que sigan siendo integrales independientes de $H$ y $X_k$.
 
-\section{El hamiltoniano de TTW en coordenadas cartesianas}
-Para continuar con el estudio del Hamiltoniano de TTW, en esta sección vamos a ver cómo se expresa en coordenadas cartesianas y vamos a representar el potencial en los casos más sencillos.
-
+\section{El hamiltoniano de TTW en coordenadas cartesianas}\label{cartesianas}
+Para continuar con el estudio del Hamiltoniano de TTW, en esta sección vamos a ver cómo se expresa en coordenadas cartesianas.
 En coordenadas cartesianas, el hamiltoniano de TTW toma la forma
 \begin{equation}
   H_k(x,y,p_x,p_y)=\frac{1}{2}[p_x^2+p_y^2+\omega^2(x^2+y^2)]+V_k(x,y),
@@ -620,23 +620,24 @@ o, equivalentemente,
 \end{align}
 Esta expresión solo es sencilla para algunos valores de $k$, por ejemplo, para $k=1$,
 \begin{equation}
-  V_1=\frac{1}{2}\left( \frac{\alpha}{x^2}+\frac{\beta}{y^2} \right).
+  V_1=\frac{1}{2}\left( \frac{\alpha}{x^2}+\frac{\beta}{y^2} \right),
 \end{equation}
-Para valores enteros pequeños de $k$ podemos hacer algunas simplificaciones y obtenemos
-\begin{equation}
-  V_2=\frac{1}{2}(x^2+y^2)\left( \frac{4\alpha}{(x^2-y^2)^2}+\frac{\beta}{x^2y^2} \right)
-\end{equation}
-y
-\begin{equation}
-  V_3=\frac{9}{2}(x^2+y^2)^2\left( \frac{\alpha}{(x^3-3xy^2)^2}+\frac{\beta}{(-3x^2y+y^3)^2} \right).
-\end{equation}
-Destaca también el caso con $k=\tfrac{1}{2}$,
-\begin{equation}
-  V_{1/2}=\frac{1}{2y^2}\left[ \alpha\left( 1-\frac{x}{\sqrt{x^2+y^2}} \right)+ \beta\left( 1+\frac{x}{\sqrt{x^2+y^2}} \right) \right].
-\end{equation}
+obtenemos la forma en coordenadas cartesianas del modelo de Smorodinsky-Winternitz \cite{frivs}.
+%Para valores enteros pequeños de $k$ podemos hacer algunas simplificaciones y obtenemos
+%\begin{equation}
+%  V_2=\frac{1}{2}(x^2+y^2)\left( \frac{4\alpha}{(x^2-y^2)^2}+\frac{\beta}{x^2y^2} \right)
+%\end{equation}
+%y
+%\begin{equation}
+%  V_3=\frac{9}{2}(x^2+y^2)^2\left( \frac{\alpha}{(x^3-3xy^2)^2}+\frac{\beta}{(-3x^2y+y^3)^2} \right).
+%\end{equation}
+%Destaca también el caso con $k=\tfrac{1}{2}$,
+%\begin{equation}
+%  V_{1/2}=\frac{1}{2y^2}\left[ \alpha\left( 1-\frac{x}{\sqrt{x^2+y^2}} \right)+ \beta\left( 1+\frac{x}{\sqrt{x^2+y^2}} \right) \right].
+%\end{equation}
 
 \section{El hamiltoniano de TTW en coordenadas complejas}
-Inspirados por el cambio a coordenadas complejas que hemos hecho al tratar el oscilador armónico anisótropo, vamos a tratar de introducir unas coordenadas complejas al caso del hamiltoniano TTW, para ver si lo podemos dejar en una forma que nos dé más información sobre su comportamiento. En este caso, sin embargo, el cambio propuesto es ligeramente distinto, ya que no queremos combinar las coordenadas con los momentos sino que queremos obtener unas nuevas coordenadas generalizadas complejas y ver qué aspecto tendrán sus momentos canónicos conjugados. Concretamente, queremos hacer un cambio de esta forma
+Inspirados por el cambio a coordenadas complejas que hemos hecho al tratar el oscilador armónico anisótropo, vamos introducir unas coordenadas complejas en el caso del hamiltoniano TTW, para ver si se puede escribir en una forma que nos dé más información sobre su comportamiento. En este caso, sin embargo, el cambio propuesto es ligeramente distinto, ya que no queremos combinar las coordenadas con los momentos sino que queremos obtener unas nuevas coordenadas generalizadas complejas y ver qué forma tendrán sus momentos canónicos conjugados. Concretamente, queremos hacer un cambio como
 \begin{equation}
   z=x+iy.
 \end{equation}
@@ -658,9 +659,8 @@ Ahora, si consideramos la aplicación bilineal
   entonces, por la propiedad universal del producto tensorial existe una única aplicación lineal $I:T_{\CC}M \rightarrow T_{\CC}M$ tal que el siguiente diagrama conmuta
   \begin{center}
     \begin{tikzcd}
-      TM \times \CC      \arrow{rr}{\otimes}\arrow{rrdd}[anchor=north,rotate=-30]{\tilde{J}} && T_{\CC}M = TM \otimes \CC \arrow{dd}[anchor=west]{I} \\ 
-       && \\
-       &&T_{\CC}M.
+      TM \times \CC      \arrow{r}{\otimes}\arrow{rd}[anchor=north,rotate=-30]{\tilde{J}} & T_{\CC}M = TM \otimes \CC \arrow{d}[anchor=west]{I} \\ 
+       &T_{\CC}M.
      \end{tikzcd}
    \end{center}
    La aplicación $I$ es entonces un endomorfismo de $T_{\CC}M$ con autovalores $\pm i$ y podemos descomponer
@@ -668,7 +668,7 @@ Ahora, si consideramos la aplicación bilineal
      T_{\CC}M=\ker(I-i)\oplus \ker(I+i).
    \end{equation*}
 
-   En el caso particular en que $M$ se una variedad de dimensión $2$ con coordenadas $(x,y)$, podemos considerar entonces la «coordenada compleja» 
+   En el caso particular en que $M$ sea una variedad de dimensión $2$ con coordenadas $(x,y)$, podemos considerar entonces la «coordenada compleja» 
    \begin{equation*}
      z=x+iy.
    \end{equation*}
@@ -680,10 +680,8 @@ Ahora, si consideramos la aplicación bilineal
      \end{align*}
      Consideremos entonces el fibrado tangente complexificado $T_{\CC}M$ y los vectores
      \begin{equation}
-       \begin{cases}
-	 \partial_z=\tfrac{1}{2}(\partial_x-i\partial_y) \\
+	 \partial_z=\tfrac{1}{2}(\partial_x-i\partial_y) \ \ \
 	 \partial_{\bar{z}}=\tfrac{1}{2}(\partial_x+i\partial_y) .
-       \end{cases}
      \end{equation}
      Es inmediato comprobar que 
 	 $\partial_z\in \ker(I-i)$ y que
@@ -715,18 +713,14 @@ Ahora, si consideramos la aplicación bilineal
 \end{equation}
 y lo cambiamos a las nuevas coordenadas
 \begin{equation}
-  \begin{cases}
-    z=x+iy \\
+    z=x+iy \ \ \
     \bar{z}=x-iy,
-  \end{cases}
 \end{equation}
 teniendo en cuenta que $z=r e^{i\phi}$ y la fórmula de Moivre
-\begin{equation*}
-  z^k=r^k(\cos k\phi+i\sin k\phi),
-\end{equation*}
+  $z^k=r^k(\cos k\phi+i\sin k\phi)$,
 de donde se tiene
 \begin{equation*}
-  \cos k\phi = \frac{z^k+\zz^k}{2|z|^k} \ \  \sin k\phi = \frac{z^k-\zz^k}{2i|z|^k}. 
+  \cos k\phi = \frac{z^k+\zz^k}{2|z|^k},\ \ \  \sin k\phi = \frac{z^k-\zz^k}{2i|z|^k}. 
 \end{equation*}
 Obtenemos entonces el potencial
 \begin{equation}
@@ -738,18 +732,14 @@ De modo que el lagrangiano del sistema TTW se expresa en las coordenadas complej
 \end{equation}
 Ahora, teniendo en cuenta que, en este caso,
 \begin{equation}
-  \begin{cases}
-    p_x=\dot{x}\\
+    p_x=\dot{x},\ \ \
     p_y=\dot{y},
-  \end{cases}
 \end{equation}
 tenemos los nuevos momentos canónicos conjugados
-\begin{equation}
-  \begin{cases}
-    p_z=\frac{\partial \mathcal{L}_k }{\partial \dot{z}}=\tfrac{1}{2} \dot{\zz}=\tfrac{1}{2}(\dot{x}-i\dot{y})=\tfrac{1}{2}(p_x-ip_y),\\
-    p_{\zz}=\frac{\partial \mathcal{L}_k }{\partial \dot{\zz}}=\tfrac{1}{2} \dot{z}=\tfrac{1}{2}(\dot{x}+i\dot{y})=\tfrac{1}{2}(p_x+ip_y).
-  \end{cases}
-\end{equation}
+\begin{align}
+    p_z=\dfrac{\partial \mathcal{L}_k }{\partial \dot{z}}=\tfrac{1}{2} \dot{\zz}=\tfrac{1}{2}(\dot{x}-i\dot{y})=\tfrac{1}{2}(p_x-ip_y),\\
+    p_{\zz}=\dfrac{\partial \mathcal{L}_k }{\partial \dot{\zz}}=\tfrac{1}{2} \dot{z}=\tfrac{1}{2}(\dot{x}+i\dot{y})=\tfrac{1}{2}(p_x+ip_y).
+\end{align}
 Vemos entonces que el hamiltoniano de TTW se escribe en las coordenadas complejas en la forma
 \begin{equation}
   H_k(z,\zz,p_z,p_{\zz})=\tfrac{1}{2}(p_zp_{\zz}+\omega^2 z \zz) + V_k(z,\zz).
@@ -758,7 +748,7 @@ Nótese también que podemos seguir pensando en las coordenadas $(z,\zz,p_z,p_{\
 \begin{equation}
   \dd p_z \wedge \dd z + \dd p_{\zz} \wedge \dd \zz=\dd p_x \wedge \dd x + \dd p_y \wedge \dd y.
 \end{equation}
-Finalmente, observamos que si $k=1$ recuperamos el oscilador armónico con términos centrífugos (barreras de Rosochatius)
+Finalmente, observamos que si $k=1$ recuperamos el sistema de Smorodinsky-Winternitz
 \begin{equation}
   V_1=\frac{2\alpha}{(z+\zz)^2}-\frac{2\beta}{(z-\zz)^2},
 \end{equation}
@@ -767,27 +757,21 @@ y, cuando $k$ sea entero, el potencial será una función racional
   V_k=2k^2(x^2+y^2)^{k-1}\left[ \frac{\alpha}{\left( (x+iy)^k+(x-iy)^k \right)^2}-\frac{\beta}{\left( (x+iy)^k-(x-iy)^k \right)^2} \right].
 \end{align}
 
-\section{El hamiltoniano de TTW en unas nuevas coordenadas}
+\section{El hamiltoniano de TTW en unas nuevas coordenadas}\label{nuevascoordenadas}
 Vamos a estudiar ahora el sistema de TTW en unas nuevas coordenadas reales, definidas de la siguiente manera
-\begin{equation}
-  \begin{cases}
-    u=\tfrac{1}{2}(z^k+\zz^k)=r^k\cos k\phi, \\
+\begin{equation}\label{nuevas}
+    u=\tfrac{1}{2}(z^k+\zz^k)=r^k\cos k\phi, \ \ \
     v=\tfrac{1}{2i}(z^k-\zz^k)=r^k \sin k\phi.
-  \end{cases}
 \end{equation}
 De modo que
 \begin{equation}
-  \begin{cases}
-    \dot{u}=\tfrac{1}{2}(kz^{k-1}\dot{z}+k\zz^k\dot{\zz}),\\
+    \dot{u}=\tfrac{1}{2}(kz^{k-1}\dot{z}+k\zz^k\dot{\zz}),\ \ \
     \dot{v}=\tfrac{1}{2i}(kz^{k-1}\dot{z}-k\zz^k\dot{\zz}).
-  \end{cases}
 \end{equation}
 Notamos ahora que 
 \begin{equation*}
-  \begin{cases}
-    \dot{u}+i\dot{v}=kz^{k-1}\dot{z},\\
+    \dot{u}+i\dot{v}=kz^{k-1}\dot{z},\ \ \
     \dot{u}-i\dot{v}=k\zz^{k-1}\dot{\zz},
-  \end{cases}
 \end{equation*}
 y que
 \begin{equation*}
@@ -811,28 +795,26 @@ con
 \end{equation}
 
 Podemos calcular ahora los momentos canónicos conjugados de estas coordenadas
-\begin{equation}
-  \begin{cases}
-    p_u=\frac{\partial \mathcal{L} _k}{\partial \dot{u}}=\frac{\dot{u}}{k^2 (u^2+v^2)^{\frac{k-1}{k}}}, \\
-    p_v=\frac{\partial \mathcal{L} _k}{\partial \dot{v}}=\frac{\dot{v}}{k^2 (u^2+v^2)^{\frac{k-1}{k}}},
-  \end{cases}
-\end{equation}
+\begin{align}
+    p_u=\dfrac{\partial \mathcal{L} _k}{\partial \dot{u}}=\dfrac{\dot{u}}{k^2 (u^2+v^2)^{\frac{k-1}{k}}}, \\
+    p_v=\dfrac{\partial \mathcal{L} _k}{\partial \dot{v}}=\dfrac{\dot{v}}{k^2 (u^2+v^2)^{\frac{k-1}{k}}},
+\end{align}
 y el hamiltoniano
 \begin{equation*}
   H_k=p_u \dot{u} + p_v \dot{v} - \mathcal{L}_k,
 \end{equation*}
 que finalmente tiene el siguiente aspecto
-\begin{equation}
+\begin{equation}\label{nuevottw}
   H_k = k^2 (u^2+v^2)^{\frac{k-1}{k}}\left[ \frac{1}{2}(p_u^2+p_v^2)+ \frac{\omega^2}{2k^2}(u^2+v^2)^{\frac{2}{k}-1}+\frac{\alpha}{2u^2}+\frac{\beta}{2 v^2} \right]. 
 \end{equation}
 Lo interesante de ver el hamiltoniano en estas coordenadas es que, si se elimina el factor global $k^2(u^2+v^2)^{\frac{k-1}{k}}$, lo que obtenemos es un oscilador no lineal con términos centrífugos.
 
-Esta manera de entender el hamiltoniano de TTW fue originalmente propuesta por M. A. Rodríguez (el director de este trabajo) y no publicada, aunque sí propuesta en un congreso. Muy recientemente el hamiltoniano de TTW ha sido estudiado en este aspecto por G. Gubbiotti y D. Latini en su trabajo \cite{gubbiottilatini}, donde sugieren un nuevo argumento a favor de su superintegrabilidad para $k$ racional empleando un método novedoso basado en la técnica de escalas múltiples.
+Esta manera de entender el hamiltoniano de TTW fue originalmente propuesta en \cite{burgos}. Muy recientemente el hamiltoniano de TTW ha sido estudiado en este aspecto por G. Gubbiotti y D. Latini en su trabajo \cite{gubbiottilatini}, donde estudian su superintegrabilidad para $k$ racional empleando un método novedoso basado en la técnica de escalas múltiples.
 
-\section{El hamiltoniano de TTW en espacios de curvatura constante}
+\section{El hamiltoniano de TTW en espacios de curvatura constante}\label{curvo}
 En esta sección hacemos una breve exposición de las generalizaciones del hamiltoniano de TTW a la esfera $\mathbb{S} ^2$ y al plano hiperbólico $\mathbb{H} ^2.$ El estudio de sistemas de este tipo se remonta al trabajo de Higgs \cite{higgs}, donde trató con la generalización del oscilador armónico a la esfera. Siguiendo estas ideas, recientemente se han tratado generalizaciones de sistemas superintegrables conocidos a espacios de curvatura constante. Una exposición detallada de los métodos utilizados para estas generalizaciones puede encontrarse en \cite{ballesteros}. Concretamente, el estudio del hamiltoniano de TTW en estos espacios así como una demostración de su superintegrabilidad puede leerse en \cite{ranada}.
 
-Para modelizar las geometrías esférica e hiperbólica seguimos el método clásico del programa de Erlangen, que consiste en tratar cada uno de estos espacios como un espacio homogéneo de un determinado grupo de isometrías actuando sobre $\mathbb{R}^3$. Así, en general el espacio a tratar vendrá modelizado por la superficie $S_\kappa \subset \mathbb{R} ^3$ de ecuación
+Para modelizar las geometrías esférica e hiperbólica seguimos el enfoque clásico que consiste en tratar cada uno de estos espacios como un espacio homogéneo de un determinado grupo de isometrías actuando sobre $\mathbb{R}^3$. Así, en general el espacio a tratar vendrá modelizado por la superficie $S_\kappa \subset \mathbb{R} ^3$ de ecuación
 \begin{equation}
  x_0^2+\kappa(x_1^2+x_2^2)=1. 
 \end{equation}
@@ -847,10 +829,8 @@ De modo que el lagrangiano libre en $S_{\kappa}$ tomará la forma
 
 Definimos ahora las \emph{coordenadas polares geodésicas} $(r,\phi)$, dadas por la relación
 \begin{equation}
-  \begin{cases}
-    x_1=S_\kappa (r)\cos \phi\\
+    x_1=S_\kappa (r)\cos \phi,\ \ \
     x_2=S_\kappa (r)\sin \phi,
-  \end{cases}
 \end{equation}
 donde $S_\kappa$ y $C_\kappa$ son las \emph{funciones trigonométricas generalizadas}, dadas por
 \begin{equation}
@@ -860,8 +840,7 @@ donde $S_\kappa$ y $C_\kappa$ son las \emph{funciones trigonométricas generaliz
     1 & \kappa =0, \\
     \cosh \sqrt{-\kappa} x & \kappa <0, 
   \end{cases}
-\end{equation}
-\begin{equation}
+  \ \ \ 
   S_{\kappa}(x)=
   \begin{cases}
     \frac{1}{\sqrt{\kappa}}\sin \sqrt{\kappa} x & \kappa >0, \\
@@ -874,10 +853,10 @@ Una comprobación directa muestra que el lagrangiano libre en estas coordenadas 
   \mathcal{L} _\kappa = \frac{1}{2}(\dot{r}^2+S_{\kappa}^2 (r) \dot{\phi}^2).
 \end{equation}
 De modo que los momentos conjugados de las coordenadas geodésicas polares serán
-\begin{align}
-  p_r&=\dot{r} \\ 
-  p_{\phi}&=S_{\kappa}^2(r) \dot{\phi}.
-\end{align}
+\begin{equation}
+  p_r=\dot{r}, \ \ \ 
+  p_{\phi}=S_{\kappa}^2(r) \dot{\phi}.
+\end{equation}
 Luego el hamiltoniano libre toma la forma
 \begin{equation}
   H_{\kappa}=\frac{1}{2}\left( p_r^2 + \frac{p^2_\phi}{S_{\kappa}^2(r)} \right) .
@@ -894,6 +873,10 @@ donde $T_{\kappa}=\frac{S_\kappa}{C_\kappa}$ y
 \end{equation}
 Nótese que en el \emph{límite euclídeo}, cuando $\kappa\rightarrow 0$, se recupera el hamiltoniano de TTW en el plano \eqref{eq:TTW}. Varias consideraciones sobre este hamiltoniano y, en particular, una prueba de su superintegrabilidad para $k$ racional pueden leerse en \cite{ranada}.
 
+\section*{Conclusiones}
+\addcontentsline{toc}{section}{Conclusiones}
+El estudio del hamiltoniano de TTW en coordenadas cartesianas y la construcción de las coordenadas complejas nos ha llevado de una forma bastante natural a las nuevas coordenadas \eqref{nuevas}, en las que el hamiltoniano tiene la forma \eqref{nuevottw}. Esta forma de ver el hamiltoniano, que ya ha dado resultados fructíferos en \cite{gubbiottilatini}, aún deja algunas dudas por despejar. ¿Cuál es el origen de ese factor global? ¿Cuál es su sentido físico? ¿Se puede obtener de la reducción de un sistema en dimensión superior? ¿Podrán construirse unas coordenadas similares en el sistema generalizado a espacios de curvatura constante? Esperemos que estas preguntas y otras nuevas que a nosotros no se nos hayan ocurrido sean respondidas en ataques futuros al problema. En cualquier caso, aún hay mucho trabajo por hacer.
+
 \appendix
 \section{Cálculo de la integral \eqref{eq:intaccion1}}\label{apendice}
 En este apéndice vamos a detallar el cálculo de la integral \eqref{eq:intaccion1}. El método de integración que seguiremos es la técnica estándar presentada en \cite{goldstein}, donde se aplica al caso del problema de Kepler.
@@ -906,7 +889,7 @@ con
 \begin{equation}
 f(r)=\sqrt{2E-\omega^2r^2-\frac{k^2A}{r^2}},
 \end{equation}
-tengamos en cuenta que $f$ es una función multivalorada en el toro de Liouville y que precisamente $f(r)=p_r=m\dot{r}$, de modo que los límites del movimiento serán dos puntos de retorno $r_1$ y $r_2$, análogos a los $r_{\text{min}}$ y $r_{\text{máx}}$ de la figura \ref{fig:bertrand}, y vendrán dados precisamente por las raíces de la expresión dentro de la raíz cuadrada. Si $r_1$ es la cota inferior del movimiento, un ciclo de $r$ comprende un movimiento de $r_1$ a $r_2$, donde $p_r>0$, de modo que en esta parte escogemos la raíz cuadrada positiva; y después comprende un movimiento de $r_2$ a $r_1$, donde $p_r<0$ y hay que tomar la raíz cuadrada negativa (ver figura \ref{fig:ciclos}). 
+tengamos en cuenta que $f$ es una función multivaluada en el toro de Liouville y que precisamente $f(r)=p_r=m\dot{r}$, de modo que los límites del movimiento serán dos puntos de retorno $r_1$ y $r_2$, análogos a los $r_{\text{min}}$ y $r_{\text{máx}}$ de la figura \ref{fig:bertrand}, y vendrán dados precisamente por las raíces de la expresión dentro de la raíz cuadrada. Si $r_1$ es la cota inferior del movimiento, un ciclo de $r$ comprende un movimiento de $r_1$ a $r_2$, donde $p_r>0$, de modo que en esta parte escogemos la raíz cuadrada positiva; y después comprende un movimiento de $r_2$ a $r_1$, donde $p_r<0$ y hay que tomar la raíz cuadrada negativa (ver figura \ref{fig:ciclos}). 
 
 Como siempre $r>0$ podemos hacer un cambio de variable $t=r^2$, de modo que $dr=\frac{dt}{2\sqrt{t}}$ y la integral queda en la forma
 \begin{equation*}
@@ -925,7 +908,7 @@ en torno a un cierto ciclo y con unos nuevos puntos de retorno $t_1$ y $t_2$ tam
   \label{fig:polos}
 \end{figure}
 
-Como el contorno de integración encierra la línea entre los puntos de ramificación, no podemos aplicar directamente el método de los residuos, pero sí que podemos considerar que el camino encierra el resto del plano complejo, con la dirección de integración opuesta (ver figura \ref{fig:polos}). En esta región el integrando sí es una función univalorada, ya que $t_1$ y $t_2$ son las únicas raíces del término que hay debajo de la raíz en todo el plano complejo, de modo que aquí sí que podemos aplicar el teorema de los residuos. Notamos también que los polos de $\tilde{f}$ están en $0$ y en $\infty$, de modo que
+Como el contorno de integración encierra la línea entre los puntos de ramificación, no podemos aplicar directamente el método de los residuos, pero sí que podemos considerar que el camino encierra el resto del plano complejo, con la dirección de integración opuesta (ver figura \ref{fig:polos}). En esta región el integrando sí es una función univaluada, ya que $t_1$ y $t_2$ son las únicas raíces del término que hay debajo de la raíz en todo el plano complejo, de modo que aquí sí que podemos aplicar el teorema de los residuos. Notamos también que los polos de $\tilde{f}$ están en $0$ y en $\infty$, de modo que
 \begin{equation}
   \oint \tilde{f}(t)dt =-2\pi i \mathrm{Res}(\tilde{f},0) -2\pi i \mathrm{Res}(\tilde{f},\infty).
 \end{equation}
@@ -949,10 +932,9 @@ Finalmente
 \end{equation}
 
 \nocite{*}
-\bibliographystyle{plain}
+\bibliographystyle{aip2}
 \bibliography{biblio}
 
 \end{document}
-
 
 

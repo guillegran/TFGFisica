@@ -1,0 +1,73 @@
+% Journal Title Abbreviations from the Physical Review Style and Notation
+%	Guide, July, 1983, in BAPS Vol. 28.
+%  Selected by Cris Barnes and Charles Karney, March 1988
+%  Extended by Hans-Hermann Bode, June 1992
+
+% IMPORTANT!! Don't make changes to this file without making the
+% 	      corresponding changes to
+%			physjabb.btx
+%			physjabb.bib
+%			physjful.bib
+
+MACRO {advp} {"Advances in Physics"}
+MACRO {ajp} {"American Journal of Physics"}
+MACRO {ao} {"Applied Optics"}
+MACRO {ap} {"Annals of Physics"}
+MACRO {apj} {"Astrophysical Journal"}
+MACRO {apl} {"Applied Physics Letters"}
+MACRO {baps} {"Bulletin of the American Physical Society"}
+MACRO {cpc} {"Computer Physics Communications"}
+MACRO {cppcf} {"Comments on Plasma Physics and Controlled Fusion"}
+MACRO {el} {"Europhysics Letters"}
+MACRO {fed} {"Fusion Engineering and Design"}
+MACRO {ft} {"Fusion Technology"}
+MACRO {ieeens} {"IEEE Transactions on Nuclear Science"}
+MACRO {ieeeps} {"IEEE Transactions on Plasma Science"}
+MACRO {ijimw} {"International Journal of Infrared and Millimeter Waves"}
+MACRO {ip} {"Infrared Physics"}
+MACRO {jap} {"Journal of Applied Physics"}
+MACRO {jchp} {"The Journal of Chemical Physics"}
+MACRO {jcop} {"Journal of Computational Physics"}
+MACRO {jcp} {"Journal of Computational Physics"}
+MACRO {jetp} {"Soviet Physics-JETP"}
+MACRO {jfe} {"Journal of Fusion Energy"}
+MACRO {jfm} {"Journal of Fluid Mechanics"}
+MACRO {jgr} {"Journal of Geophysical Research"}
+MACRO {jmp} {"Journal of Mathematical Physics"}
+MACRO {jne} {"Journal of Nuclear Energy"}
+MACRO {jnec} 
+{"Journal of Nuclear Energy, Part~C: Plasma Physics, Accelerators,
+Thermonuclear Research"}
+MACRO {jnm} {"Journal of Nuclear Materials"}
+MACRO {josa} {"Journal of the Optical Society of America"}
+MACRO {jpa} {"Journal of Physics~A: Mathematical and General"}
+MACRO {jpp} {"Journal of Plasma Physics"}
+MACRO {jpsj} {"Journal of the Physical Society of Japan"}
+MACRO {jsp} {"Journal of Statistical Physics"}
+MACRO {jvst} {"Journal of Vacuum Science and Technology"}
+MACRO {nedf} {"Nuclear Engineering and Design/Fusion"}
+MACRO {nf} {"Nuclear Fusion"}
+MACRO {nim} {"Nuclear Instruments and Methods"}
+MACRO {nimpr} {"Nuclear Instruments and Methods in Physics Research"}
+MACRO {nt/f} {"Nuclear Technology/Fusion"}
+MACRO {phy} {"Physica"}
+MACRO {phya} {"Physica~A"}
+MACRO {phyd} {"Physica~D"}
+MACRO {pf} {"Physics of Fluids"}
+MACRO {pfa} {"Physics of Fluids~A: Fluid Dynamics"}
+MACRO {pfb} {"Physics of Fluids~B: Plasma Physics"}
+MACRO {pl} {"Physics Letters"}
+MACRO {pla} {"Physics Letters~A"}
+MACRO {pnas} {"Proceedings of the National Academy of Sciences of the USA"}
+MACRO {pp} {"Plasma Physics"}
+MACRO {ppcf} {"Plasma Physics and Controlled Fusion"}
+MACRO {pr} {"Physical Review"}
+MACRO {pra} {"Physical Review~A: General Physics"}
+MACRO {prl} {"Physical Review Letters"}
+MACRO {ps} {"Physica Scripta"}
+MACRO {rmp} {"Reviews of Modern Physics"}
+MACRO {rsi} {"Review of Scientific Instruments"}
+MACRO {sjpp} {"Soviet Journal of Plasma Phys."}
+MACRO {spd} {"Soviet Physics-Doklady"}
+MACRO {sptp} {"Soviet Physics-Technical Physics"}
+MACRO {spu} {"Soviet Physics-Uspeki"}
