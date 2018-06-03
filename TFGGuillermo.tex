@@ -33,7 +33,7 @@
 %Otro formato para las secciones
 \titleformat{\section}[block]
 {\fontsize{15}{18}\bfseries\sffamily\filcenter}
-{\S \thesection.}
+{\S\ \thesection.}
 {1em}
 {}
 
@@ -205,7 +205,7 @@ La teoría de sistemas integrables tiene unas profundas raíces históricas, rem
 
 En las dos primeras secciones de este trabajo reexponemos la teoría clásica en el lenguaje moderno de la geometría simpléctica, definiendo los términos básicos en este formalismo y enunciando los teoremas fundamentales: el de Noether y el de Arnold-Liouville. Introducimos también la noción de las variables de acción-ángulo, así como el método general de su construcción. En la sección \ref{superintegrables} definimos \emph{sistema superintegrable} y exponemos los casos del problema de Kepler y del oscilador armónico, con los que ya estamos familiarizados. En la sección \ref{anisotropo} estudiamos otro conocido sistema superintegrable, el oscilador armónico anisótropo, que aporta varias ideas para el desarrollo posterior del trabajo.
 
-Seguimos con lo que constituye el núcleo del trabajo, el estudio del \emph{sistema de Tremblay, Turbiner y Winternitz}, un sistema hamiltoniano introducido en \cite{ttw1} y que ha recibido mucho interés en los últimos años. En la sección \ref{superintTTW} exponemos la demostración dada por C. Gonera \cite{gonera} de la superintegrabilidad de este sistema. En las secciones \ref{cartesianas}-\ref{nuevascoordenadas} estudiamos la forma del hamiltoniano del sistema en distintos sistemas de coordenadas, especialmente en una nueva forma introducida en \cite{burgos}. Finalmente, en la sección \ref{curvo} se estudia la generalización del sistema a espacios de curvatura constante. Se incluye también un apéndice donde se detalla uno de los cálculos involucrados en la sección \ref{superintTTW}.
+Seguimos con lo que constituye el núcleo del trabajo, el estudio del \emph{sistema de Tremblay, Turbiner y Winternitz}, un sistema hamiltoniano introducido en \cite{ttw1} y que ha recibido mucho interés en los últimos años. En la sección \ref{superintTTW} exponemos la demostración dada por C. Gonera \cite{gonera} de la superintegrabilidad de este sistema para $k$ racional. En las secciones \ref{cartesianas}-\ref{nuevascoordenadas} estudiamos la forma del hamiltoniano del sistema en distintos sistemas de coordenadas, especialmente en una nueva forma introducida en \cite{burgos}. Finalmente, en la sección \ref{curvo} se estudia la generalización del sistema a espacios de curvatura constante. Se incluye también un apéndice donde se detalla uno de los cálculos involucrados en la sección \ref{superintTTW}.
 
 \section{Geometría simpléctica y simetrías en mecánica clásica}
 La estructura matemática característica de los espacios de fases en Mecánica Clásica es la de \emph{variedad simpléctica}. Una variedad simpléctica es un par $(M,\omega)$, donde $M$ es una variedad diferenciable y $\omega$ es una $2$-forma diferencial no degenerada y cerrada, es decir, tal que $\dd \omega=0$. En el caso en que la forma $\omega$ sea exacta, es decir, que exista una $1$-forma $\theta$ tal que $\omega=\dd \theta$, se dice que la variedad $(M,\omega)$ es exacta. 
@@ -251,14 +251,14 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
       \begin{equation*}
 	\vect{u}_{\RR^6}=\epsilon_{ijk}u_k(q_i \partial_{q_j}+p_i \partial_{p_j}).
       \end{equation*}
-      Ahora, si consideramos el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$, que en coordenadas se expresa $L_k(q_i,p_j)=\epsilon_{ijk}q_ip_j$, de modo que $(\vect{L}\times\vect{u})_{k}=\epsilon_{ijk}u_kq_ip_j$ y 
+      Ahora, consideramos el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$, que en coordenadas se expresa $L_k(q_i,p_j)=\epsilon_{ijk}q_ip_j$, de modo que $(\vect{L}\times\vect{u})_{k}=\epsilon_{ijk}u_kq_ip_j$ y 
       \begin{align*}
 	\dd(\vect{L}\times \vect{u})&=\epsilon_{ijk}u_k(q_i\dd p_j + p_j\dd q_i)=\epsilon_{ijk}u_k(q_i\dd p_j - p_i\dd q_j)=-i_{\vect{u}_{\RR^6}}\omega.
       \end{align*}
       Por tanto, si consideramos la aplicación $L:\RR^6\rightarrow\mathfrak{so}(3)^*$ que a cada $(\vect{q},\vect{p})$ le asigna  
       \begin{align*}
 	L(\vect{q},\vect{p}) :\mathfrak{so}(3)&\longrightarrow \RR\\ 
-	\vect{u} &\longmapsto \vect{L}(\vect{q},\vect{p})\times \vect{u},
+	J_\vect{u} &\longmapsto \vect{L}(\vect{q},\vect{p})\times \vect{u},
 	\end{align*}
 	tenemos que $L$ es una aplicación momento de la acción de $\mathrm{SO}(3)$. Por el teorema de Noether, si consideramos un hamiltoniano $H$ en $\RR^6$ que sea invariante bajo rotaciones, tenemos que la aplicación momento $L$ es una integral primera del sistema hamiltoniano dado por $H$. Como consecuencia, el momento angular $\vect{L}$ es una cantidad conservada del sistema.
   \end{ejemplo}
@@ -392,9 +392,9 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
 
 Observemos que podemos considerar la partícula sujeta a un «potencial efectivo»
 \begin{equation}
-  U=\frac{L^2}{2mr^2}+V(r),
+  U(r)=\frac{L^2}{2mr^2}+V(r),
 \end{equation}
-donde el término $\frac{L^2}{2mr^2}$ constituye una «energía centrífuga». En los valores de $r$ para los cuales $U$ es constante la velocidad radial $\dot r$ se anula y nos indica los \emph{puntos de retorno} de la trayectoria. En el caso en que el movimiento sea acotado, $r$ varía entre dos límites $r_{\text{min}}$ y $r_{\text{máx}}$ y la trayectoria está contenida enteramente en el interior de una corona circular limitada por las circunferencias de radios $r_{\text{min}}$ y $r_{\text{máx}}$. Sin embargo, esto no implica que la trayectoria sea una curva cerrada. En efecto, si, de acuerdo con \eqref{eq:intphi}, calculamos el ángulo que gira el vector posición en lo que la partícula se mueve entre $r_{\text{min}}$ y $r_{\text{máx}}$ obtenemos
+donde el término $\frac{L^2}{2mr^2}$ constituye una «energía centrífuga». En los valores de $r$ para los cuales $U=E$ la velocidad radial $\dot r$ se anula, y estos valores se llaman \emph{puntos de retorno} de la trayectoria. En el caso en que el movimiento sea acotado, $r$ varía entre dos límites $r_{\text{min}}$ y $r_{\text{máx}}$ y la trayectoria está contenida enteramente en el interior de una corona circular limitada por las circunferencias de radios $r_{\text{min}}$ y $r_{\text{máx}}$. Sin embargo, esto no implica que la trayectoria sea una curva cerrada. En efecto, si, de acuerdo con \eqref{eq:intphi}, calculamos el ángulo que gira el vector posición en lo que la partícula se mueve entre $r_{\text{min}}$ y $r_{\text{máx}}$ obtenemos
 \begin{equation}
   \Delta \phi = 2\int_{r_{\text{min}}}^{r_{\text{máx}}} \frac{Ldr}{r^2\sqrt{2m[E-V(r)]-L^2/r^2}}.
 \end{equation}
@@ -472,9 +472,10 @@ y un tensor de Fradkin
 \end{equation}
 
 \section{El hamiltoniano de TTW}
-Principalmente por consideraciones al cuantizar, dentro de los sistemas integrables y superintegrables son de especial interés aquellos en los que sus integrales primeras son polinomiales en los momentos. Así, estos sistemas se llamarán \emph{polinomialmente integrables} (respectivamente, \emph{polinomialmente superintegrables}) y llamaremos \emph{orden} de sus integrales primeras al grado que éstas tengan como polinomios en los momentos. Para más información al respecto, consultar \cite{miller}.
+Principalmente por consideraciones al cuantizar, dentro de los sistemas integrables y superintegrables son de especial interés aquellos en los que sus integrales primeras son polinomiales en los momentos. Así, estos sistemas se llamarán \emph{polinomialmente integrables} (respectivamente, \emph{polinomialmente superintegrables}) y llamaremos \emph{orden} de sus integrales primeras al grado que éstas tengan como polinomios en los momentos. 
 
-Los sistemas superintegrables de segundo orden han sido bastante estudiados y poseen una teoría de clasificación. También han sido tratados varias clases de sistemas de tercer orden. Sin embargo, para sistemas generales de tercer orden y de órdenes superiores se conoce mucho menos. En particular hasta hace unos pocos años había pocos ejemplos y las teorías de estructura y clasificación eran prácticamente inexistentes. 
+Los sistemas superintegrables de segundo orden han sido bastante estudiados y poseen una teoría de clasificación. También han sido tratados varias clases de sistemas de tercer orden. Sin embargo, para sistemas generales de tercer orden y de órdenes superiores se conoce mucho menos. En particular hasta hace unos pocos años había pocos ejemplos y las teorías de estructura y clasificación eran prácticamente inexistentes. Para más información al respecto, consultar \cite{miller}.
+ 
 
 La situación cambió drásticamente en 2009 con el trabajo de F. Tremblay, A. V. Turbiner y P. Winternitz \cite{ttw1}, donde los autores presentaron una familia de potenciales en el plano, parametrizados por una constante $k$, y conjeturaron que estos sistemas eran superintegrables para todo $k\in \QQ$, con órdenes tan grandes como se quisieran. Unos meses más tarde, en otro trabajo \cite{ttw2} (algunas aclaraciones a este texto fueron presentadas posteriormente en \cite{burgos}) los mismos autores calcularon las trayectorias acotadas de esta familia de sistemas y mostraron que eran curvas cerradas para todos los casos con $k \in \QQ$, dando así evidencia a favor de su conjetura. Posteriormente se ha verificado por varios métodos que, efectivamente, sus conjeturas eran correctas.
 
@@ -562,7 +563,7 @@ Como $\frac{\sqrt{\alpha}+\sqrt{\beta}}{2}$ es un término que sólo depende de 
 \begin{equation}
   J_{\theta}=\frac{\sqrt{A}}{2}. 
 \end{equation}
-El cálculo de la integral \eqref{eq:intaccion1} puede hacerse con técnicas de variable compleja, como aparece detallado en el Apéndice \ref{apendice}, mientras que la integral \eqref{eq:intaccion2} está calculada usando técnicas elementales en \cite{lechtenfeld}.
+El cálculo de la integral \eqref{eq:intaccion1} puede hacerse con técnicas de variable compleja, como aparece detallado en el apéndice \ref{apendice}, mientras que la integral \eqref{eq:intaccion2} está calculada usando técnicas elementales en \cite{lechtenfeld}.
 
 \begin{figure}[h]
   \centering
@@ -680,7 +681,7 @@ Ahora, si consideramos la aplicación bilineal
      \end{align*}
      Consideremos entonces el fibrado tangente complexificado $T_{\CC}M$ y los vectores
      \begin{equation}
-	 \partial_z=\tfrac{1}{2}(\partial_x-i\partial_y) \ \ \
+	 \partial_z=\tfrac{1}{2}(\partial_x-i\partial_y), \ \ \
 	 \partial_{\bar{z}}=\tfrac{1}{2}(\partial_x+i\partial_y) .
      \end{equation}
      Es inmediato comprobar que 
@@ -713,7 +714,7 @@ Ahora, si consideramos la aplicación bilineal
 \end{equation}
 y lo cambiamos a las nuevas coordenadas
 \begin{equation}
-    z=x+iy \ \ \
+    z=x+iy, \ \ \
     \bar{z}=x-iy,
 \end{equation}
 teniendo en cuenta que $z=r e^{i\phi}$ y la fórmula de Moivre
@@ -765,8 +766,8 @@ Vamos a estudiar ahora el sistema de TTW en unas nuevas coordenadas reales, defi
 \end{equation}
 De modo que
 \begin{equation}
-    \dot{u}=\tfrac{1}{2}(kz^{k-1}\dot{z}+k\zz^k\dot{\zz}),\ \ \
-    \dot{v}=\tfrac{1}{2i}(kz^{k-1}\dot{z}-k\zz^k\dot{\zz}).
+  \dot{u}=\tfrac{1}{2}(kz^{k-1}\dot{z}+k\zz^{k-1}\dot{\zz}),\ \ \
+  \dot{v}=\tfrac{1}{2i}(kz^{k-1}\dot{z}-k\zz^{k-1}\dot{\zz}).
 \end{equation}
 Notamos ahora que 
 \begin{equation*}
@@ -818,9 +819,9 @@ Para modelizar las geometrías esférica e hiperbólica seguimos el enfoque clá
 \begin{equation}
  x_0^2+\kappa(x_1^2+x_2^2)=1. 
 \end{equation}
-Cuando $\kappa=1$ obtenemos una esfera, mientras que si $\kappa=-1$ obtenemos un hiperboloide de dos hojas y si $\kappa=0$ obtenemos dos planos. En los dos últimos casos nos interesa trabajar sólo en una de las dos hojas, por lo añadimos la restricción $x_0\geq 1$. Podemos dotar ahora a $S_\kappa$ de una métrica, restringiendo la métrica de $\mathbb{R} ^3$ y diviendo por la curvatura
+Cuando $\kappa=1$ obtenemos una esfera, mientras que si $\kappa=-1$ obtenemos un hiperboloide de dos hojas y si $\kappa=0$ obtenemos dos planos. En los dos últimos casos nos interesa trabajar sólo en una de las dos hojas, por lo que añadimos la restricción $x_0\geq 1$. Podemos dotar ahora a $S_\kappa$ de una métrica, restringiendo la métrica de $\mathbb{R} ^3$ y dividiendo por la curvatura
 \begin{equation}
-  ds^2=\frac{1}{\kappa}(\dd x_0^2 +  \dd x_1^2 + \dd x_2^2)|_{S_\kappa}=\frac{\kappa (x_1\dd x_1+x_2 \dd x_2)^2}{1-\kappa(x_1^2+x_2^2)}+\dd x_1^2 + \dd x_2 ^2.
+  ds^2=\left.\frac{1}{\kappa}(\dd x_0^2 +  \dd x_1^2 + \dd x_2^2)\right|_{S_\kappa}=\frac{\kappa (x_1\dd x_1+x_2 \dd x_2)^2}{1-\kappa(x_1^2+x_2^2)}+\dd x_1^2 + \dd x_2 ^2.
 \end{equation}
 De modo que el lagrangiano libre en $S_{\kappa}$ tomará la forma
 \begin{equation}
@@ -871,7 +872,7 @@ donde $T_{\kappa}=\frac{S_\kappa}{C_\kappa}$ y
 \begin{equation}
   V_{k,\kappa}(r,\phi)=\frac{k^2\alpha}{2S_\kappa^2(r)\cos^2k\phi} +\frac{k^2\beta}{2S_\kappa^2(r)\sin^2 k\phi}.
 \end{equation}
-Nótese que en el \emph{límite euclídeo}, cuando $\kappa\rightarrow 0$, se recupera el hamiltoniano de TTW en el plano \eqref{eq:TTW}. Varias consideraciones sobre este hamiltoniano y, en particular, una prueba de su superintegrabilidad para $k$ racional pueden leerse en \cite{ranada}.
+Nótese que en el \emph{límite euclidiano}, cuando $\kappa\rightarrow 0$, se recupera el hamiltoniano de TTW en el plano \eqref{eq:TTW}. Varias consideraciones sobre este hamiltoniano y, en particular, una prueba de su superintegrabilidad para $k$ racional pueden leerse en \cite{ranada}.
 
 \section*{Conclusiones}
 \addcontentsline{toc}{section}{Conclusiones}
