@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: TFGGuillermo.aux
 The style file: aip2.bst
 Database file #1: biblio.bib
-You've used 18 entries,
+You've used 19 entries,
             2389 wiz_defined-function locations,
-            1098 strings with 11287 characters,
-and the built_in function-call counts, 6528 in all, are:
-= -- 412
-> -- 141
-< -- 12
-+ -- 59
-- -- 41
-* -- 434
-:= -- 629
+            1101 strings with 11446 characters,
+and the built_in function-call counts, 7079 in all, are:
+= -- 470
+> -- 151
+< -- 14
++ -- 63
+- -- 44
+* -- 451
+:= -- 687
 add.period$ -- 0
-call.type$ -- 18
+call.type$ -- 19
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 692
-empty$ -- 679
-format.name$ -- 53
-if$ -- 1494
+cite$ -- 38
+duplicate$ -- 734
+empty$ -- 714
+format.name$ -- 57
+if$ -- 1638
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 171
-newline$ -- 82
-num.names$ -- 18
-pop$ -- 221
+int.to.str$ -- 19
+missing$ -- 184
+newline$ -- 86
+num.names$ -- 19
+pop$ -- 247
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 231
+skip$ -- 270
 stack$ -- 0
-substring$ -- 331
-swap$ -- 511
-text.length$ -- 12
+substring$ -- 391
+swap$ -- 521
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 46
-width$ -- 20
-write$ -- 166
+while$ -- 51
+width$ -- 21
+write$ -- 175

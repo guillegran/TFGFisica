@@ -10,12 +10,12 @@
 \bibitem{ttw1}
 F.~Tremblay, A.~V. Turbiner and P.~Winternitz, An infinite family of solvable
   and integrable quantum systems on a plane, \emph{J. Phys. A: Math. Theor.}
-  \textbf{42} (2009)~(24), p. 242001
+  \textbf{42} (2009), p. 242001
 \bibAnnoteFile{ttw1}
 
 \bibitem{gonera}
 C.~Gonera, On the superintegrability of {TTW} model, \emph{Phys. Lett. A}
-  \textbf{376} (2012)~(35), pp. 2341--2343
+  \textbf{376} (2012), pp. 2341--2343
 \bibAnnoteFile{gonera}
 
 \bibitem{burgos}
@@ -41,64 +41,71 @@ L.~D. Landau and E.~M. Lifshitz, \emph{Curso de física teórica. {V}olumen 1:
 
 \bibitem{bertrand}
 J.~Bertrand, Th{\'e}oreme relatif au mouvement d’un point attir{\'e} vers un
-  centre fixe, \emph{CR. Acad. Sci.} \textbf{77} (1873)~(849-853), p.~2
+  centre fixe, \emph{CR. Acad. Sci.} \textbf{77} (1873), p.~2
 \bibAnnoteFile{bertrand}
 
 \bibitem{fradkin}
 D.~M. Fradkin, Three-dimensional isotropic harmonic oscillator and {SU}(3),
-  \emph{Am. J. Phys.} \textbf{33} (1965)~(3), pp. 207--211
+  \emph{Am. J. Phys.} \textbf{33} (1965), pp. 207--211
 \bibAnnoteFile{fradkin}
 
 \bibitem{jauchhill}
 J.~Jauch and E.~Hill, On the problem of degeneracy in quantum mechanics,
-  \emph{Phys. Rev.} \textbf{57} (1940)~(7), p. 641
+  \emph{Phys. Rev.} \textbf{57} (1940), p. 641
 \bibAnnoteFile{jauchhill}
+
+\bibitem{rodriguez}
+M.~A. Rodr{\'\i}guez, P.~Tempesta and P.~Winternitz, Reduction of
+  superintegrable systems: the anisotropic harmonic oscillator, \emph{Phys.
+  Rev. E} \textbf{78} (2008), p. 046608
+\bibAnnoteFile{rodriguez}
 
 \bibitem{miller}
 W.~Miller~Jr, S.~Post and P.~Winternitz, Classical and quantum
   superintegrability with applications, \emph{J. Phys. A: Math. Theor.}
-  \textbf{46} (2013)~(42), p. 423001
+  \textbf{46} (2013), p. 423001
 \bibAnnoteFile{miller}
 
 \bibitem{ttw2}
 F.~Tremblay, A.~V. Turbiner and P.~Winternitz, Periodic orbits for an infinite
   family of classical superintegrable systems, \emph{J. Phys. A: Math. Theor.}
-  \textbf{43} (2009)~(1), p. 015202
+  \textbf{43} (2009), p. 015202
 \bibAnnoteFile{ttw2}
 
 \bibitem{lechtenfeld}
 O.~Lechtenfeld, A.~Nersessian and V.~Yeghikyan, Action-angle variables for
-  dihedral systems on the circle, \emph{Phys. Lett. A} \textbf{374}
-  (2010)~(46), pp. 4647--4652
+  dihedral systems on the circle, \emph{Phys. Lett. A} \textbf{374} (2010), pp.
+  4647--4652
 \bibAnnoteFile{lechtenfeld}
 
 \bibitem{frivs}
 J.~Fri{\v{s}}, V.~Mandrosov, Y.~A. Smorodinsky, M.~Uhl{\'\i}{\v{r}} and
   P.~Winternitz, On higher symmetries in quantum mechanics, \emph{Phys. Lett.}
-  \textbf{16} (1965)~(3), pp. 354--356
+  \textbf{16} (1965), pp. 354--356
 \bibAnnoteFile{frivs}
 
 \bibitem{gubbiottilatini}
 G.~Gubbiotti and D.~Latini, A multiple scales approach to maximal
-  superintegrability, \emph{J. Phys. A: Math. Theor.}  (2018)
+  superintegrability, \emph{J. Phys. A: Math. Theor.} \textbf{51} (2018), p.
+  285201
 \bibAnnoteFile{gubbiottilatini}
 
 \bibitem{higgs}
 P.~W. Higgs, Dynamical symmetries in a spherical geometry. {I}, \emph{J. Phys.
-  A: Math. Gen.} \textbf{12} (1979)~(3), p. 309
+  A: Math. Gen.} \textbf{12} (1979), p. 309
 \bibAnnoteFile{higgs}
 
 \bibitem{ballesteros}
 A.~Ballesteros, A.~Blasco, F.~J. Herranz and F.~Musso, A new integrable
   anisotropic oscillator on the two-dimensional sphere and the hyperbolic
-  plane, \emph{J. Phys. A: Math. Theor.} \textbf{47} (2014)~(34), p. 345204
+  plane, \emph{J. Phys. A: Math. Theor.} \textbf{47} (2014), p. 345204
 \bibAnnoteFile{ballesteros}
 
 \bibitem{ranada}
 M.~F. Rañada, The {T}remblay--{T}urbiner--{W}internitz system on spherical and
   hyperbolic spaces: superintegrability, curvature-dependent formalism and
-  complex factorization, \emph{J. Phys. A: Math. Theor.} \textbf{47}
-  (2014)~(16), p. 165203
+  complex factorization, \emph{J. Phys. A: Math. Theor.} \textbf{47} (2014), p.
+  165203
 \bibAnnoteFile{ranada}
 
 \bibitem{abraham}

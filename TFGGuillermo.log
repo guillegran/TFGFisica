@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  3 JUN 2018 18:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  10 JUN 2018 13:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1736,6 +1736,17 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 213.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 6.1pt on input line 213.
+LaTeX Font Info:    Try loading font information for T1+ntxsups on input line 2
+13.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/t1ntxsups.fd
+File: t1ntxsups.fd 2015/01/17 v1.0
+)
+LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
+(Font)              scaled to size 10.95pt on input line 213.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 213.
+LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
+(Font)              scaled to size 9.0pt on input line 213.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1744,6 +1755,19 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [3]
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.0pt on input line 245.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 245.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 245.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 9.0pt on input line 245.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 7.3pt on input line 245.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 5.5pt on input line 245.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -1755,23 +1779,15 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 8.0pt on input line 307.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 6.1pt on input line 307.
- <homology.png, id=153, 311.1625pt x 260.975pt>
+ <homology.png, id=158, 311.1625pt x 260.975pt>
 File: homology.png Graphic file (type png)
  <use homology.png>
 Package pdftex.def Info: homology.png used on input line 332.
 (pdftex.def)             Requested size: 128.0387pt x 107.3867pt.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.0pt on input line 333.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 333.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 333.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 333.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 7.3pt on input line 333.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 5.5pt on input line 333.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1794,7 +1810,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 397.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.1pt on input line 397.
- <bertrand.png, id=195, 363.3575pt x 310.15875pt>
+ <bertrand.png, id=200, 363.3575pt x 310.15875pt>
 File: bertrand.png Graphic file (type png)
 
 <use bertrand.png>
@@ -1853,7 +1869,7 @@ Package epstopdf Info: Source file: <ciclos.eps>
 f ciclos.eps>
 (epstopdf)             \includegraphics on input line 570.
 Package epstopdf Info: Output file is already uptodate.
- <ciclos-eps-converted-to.pdf, id=317, 335.2525pt x 117.43875pt>
+ <ciclos-eps-converted-to.pdf, id=324, 335.2525pt x 117.43875pt>
 File: ciclos-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ciclos-eps-converted-to.pdf>
@@ -1942,7 +1958,7 @@ Package epstopdf Info: Source file: <polos.eps>
  polos.eps>
 (epstopdf)             \includegraphics on input line 907.
 Package epstopdf Info: Output file is already uptodate.
- <polos-eps-converted-to.pdf, id=471, 424.58624pt x 56.21pt>
+ <polos-eps-converted-to.pdf, id=478, 424.58624pt x 56.21pt>
 File: polos-eps-converted-to.pdf Graphic file (type pdf)
 
 <use polos-eps-converted-to.pdf>
@@ -1980,38 +1996,40 @@ Package rerunfilecheck Info: File `TFGGuillermo.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 939.
  ) 
 Here is how much of TeX's memory you used:
- 23472 strings out of 494850
- 428160 string characters out of 6178025
- 506464 words of memory out of 5000000
- 25960 multiletter control sequences out of 15000+600000
- 117584 words of font info for 159 fonts, out of 8000000 for 9000
+ 23541 strings out of 494850
+ 429162 string characters out of 6178025
+ 506496 words of memory out of 5000000
+ 26003 multiletter control sequences out of 15000+600000
+ 133965 words of font info for 192 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  56i,19n,84p,1023b,939s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/sh
-are/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/en
-c/dvips/newtx/ntx-ec-tlf-sc.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec
-.enc}</usr/share/texmf/fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf/f
-onts/type1/public/tex-gyre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gy
-re/qtmr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmri.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/newtx/rntxmi.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/newtx/rntxmi5.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/newtx/rntxmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/
-rtxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rtxmi5.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/newtx/txex-bar.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/txfonts/txmia.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t
-xsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TFGGuillermo.pdf (20 pages, 485344 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/ec.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/n
+ewtx/ntx-ec-tlf.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec
+-tlf-sc.enc}{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ec.enc}</usr/share/tex
+live/texmf-dist/fonts/type1/public/newtx/ntxsups-Regular.pfb></usr/share/texmf/
+fonts/type1/public/tex-gyre/qhvb.pfb></usr/share/texmf/fonts/type1/public/tex-g
+yre/qtmb.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share
+/texmf/fonts/type1/public/tex-gyre/qtmri.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/newtx/rntxmi.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/newtx/rntxmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/r
+ntxmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/newtx/rtxmi5.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/newtx/rtxmi7.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/newtx/txex-bar.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/t
+xex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on TFGGuillermo.pdf (20 pages, 488785 bytes).
 PDF statistics:
- 624 PDF objects out of 1000 (max. 8388607)
- 559 compressed objects within 6 object streams
- 252 named destinations out of 1000 (max. 500000)
+ 637 PDF objects out of 1000 (max. 8388607)
+ 571 compressed objects within 6 object streams
+ 255 named destinations out of 1000 (max. 500000)
  158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
