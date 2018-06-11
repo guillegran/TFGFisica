@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  10 JUN 2018 13:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.3.3)  11 JUN 2018 13:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1996,10 +1996,10 @@ Package rerunfilecheck Info: File `TFGGuillermo.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 939.
  ) 
 Here is how much of TeX's memory you used:
- 23541 strings out of 494850
- 429162 string characters out of 6178025
+ 23542 strings out of 494850
+ 429183 string characters out of 6178025
  506496 words of memory out of 5000000
- 26003 multiletter control sequences out of 15000+600000
+ 26004 multiletter control sequences out of 15000+600000
  133965 words of font info for 192 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  56i,19n,84p,1023b,939s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2026,7 +2026,7 @@ live/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
 /utmri8a.pfb>
-Output written on TFGGuillermo.pdf (20 pages, 488785 bytes).
+Output written on TFGGuillermo.pdf (20 pages, 488969 bytes).
 PDF statistics:
  637 PDF objects out of 1000 (max. 8388607)
  571 compressed objects within 6 object streams

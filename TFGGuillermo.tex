@@ -251,14 +251,14 @@ En el formalismo simpléctico el teorema de Noether adquiere también un nuevo c
       \begin{equation*}
 	\vect{u}_{\RR^6}=\epsilon_{ijk}u_k(q_i \partial_{q_j}+p_i \partial_{p_j}).
       \end{equation*}
-      Ahora, consideramos el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$, que en coordenadas se expresa $L_k(q_i,p_j)=\epsilon_{ijk}q_ip_j$, de modo que $(\vect{L}\times\vect{u})_{k}=\epsilon_{ijk}u_kq_ip_j$ y 
+      Ahora, consideramos el momento angular $\vect{L}(\vect{q},\vect{p})=\vect{q}\times \vect{p}$, que en coordenadas se expresa $L_k(q_i,p_j)=\epsilon_{ijk}q_ip_j$, de modo que $\vect{L}\cdot\vect{u}=\epsilon_{ijk}u_kq_ip_j$ y 
       \begin{align*}
-	\dd(\vect{L}\times \vect{u})&=\epsilon_{ijk}u_k(q_i\dd p_j + p_j\dd q_i)=\epsilon_{ijk}u_k(q_i\dd p_j - p_i\dd q_j)=-i_{\vect{u}_{\RR^6}}\omega.
+	\dd(\vect{L}\cdot \vect{u})&=\epsilon_{ijk}u_k(q_i\dd p_j + p_j\dd q_i)=\epsilon_{ijk}u_k(q_i\dd p_j - p_i\dd q_j)=-i_{\vect{u}_{\RR^6}}\omega.
       \end{align*}
       Por tanto, si consideramos la aplicación $L:\RR^6\rightarrow\mathfrak{so}(3)^*$ que a cada $(\vect{q},\vect{p})$ le asigna  
       \begin{align*}
 	L(\vect{q},\vect{p}) :\mathfrak{so}(3)&\longrightarrow \RR\\ 
-	J_\vect{u} &\longmapsto \vect{L}(\vect{q},\vect{p})\times \vect{u},
+	J_\vect{u} &\longmapsto \vect{L}(\vect{q},\vect{p})\cdot \vect{u},
 	\end{align*}
 	tenemos que $L$ es una aplicación momento de la acción de $\mathrm{SO}(3)$. Por el teorema de Noether, si consideramos un hamiltoniano $H$ en $\RR^6$ que sea invariante bajo rotaciones, tenemos que la aplicación momento $L$ es una integral primera del sistema hamiltoniano dado por $H$. Como consecuencia, el momento angular $\vect{L}$ es una cantidad conservada del sistema.
   \end{ejemplo}
@@ -358,7 +358,7 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
   \end{defn}
   La primera parte del teorema \ref{arnoldliouville} se puede generalizar al caso superintegrable, destacando especialmente el caso maximalmente superintegrable, para el cual el resultado nos dice que las órbitas serán curvas cerradas (con movimiento periódico).
 
-  Vamos a aplicar estas ideas al caso del potencial central, para ver en qué casos el sistema será superintegrable. Como ya hemos visto, en el movimiento en un potencial central, el momento angular $\vect{L}=\vect{q}\times \vect{p}$ se conserva. Puesto que $\vect{L}$ es perpendicular a $\vect{q}$ y a $\vect{p}$, la conservación de $\vect{L}$ significa que, durante todo el movimiento, la posición y el momento de la partícula permanecen en un mismo plano, perpendicular a $\vect{L}$. La invariancia bajo rotaciones nos permite escoger la dirección $\vect{e}_z$ paralela al momento angular $\vect{L}$ y estudiar el sistema «reducido» en el plano perpendicular, que ahora será el plano $XY$. Llamando ahora $r=x^2+y^2$, el hamiltoniano en este «sistema reducido» será
+  Vamos a aplicar estas ideas al caso del potencial central, para ver en qué casos el sistema será superintegrable. Como ya hemos visto, en el movimiento en un potencial central, el momento angular $\vect{L}=\vect{q}\times \vect{p}$ se conserva. Puesto que $\vect{L}$ es perpendicular a $\vect{q}$ y a $\vect{p}$, la conservación de $\vect{L}$ significa que, durante todo el movimiento, la posición y el momento de la partícula permanecen en un mismo plano, perpendicular a $\vect{L}$. La invariancia bajo rotaciones nos permite escoger la dirección $\vect{e}_z$ paralela al momento angular $\vect{L}$ y estudiar el sistema «reducido» en el plano perpendicular, que ahora será el plano $XY$. Llamando ahora $r=\sqrt{x^2+y^2}$, el hamiltoniano en este «sistema reducido» será
   \begin{equation}
     H(x,y,p_x,p_y)= \tfrac{1}{2m}(p_x^2+p_y^2)+V(r).
   \end{equation}
@@ -381,12 +381,12 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
   \end{equation}
   De modo que
   \begin{equation}
-      \dot r=\sqrt{\frac{2}{m}[E-V(r)]-\frac{L^2}{2mr^2}}, \ \ \  
-    t=\int \frac{dr}{\sqrt{\frac{2}{m}[E-V(r)]-\frac{L^2}{2mr^2}}}.
+      \dot r=\sqrt{\frac{2}{m}[E-V(r)]-\frac{L^2}{mr^2}}, \ \ \  
+    t=\int \frac{dr}{\sqrt{\frac{2}{m}[E-V(r)]-\frac{L^2}{mr^2}}}.
   \end{equation}
   Por tanto, el ángulo $\phi$ puede ser integrado por cuadraturas en la forma
   \begin{equation}
-    \phi=\int\frac{Ldr}{r^2\sqrt{2m[E-V(r)]-L^2/r^2}}. 
+    \phi=\int \frac{d\phi}{dr}dr=\int \frac{\dot{\phi}}{\dot{r}}dr=\int\frac{Ldr}{r^2\sqrt{2m[E-V(r)]-L^2/r^2}}. 
     \label{eq:intphi}
   \end{equation}
 
@@ -496,7 +496,7 @@ La integrabilidad viene garantizada por la integral primera
 La existencia de una integral primera adicional $Y_{k}$ para $k\in \QQ$ que diera la superintegrabilidad polinomial del sistema fue conjeturada por Tremblay, Turbiner y Winternitz en \cite{ttw1} y posteriormente demostrada.
 
 \section{Superintegrabilidad del sistema de TTW}\label{superintTTW}
-En esta sección vamos a demostrar la superintegrabilidad del sistema de TTW con $k\in \QQ$ siguiendo el método de C. Gonera \cite{gonera}. Para ello, lo primero que vamos a hacer es obtener las variables de acción-ángulo del sistema. Teniendo en cuenta que las integrales primeras que dan la integrabilidad son el hamiltoniano $\eqref{eq:TTW}$ y la función $X_k$ dada por $\eqref{eq:integralprimeraTTW}$, un toro de Liouville con $H=E$ y $X_k=A$ vendrá dado por las ecuaciones
+En esta sección vamos a demostrar la superintegrabilidad del sistema de TTW con $k\in \QQ$ siguiendo el método de C. Gonera \cite{gonera}. Para ello, lo primero que vamos a hacer es obtener las variables de acción del sistema. Teniendo en cuenta que las integrales primeras que dan la integrabilidad son el hamiltoniano $\eqref{eq:TTW}$ y la función $X_k$ dada por $\eqref{eq:integralprimeraTTW}$, un toro de Liouville con $H=E$ y $X_k=A$ vendrá dado por las ecuaciones
 \begin{equation}
   \begin{cases}
     p_r^2+\frac{p_{\phi}^2}{r^2}+\omega^2r^2 + \frac{k}{r^2}\left( \frac{\alpha}{\cos^2k\phi} +\frac{\beta}{\sen^2k\phi}\right) = 2E \\
@@ -655,12 +655,12 @@ Sea $M$ una variedad diferenciable. Una \emph{estructura cuasicompleja} en $M$ e
 Ahora, si consideramos la aplicación bilineal
 \begin{align*}
   \tilde{J} :TM \times \CC&\longrightarrow TM\otimes \CC\\ 
-    (\xi,z) &\longmapsto J(\xi)\otimes \CC, 
+    (\xi,z) &\longmapsto J(\xi)\otimes z, 
   \end{align*}
   entonces, por la propiedad universal del producto tensorial existe una única aplicación lineal $I:T_{\CC}M \rightarrow T_{\CC}M$ tal que el siguiente diagrama conmuta
   \begin{center}
     \begin{tikzcd}
-      TM \times \CC      \arrow{r}{\otimes}\arrow{rd}[anchor=north,rotate=-30]{\tilde{J}} & T_{\CC}M = TM \otimes \CC \arrow{d}[anchor=west]{I} \\ 
+      TM \times \CC      \arrow{r}{\otimes}\arrow{rd}[anchor=north,rotate=-15]{\tilde{J}} & T_{\CC}M = TM \otimes \CC \arrow{d}[anchor=west]{I} \\ 
        &T_{\CC}M.
      \end{tikzcd}
    \end{center}
@@ -669,7 +669,7 @@ Ahora, si consideramos la aplicación bilineal
      T_{\CC}M=\ker(I-i)\oplus \ker(I+i).
    \end{equation*}
 
-   En el caso particular en que $M$ sea una variedad de dimensión $2$ con coordenadas $(x,y)$, podemos considerar entonces la «coordenada compleja» 
+   En el caso particular en que $M$ sea una variedad de dimensión $2$ con coordenadas $(x,y)$, definimos la «coordenada compleja» 
    \begin{equation*}
      z=x+iy.
    \end{equation*}
@@ -679,7 +679,7 @@ Ahora, si consideramos la aplicación bilineal
        \partial_x &\longmapsto \partial_y \\
        \partial_y &\longmapsto -\partial_x .
      \end{align*}
-     Consideremos entonces el fibrado tangente complexificado $T_{\CC}M$ y los vectores
+     Tomemos entonces el fibrado tangente complexificado $T_{\CC}M$ y los vectores
      \begin{equation}
 	 \partial_z=\tfrac{1}{2}(\partial_x-i\partial_y), \ \ \
 	 \partial_{\bar{z}}=\tfrac{1}{2}(\partial_x+i\partial_y) .
@@ -813,7 +813,7 @@ Lo interesante de ver el hamiltoniano en estas coordenadas es que, a parte del f
 Esta manera de entender el hamiltoniano de TTW fue originalmente propuesta en \cite{burgos}. Muy recientemente el hamiltoniano de TTW ha sido estudiado en este aspecto por G. Gubbiotti y D. Latini en su trabajo \cite{gubbiottilatini}, donde estudian su superintegrabilidad para $k$ racional empleando un método novedoso basado en la técnica de escalas múltiples.
 
 \section{El hamiltoniano de TTW en espacios de curvatura constante}\label{curvo}
-En esta sección hacemos una breve exposición de las generalizaciones del hamiltoniano de TTW a la esfera $\mathbb{S} ^2$ y al plano hiperbólico $\mathbb{H} ^2.$ El estudio de sistemas de este tipo se remonta al trabajo de Higgs \cite{higgs}, donde trató la generalización del oscilador armónico a la esfera. Siguiendo estas ideas, recientemente se han tratado generalizaciones de sistemas superintegrables conocidos a espacios de curvatura constante. Una exposición detallada de los métodos utilizados para estas generalizaciones puede encontrarse en \cite{ballesteros}. Concretamente, el estudio del hamiltoniano de TTW en estos espacios así como una demostración de su superintegrabilidad puede leerse en \cite{ranada}.
+En esta sección hacemos una breve exposición de las generalizaciones del hamiltoniano de TTW a la esfera $\mathbb{S} ^2$ y al plano hiperbólico $\mathbb{H} ^2.$ El estudio de sistemas de este tipo se remonta al trabajo de Higgs \cite{higgs}, donde trató la generalización del oscilador armónico a la esfera. Siguiendo estas ideas, recientemente se han considerado generalizaciones de sistemas superintegrables conocidos a espacios de curvatura constante. Una exposición detallada de los métodos utilizados para estas generalizaciones puede encontrarse en \cite{ballesteros}. Concretamente, el estudio del hamiltoniano de TTW en estos espacios así como una demostración de su superintegrabilidad puede leerse en \cite{ranada}.
 
 Para modelizar las geometrías esférica e hiperbólica seguimos el enfoque clásico que consiste en tratar cada uno de estos espacios como un espacio homogéneo de un determinado grupo de isometrías actuando sobre $\mathbb{R}^3$. Así, en general el espacio a tratar vendrá modelizado por la superficie $S_\kappa \subset \mathbb{R} ^3$ de ecuación
 \begin{equation}
