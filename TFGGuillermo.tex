@@ -362,11 +362,11 @@ Por tanto, $H$, $L^2$ y $L_3$ son $3$ funciones en involución, de modo que el p
   \begin{equation}
     H(x,y,p_x,p_y)= \tfrac{1}{2m}(p_x^2+p_y^2)+V(r).
   \end{equation}
-  Cambiando a coordenadas polares $\vect{q}=(x,y)=r\vect{e}_{r}$, con $\vect{e}_r=(\cos \phi, \sin \phi)$, $p_r=m\dot r$, $p_{\phi}=mr^2\dot \phi$, tenemos
+  Cambiando a coordenadas polares $\vect{q}=(x,y)=r\vect{e}_{r}$, con $\vect{e}_r=(\cos \phi, \sen \phi)$, $p_r=m\dot r$, $p_{\phi}=mr^2\dot \phi$, tenemos
   \begin{equation}
     H(r,\phi,p_r,p_{\phi})=\frac{p_r^2}{2m}+\frac{p_{\phi}^2}{2mr^2}+V(r). 
   \end{equation}
-  Nótese ahora que, si $\vect{p}=m\dot{\vect{q}}=m\dot r \vect{e}_r + mr \dot \phi \vect{e}_{\phi}$, con $\vect{e}_{\phi}=(-\sin \phi,\cos \phi)$, entonces $\vect{L}=\vect{q}\times \vect{p}=mr^2\dot \phi \vect{e}_z$, luego $L=|\vect{L}|=p_{\phi}$. Por tanto, el hamiltoniano queda en la forma
+  Nótese ahora que, si $\vect{p}=m\dot{\vect{q}}=m\dot r \vect{e}_r + mr \dot \phi \vect{e}_{\phi}$, con $\vect{e}_{\phi}=(-\sen \phi,\cos \phi)$, entonces $\vect{L}=\vect{q}\times \vect{p}=mr^2\dot \phi \vect{e}_z$, luego $L=|\vect{L}|=p_{\phi}$. Por tanto, el hamiltoniano queda en la forma
   \begin{equation}
     H(r,\phi,p_r,p_{\phi})=\frac{p_r^2}{2m}+\frac{L^2}{2mr^2}+V(r). 
   \end{equation}
@@ -660,7 +660,7 @@ Ahora, si consideramos la aplicación bilineal
   entonces, por la propiedad universal del producto tensorial existe una única aplicación lineal $I:T_{\CC}M \rightarrow T_{\CC}M$ tal que el siguiente diagrama conmuta
   \begin{center}
     \begin{tikzcd}
-      TM \times \CC      \arrow{r}{\otimes}\arrow{rd}[anchor=north,rotate=-15]{\tilde{J}} & T_{\CC}M = TM \otimes \CC \arrow{d}[anchor=west]{I} \\ 
+      TM \times \CC      \arrow{r}{\otimes}\arrow{rd}[anchor=north,rotate=-21]{\tilde{J}} & T_{\CC}M = TM \otimes \CC \arrow{d}[anchor=west]{I} \\ 
        &T_{\CC}M.
      \end{tikzcd}
    \end{center}
@@ -808,7 +808,7 @@ que finalmente tiene el siguiente aspecto
 \begin{equation}\label{nuevottw}
   H_k = k^2 (u^2+v^2)^{\frac{k-1}{k}}\left[ \frac{1}{2}(p_u^2+p_v^2)+ \frac{\omega^2}{2k^2}(u^2+v^2)^{\frac{2}{k}-1}+\frac{\alpha}{2u^2}+\frac{\beta}{2 v^2} \right]. 
 \end{equation}
-Lo interesante de ver el hamiltoniano en estas coordenadas es que, a parte del factor global $k^2(u^2+v^2)^{\frac{k-1}{k}}$, lo que obtenemos es un oscilador no lineal con términos centrífugos.
+Lo interesante de ver el hamiltoniano en estas coordenadas es que, aparte del factor global $k^2(u^2+v^2)^{\frac{k-1}{k}}$, lo que obtenemos es un oscilador no lineal con términos centrífugos.
 
 Esta manera de entender el hamiltoniano de TTW fue originalmente propuesta en \cite{burgos}. Muy recientemente el hamiltoniano de TTW ha sido estudiado en este aspecto por G. Gubbiotti y D. Latini en su trabajo \cite{gubbiottilatini}, donde estudian su superintegrabilidad para $k$ racional empleando un método novedoso basado en la técnica de escalas múltiples.
 
