@@ -1,0 +1,149 @@
+%\documentclass[mathserif]{beamer}
+\documentclass[aspectratio=169,mathserif]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm, mathtools}
+\usepackage{mathrsfs}
+\usepackage{tikz,tikz-cd}
+%\usepackage{eulervm}
+%\usepackage{libertine}
+\usepackage[scaled]{helvet}
+%\usepackage[libertine]{newtxmath}
+\usepackage{mathpazo}
+\usepackage{anyfontsize}
+%\usepackage{lmodern}
+
+\deftranslation[to=spanish]{Theorem}{Teorema}
+\deftranslation[to=spanish]{Definition}{Definición}
+
+\newtheorem{prop}{Proposición}
+
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\title{Sistemas superintegrables: El hamiltoniano de TTW}
+\author{Guillermo Gallego Sánchez}
+\date{25 de junio de 2018}
+
+\begin{document}
+\begin{frame}
+  \maketitle
+\end{frame}
+\begin{frame}{Geometría simpléctica}
+  \begin{itemize}
+    \item  Una \emph{variedad simpléctica} es un par $(M,\omega)$, donde $M$ es una variedad diferenciable y $\omega$ es una $2$-forma diferencial no degenerada y cerrada, es decir, tal que $\mathrm{d}\omega=0$.
+
+    \item  El \emph{teorema de Darboux} garantiza que localmente es posible encontrar unas coordenadas $(\vect{q},\vect{p})$ (llamadas \emph{canónicas} o de Darboux) en las que la forma toma el aspecto $\omega=\sum_i \mathrm{d}p_i \wedge \mathrm{d}q_i$.
+
+ \item Sea una función $F:M\rightarrow \mathbb{R} $. Se define el \emph{campo hamiltoniano asociado a} $F$, como aquel campo $X_F$ tal que $i_{X_F}F=-\mathrm{d}F$. En coordenadas canónicas el campo $X_F$ se expresa
+   \begin{equation*}
+     X_F=\sum_i \frac{\partial H}{\partial p_i}\frac{\partial}{\partial q_i}-\frac{\partial H}{\partial q_i}\frac{\partial}{\partial p_i}.
+   \end{equation*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mecánica hamiltoniana}
+  Un \emph{sistema mecánico hamiltoniano} (independiente del tiempo) con $n$ grados de libertad consiste en:
+  \begin{itemize}
+    \item \textbf{Estados}: Una variedad simpléctica $M$ de dimensión $2n$. $M$ se le suele llamar \emph{espacio de fases}. Los puntos $(\vect{q},\vect{p})\in M$ se llaman \emph{estados} del sistema.
+    \item \textbf{Observables}: Funciones $M\rightarrow \mathbb{R} $.
+    \item \textbf{Evolución temporal}: Fijada una función $H:M\rightarrow \mathbb{R} $ que llamaremos \emph{hamiltoniano del sistema}, la evolución temporal de los estados $(\vect{q}(t),\vect{p}(t))$ vendrá dada por las curvas integrales del campo hamiltoniano $X_H$, es decir, siguiendo las \emph{ecuaciones de Hamilton}
+      \begin{equation*}
+	\begin{cases}
+	  \dot{q_i}(t)=\dfrac{\partial H}{\partial p_i}, \\[8 pt]
+	  \dot{p_i}(t)=-\dfrac{\partial H}{\partial q_i}.
+	\end{cases}
+      \end{equation*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Sistemas integrables}
+  \begin{itemize}
+    \item Un sistema hamiltoniano con $n$ grados de libertad se dice \emph{completamente integrable} si admite $n$ integrales primeras $F_1,\dots,F_n$ independientes tales que $\left\{ F_i, F_j \right\}=0$ para cualesquiera $i,j=1,\dots,n$.
+    \item En particular, como hemos supuesto que el sistema no depende del tiempo, $H$ es una de estas integrales primeras.
+    \item \textbf{Ejemplo}: El potencial central
+      \begin{equation*}
+	H(\vect{q},\vect{p})=\frac{p^2}{2m}+V(r),
+      \end{equation*}
+      con las integrales primeras $H$, $L^2$ y $L_z$.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Teorema de Arnold-Liouville}
+  \begin{theorem}
+    Sea $H$ un sistema hamiltoniano completamente integrable con $n$ grados de libertad y sea $F=(F_1,\dots,F_n)$ con $F_1=H,F_2,\dots,F_n$ las integrales en involución del sistema. Entonces:
+    \begin{enumerate}
+      \item Los conjuntos de nivel $M_a=F^{-1}(a)$ son subvariedades del espacio de fases invariantes bajo el flujo del sistema.
+      \item Si $M_a$ es compacta y conexa entonces es difeomorfa al toro $n$-dimensional y se llama un \emph{toro de Liouville}.
+      \item En torno a cada toro de Liouville podemos dar unas coordenadas canónicas $(\vect{J},\vect{w})$ llamadas \emph{variables de acción-ángulo}, tales que las $\vect{J}$ son constantes en cada toro de Liouville y las $\vect{w}$ son coordenadas angulares en el toro. 
+    \end{enumerate}
+  \end{theorem}
+\end{frame}
+
+\begin{frame}{Integración por cuadraturas}
+  \begin{itemize}
+    \item Como consecuencia, las ecuaciones de Hamilton quedan
+      \begin{equation*}
+	\begin{cases}
+	  \frac{\partial H}{\partial w_i}=-\dot{J_i}=0, \\
+	  \dot{w_i}= \frac{\partial H}{\partial J_i}=\nu_i(\vect{J}).
+	\end{cases}
+      \end{equation*}
+    \item Se pueden integrar por cuadraturas
+      \begin{equation*}
+	\begin{cases}
+	  J_i(t)=J_i(0), \\
+	  w_i(t)=w_i(0)+t\nu_i(\vect{J}).
+	\end{cases}
+      \end{equation*}
+    \item Un flujo de este tipo en el toro se llama \emph{movimiento condicionalmente periódico}. La trayectoria es cerrada si y sólo si las frecuencias $\nu_1,\dots,\nu_n$ son conmesurables.
+  \end{itemize}
+\end{frame}
+
+  \begin{frame}{Variables de acción-ángulo}
+    Fijo $M_a$ un toro de Liouville, las variables de acción-ángulo en torno a $M_a$ se construyen como sigue:
+    \begin{enumerate}
+      \item Se escogen unos ciclos $\gamma_1,\dots,\gamma_n$ que den una base de $H_1(M_a)$.
+      \item Se calculan las variables de acción
+	\begin{equation*}
+	  J_i=\oint_{\gamma_i}\vect{p}\mathrm{d}\vect{q}.
+	\end{equation*}
+      \item Se genera una transformación canónica $(\vect{q},\vect{p})\mapsto (\vect{J},\vect{w})$ con la función
+	\begin{equation*}
+	  S(\vect{q},\vect{J})=\int_{\vect{q}_0}^{\vect{q}}\vect{p}(\vect{J},\vect{q})\mathrm{d}\vect{q}.
+	\end{equation*}
+      \item Se hallan las variables de ángulo
+	\begin{equation*}
+	  w_i = \frac{\partial S}{\partial J_i}.
+	\end{equation*}
+    \end{enumerate}
+  \end{frame}
+
+  \begin{frame}{Sistemas superintegrables}
+    \begin{itemize}
+      \item Un sistema hamiltoniano con $n$ grados de libertad se llama \emph{superintegrable} si admite $n+k$ integrales primeras independientes para cierto $k=1,\dots,n-1$. En el caso en que $k=n-1$ el sistema se dice que es \emph{maximalmente superintegrable}.
+      \item En un sistema maximalmente superintegrable todas las órbitas son curvas cerradas (con movimiento periódico).
+      \item \textbf{Ejemplos}:
+	\begin{itemize}
+	  \item El potencial central, con el \emph{vector de Laplace-Runge-Lenz} 
+	    \begin{equation*}
+	      \vect{A}=\vect{q}\times \vect{L} - mk\frac{\vect{q}}{r}.
+	    \end{equation*}
+	  \item El oscilador armónico isótropo, con el \emph{tensor de Fradkin}
+	    \begin{equation*}
+	      A_{ij}=\frac{1}{2m}(p_ip_j+kq_iq_j).
+	    \end{equation*}
+	\end{itemize}
+    \end{itemize}
+    
+  \end{frame}
+
+  \begin{frame}{El hamiltoniano de TTW}
+    a
+  \end{frame}
+  
+\end{document}
