@@ -1,0 +1,39 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{\\URL: }
+\providecommand{\bibAnnoteFile}[1]{%
+  \IfFileExists{#1}{\begin{quotation}\noindent\textsc{Key:} #1\\
+  \textsc{Annotation:}\ \input{#1}\end{quotation}}{}}
+\providecommand{\bibAnnote}[2]{%
+\begin{quotation}\noindent\textsc{Annotation:}\ #2\end{quotation}}
+
+\bibitem{arnold}
+V.~I. Arnold, \emph{Mathematical {M}ethods of {C}lassical {M}echanics}
+  (Springer Science \& Business Media, 2013)
+\bibAnnoteFile{arnold}
+
+\bibitem{ttw1}
+F.~Tremblay, A.~V. Turbiner and P.~Winternitz, An infinite family of solvable
+  and integrable quantum systems on a plane, \emph{J. Phys. A: Math. Theor.}
+  \textbf{42} (2009), p. 242001
+\bibAnnoteFile{ttw1}
+
+\bibitem{gonera}
+C.~Gonera, On the superintegrability of {TTW} model, \emph{Phys. Lett. A}
+  \textbf{376} (2012), pp. 2341--2343
+\bibAnnoteFile{gonera}
+
+\bibitem{burgos}
+M.~A. Rodríguez, A.~Sampedro and P.~Tempesta, ``On classical harmonic
+  oscillators and their generalizations'', {W}orkshop on Nonlinear Integrable
+  Systems. Burgos (Spain). October 20-22, 2016
+\bibAnnoteFile{burgos}
+
+\bibitem{ranada}
+M.~F. Rañada, The {T}remblay--{T}urbiner--{W}internitz system on spherical and
+  hyperbolic spaces: superintegrability, curvature-dependent formalism and
+  complex factorization, \emph{J. Phys. A: Math. Theor.} \textbf{47} (2014), p.
+  165203
+\bibAnnoteFile{ranada}
+
+\end{thebibliography}

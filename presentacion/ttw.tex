@@ -27,7 +27,7 @@
 
 \newcommand{\vect}[1]{\mathbf{#1}}
 
-\title{Sistemas superintegrables: El hamiltoniano de TTW}
+\title{Sistemas superintegrables: El hamiltoniano de Tremblay-Turbiner-Winternitz}
 \author{Guillermo Gallego Sánchez}
 \institute{Departamento de Física Teórica}
 \date{25 de junio de 2018}
@@ -143,7 +143,7 @@
     \begin{itemize}
       \item Un sistema hamiltoniano con $n$ grados de libertad se llama \emph{superintegrable} si admite $n+k$ integrales primeras independientes para cierto $k=1,\dots,n-1$. En el caso en que $k=n-1$ el sistema se dice que es \emph{maximalmente superintegrable}.
     \pause
-      \item En un sistema maximalmente superintegrable todas las órbitas son curvas cerradas (con movimiento periódico).
+      \item En un sistema maximalmente superintegrable las órbitas acotadas son curvas cerradas (con movimiento periódico).
     \pause
       \item \textbf{Ejemplos}:
     \pause
@@ -261,7 +261,7 @@
       \item $k$ irracional $\implies$ $\nu_r$, $\nu_\theta$ inconmesurables $\implies$ Trayectorias densas $\implies$ No superintegrable
     \pause
       \item $k=m/n$ $\implies$ $m\dot{w_r}-n\dot{w_\theta}=0$ $\implies$ $mw_r-nw_\theta$ es una cantidad conservada $\implies$
-      $e^{i(mw_r - nw_{\theta}}=(e^{iw_r})^m(e^{-iw_\theta})^n$
+      $e^{i(mw_r - nw_{\theta})}=(e^{iw_r})^m(e^{-iw_\theta})^n$
     es una cantidad conservada univaluada en el toro de Liouville.
     \end{itemize}
 
@@ -325,7 +325,7 @@
       H_k=k^2(u^2+v^2)^{(k-1)/k}\left[ \tfrac{1}{2}(p_u^2+p_v^2)+\frac{\omega^2}{2k^2}(u^2+v^2)^{2/k-1}+\frac{\alpha}{2u^2}+\frac{\beta}{2v^2} \right].
     \end{equation*}
     \pause
-   A parte del factor global $k^2(u^2+v^2)^{(k-1)/k}$, obtenemos un oscilador no lineal con términos centrífugos, que nos plantea varias preguntas
+   Aparte del factor global $k^2(u^2+v^2)^{(k-1)/k}$, obtenemos un oscilador no lineal con términos centrífugos, que nos plantea varias preguntas
     \pause
    \begin{itemize}
      \item ¿Cuál es su origen?
@@ -435,6 +435,12 @@
 
   \pause
    Nótese que en el límite euclidiano (cuando $\kappa\rightarrow 0$), se recupera el hamiltoniano de TTW en el plano.
+ \end{frame}
+
+ \begin{frame}{Referencias}
+   \nocite{*}
+   \bibliographystyle{aip2}
+   \bibliography{biblio}
  \end{frame}
 
  \begin{frame}
